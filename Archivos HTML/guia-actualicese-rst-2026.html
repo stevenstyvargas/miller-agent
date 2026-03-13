@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main-style-act-2025.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+  .azul-siigo {color: #00a4ff;}
+  .azul-osc-siigo {color: #005d95;}
+  .bg-azul-osc-siigo {background-color: #005d95;}
+  .uxp-lista-datos li::marker { color: #00a4ff !important;}
+  
+  /* Clases reutilizables para tarjetas */
+  .tarjeta-info {
+    box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+    border-radius: 10px;
+    background: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  .tarjeta-info-icono { padding: 1rem 0; }
+  
+  /* Contenedor de tarjetas */
+  .contenedor-tarjetas {
+    justify-content: center;
+    gap: 32px;
+    margin-top: -70px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Cajas de contenido */
+  .caja-contenido {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  /* Clases de visibilidad */
+  .uxp-hidden { display: block; }
+  .uxp-hidden-desktop { display: none; }
+  
+  /* Texto con ancho limitado */
+  .texto-ancho-limitado {
+    width: 520px;
+    margin: auto;
+  }
+
+@media (max-width: 600px) {
+  .uxp-grid-contenedor-ruta {
+    margin: 24px 8px;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  .uxp-ancho-completo {
+    width: 100vw;
+    margin-left: -8px;
+    margin-right: -8px;
+    box-sizing: border-box;
+  }
+  .uxp-flex-fila {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .uxp-flex-2, .uxp-flex-1 {
+    width: 100%;
+  }
+  .uxp-texto-banner {
+    font-size: 28px !important;
+    line-height: 32px !important;
+  }
+  .uxp-texto-precios {
+    font-size: 18px !important;
+    line-height: 22px !important;
+  }
+  .uxp-margen-izquierdo img {
+    width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+  }
+  .uxp-linea-corta {
+    width: 50% !important;
+  }
+  .btn-actu-amarillo {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* BLOQUE 1 */
+  section:first-of-type {
+    height: auto !important;
+    padding: 24px 16px !important;
+  }
+  
+  /* BLOQUE 2 */
+  section:nth-of-type(2) .uxp-grid-contenedor-ruta {
+    margin-top: -40px !important;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  section:nth-of-type(2) article {
+    flex: 1 1 calc(50% - 8px);
+    min-width: calc(50% - 8px);
+  }
+  section:nth-of-type(2) article:last-of-type {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+  .uxp-hidden { display: none; }
+  .uxp-hidden-desktop { display: inline; }
+  .tarjeta-info-icono.uxp-hidden-desktop { display: inline; padding: 0; }
+  
+  /* BLOQUE 3 */
+  section:nth-of-type(3) .uxp-flex-fila {
+    flex-direction: column;
+  }
+  section:nth-of-type(3) figure {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  section:nth-of-type(3) figure img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  section:nth-of-type(3) .uxp-margen-izquierdo {
+    margin-left: 0;
+  }
+  
+  /* BLOQUE 4 */
+  section:nth-of-type(4) > div {
+    padding: 24px 16px !important;
+  }
+  section:nth-of-type(4) .uxp-flex-fila {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  section:nth-of-type(4) article {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  section:nth-of-type(4) article:last-of-type {
+    margin-bottom: 0;
+  }
+  .caja-contenido {
+    padding: 20px !important;
+  }
+  
+  /* BLOQUE 5 */
+  section:nth-of-type(5) .uxp-flex-fila {
+    flex-direction: column;
+    align-items: center !important;
+  }
+  section:nth-of-type(5) figure {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  section:nth-of-type(5) figure img {
+    width: 200px !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+  section:nth-of-type(5) .uxp-relleno-derecho {
+    padding-right: 0;
+  }
+  
+  /* BLOQUE 6 */
+  section:nth-of-type(6) .uxp-flex-fila {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  section:nth-of-type(6) figure {
+    width: 100%;
+    margin-top: 16px;
+  }
+  section:nth-of-type(6) figure.uxp-relleno-izquierdo {
+    padding-left: 0;
+  }
+  section:nth-of-type(6) figure img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* BLOQUE 7 */
+  section:last-of-type {
+    height: auto !important;
+    padding: 40px 16px !important;
+    background-size: cover !important;
+  }
+  section:last-of-type .uxp-flex-2 {
+    width: 100%;
+  }
+  .texto-ancho-limitado {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  section:last-of-type .uxp-texto-banner {
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+}
+
+</style>
+  
+</head>
+  <body>
+
+      <!-- BLOQUE 1 - Banner principal  -->   
+      <section class="uxp-ancho-completo uxp-relleno-superior uxp-relleno-inferior" style="background: linear-gradient(315deg, #6cb9f1 25%, #acd8f8 100%); height: 625px;">
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila">
+          <div class="uxp-flex-2 uxp-texto-izquierda">
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero uxp-texto-precios"><strong class="azul-osc-siigo">Capacitación presencial</strong></p>
+            <p class="uxp-texto-banner uxp-margen-superior-cero uxp-margen-inferior-cero uxp-txt-blanco"><strong>Declaración de renta de personas jurídicas AG 2025</strong></p>
+            <div class="uxp-margen-superior uxp-linea-corta uxp-fondo-blanco"></div>
+            <p class="uxp-relleno-superior">Un encuentro presencial de alto nivel técnico para preparar, sustentar y optimizar el impuesto de renta a tiempo.</p>
+            <p class="uxp-texto-precios uxp-margen-inferior-cero"><strong class="azul-osc-siigo">$199.900 + IVA</strong></p>
+            <p class="uxp-relleno-inferior uxp-margen-superior-cero"><i>Cupos limitados por aforo presencial</i></p>
+            <p class="uxp-margen-inferior"><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1035472">Asegurar mi cupo ahora</a></p>
+          </div>
+          <figure class="uxp-flex-1 uxp-hidden">
+            <img class="uxp-margen-izquierdo uxp-borde-redondeado" src="https://cdn.actualicese.com/wp-content/uploads/2025/12/23152301/Gerente-senior-sonriente-con-sus-colegas-sentados-juntos-en-la-reunion.jpg" width="650" height="400" loading="eager" alt="Capacitación presencial sobre declaración de renta de personas jurídicas AG 2025">
+          </figure>
+        </div>
+      </section>
+  
+      <!-- BLOQUE 2 - Tarjetas con iconos  -->   
+      <section class="uxp-ancho-completo uxp-relleno-superior">
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila contenedor-tarjetas">
+          <article class="uxp-flex-1 tarjeta-info">
+            <div class="tarjeta-info-icono uxp-hidden-desktop"><i class="fas fa-user-check fa-xl azul-siigo"></i>&nbsp;&nbsp;</div>
+            <div class="tarjeta-info-icono uxp-hidden"><i class="fas fa-user-check fa-2xl azul-siigo"></i></div>
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero"><strong>Modalidad:</strong> Presencial</p>
+          </article>
+          <article class="uxp-flex-1 tarjeta-info">
+            <div class="tarjeta-info-icono uxp-hidden-desktop"><i class="fas fa-clock fa-xl azul-siigo"></i>&nbsp;&nbsp;</div>
+            <div class="tarjeta-info-icono uxp-hidden"><i class="fas fa-clock fa-2xl azul-siigo"></i></div>
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero"><strong>Duración:</strong> 4 horas</p>
+          </article>
+          <article class="uxp-flex-1 tarjeta-info">
+            <div class="tarjeta-info-icono uxp-hidden-desktop"><i class="fas fa-map-marker-alt fa-xl azul-siigo"></i>&nbsp;&nbsp;</div>
+            <div class="tarjeta-info-icono uxp-hidden"><i class="fas fa-map-marker-alt fa-2xl azul-siigo"></i></div>
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero"><strong>Ubicación:</strong> Bogotá</p>
+          </article>
+          <article class="uxp-flex-1 tarjeta-info">
+            <div class="tarjeta-info-icono uxp-hidden-desktop"><i class="fas fa-calendar-day fa-xl azul-siigo"></i>&nbsp;&nbsp;</div>
+            <div class="tarjeta-info-icono uxp-hidden"><i class="fas fa-calendar-day fa-2xl azul-siigo"></i></div>
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero"><strong>Fecha:</strong> 12 de febrero</p>
+          </article>
+          <article class="uxp-flex-1 tarjeta-info">
+            <div class="tarjeta-info-icono uxp-hidden-desktop"><i class="fas fa-hourglass-half fa-xl azul-siigo"></i>&nbsp;&nbsp;</div>
+            <div class="tarjeta-info-icono uxp-hidden"><i class="fas fa-hourglass-half fa-2xl azul-siigo"></i></div>
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero"><strong>Hora:</strong> 5 a 9 pm</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- BLOQUE 3 - Comprende, aplica y evalúa  -->
+      <section class="uxp-ancho-completo uxp-fondo-blanco">
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila">
+          <figure>
+            <img class="uxp-borde-redondeado" src="https://cdn.actualicese.com/wp-content/uploads/2025/11/26172022/Reclutacion-con-tecnologia-en-linea-desempleo-busqueda-de-trabajo-busqueda-de-curriculum-registro-entrevista-de-trabajo-encontrar-su-carrera.jpg" alt="Profesionales en capacitación sobre estrategia tributaria" width="600" height="100%">
+          </figure>
+          <div class="uxp-margen-izquierdo">
+            <p class="uxp-texto-precios"><strong class="azul-siigo">¿Está tu estrategia tributaria blindada para el cierre del 2025? </strong></p>
+            <div class="uxp-margen-superior uxp-margen-inferior uxp-linea-corta bg-azul-osc-siigo"></div>
+            <p>La declaración de renta de personas jurídicas es uno de los procesos más sensible para cualquier empresa. Un error en la conciliación o un beneficio mal aplicado no solo es una falla técnica; es una puerta abierta a sanciones onerosas y procesos de fiscalización de la DIAN.</p>
+            <p><strong class="azul-osc-siigo">¿Por qué asistir de forma presencial?</strong></p>
+            <ul class="uxp-lista-datos">
+              <li><strong>Networking Directo:</strong> Conecte con colegas y expertos del sector.</li>
+              <li><strong>Resolución de Dudas:</strong> Espacio de preguntas en tiempo real con Diego Guevara.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE 4 - Contenido del Libro Digital -->
+      <section class="uxp-ancho-completo uxp-fondo-blanco">
+        <div style="padding: 50px; background-color: #7bc0f5;" class="uxp-grid-contenedor-ruta uxp-relleno-superior uxp-relleno-inferior uxp-borde-redondeado">
+
+          <div class="uxp-flex-fila uxp-align-items-flex-end">
+            <article class="uxp-flex-1 uxp-borde-redondeado">
+              <p class="uxp-texto-precios"><strong class="uxp-txt-blanco">Nuestra agenda está estructurada para cubrir los puntos críticos que la DIAN vigilará en 2026</strong></p>
+              <div class="uxp-margen-superior uxp-margen-inferior uxp-linea-corta bg-azul-osc-siigo"></div>
+              <div class="caja-contenido">
+                <p><strong class="azul-osc-siigo">Determinación de la renta líquida</strong></p>
+                <p class="uxp-relleno-izquierdo"><strong>A. Ingresos fiscales</strong></p>
+                <ul class="uxp-lista-datos">
+                  <li>Realización del ingreso.</li>
+                  <li>Ingresos gravados e ingresos no constitutivos de renta ni ganancia ocasional.</li>
+                  <li>Tratamiento de ingresos financieros, dividendos y ganancias ocasionales.</li>
+                </ul>
+                <p class="uxp-relleno-izquierdo"><strong>B. Costos y deducciones</strong></p>
+                <ul class="uxp-lista-datos">
+                  <li>Requisitos generales y específicos.</li>
+                  <li>Costos por ventas, servicios y construcción.</li>
+                  <li>Deducciones laborales: nómina electrónica, aportes y provisiones.</li>
+                  <li>Intereses, descuentos, deterioros, castigos y provisiones.</li>
+                  <li>Límites y rechazos frecuentes por la Dian.</li>
+                </ul>
+                <p class="uxp-relleno-izquierdo"><strong>C. Beneficios tributarios AG 2025</strong></p>
+                <ul class="uxp-lista-datos">
+                  <li>Rentas exentas y deducciones especiales.</li>
+                  <li>Incentivos: economía naranja, ZOMAC, ZESE, entre otros.</li>
+                  <li>Descuentos tributarios: impuestos locales, ICA, energías renovables, donaciones.</li>
+                  <li>Límites de beneficios y control por parte de la Dian.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="uxp-flex-1 uxp-borde-redondeado">
+              <div class="caja-contenido uxp-margen-inferior">
+                <p><strong class="azul-osc-siigo">Clasificación y responsabilidades de la persona jurídica</strong></p>
+                <ul class="uxp-lista-datos uxp-margen-inferior-cero">
+                  <li>Régimen ordinario vs. régimen especial vs. SIMPLE (impactos en renta).</li>
+                  <li>Residencia fiscal y sus efectos.</li>
+                  <li>Responsabilidad en IVA, ICA y retenciones, y su incidencia en renta.</li>
+                  <li>Entidades no contribuyentes y régimen de excepción.</li>
+                </ul>
+              </div>
+              <div class="caja-contenido uxp-margen-inferior">
+                <p><strong class="azul-osc-siigo">Contabilidad fiscal para el AG 2025</strong></p>
+                <ul class="uxp-lista-datos uxp-margen-inferior-cero">
+                  <li>Conciliación contable-fiscal: formato 2516 versión 2026.</li>
+                  <li>Políticas NIIF con impacto fiscal (ingresos, deterioros, depreciaciones y estimaciones).</li>
+                  <li>Control de diferencias temporarias y permanentes.</li>
+                  <li>Documentación soporte para efectos fiscales.</li>
+                </ul>
+              </div>
+              <div class="caja-contenido">
+                <p><strong class="azul-osc-siigo">Tarifa del impuesto y cálculo del impuesto neto de renta</strong></p>
+                <ul class="uxp-lista-datos uxp-margen-inferior-cero">
+                  <li>Tarifas generales aplicables al AG 2025.</li>
+                  <li>Tarifas especiales por tipo de entidad.</li>
+                  <li>Compensaciones: pérdidas fiscales y excesos de renta presuntiva.</li>
+                  <li>Anticipos de renta 2026: cálculo y proyección.</li>
+                  <li>Descuentos tributarios imputables a la carga fiscal.</li>
+                  <li>Tasa mínima de tributación.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <p class="uxp-texto-centrado uxp-margen-superior uxp-relleno-superior">
+            <a class="uxp-margen-superior btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=https://actualicese.com/?add-to-cart=1035472">Registrarme</a>
+          </p>
+
+        </div>
+      </section>
+
+      <!-- BLOQUE 5 - Diego Guevara -->
+      <section class="uxp-ancho-completo uxp-fondo-blanco">
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-align-items-flex-end">
+          <figure>
+            <img src="https://actualicese.com/wp-content/uploads/2025/08/Diego-Guevara.jpg" alt="Diego Guevara, conferencista especialista en tributación" width="300" height="330">
+          </figure>
+          <div>
+            <p class="uxp-texto-precios"><strong class="azul-siigo">Conferencista:</strong></p>
+            <div class="uxp-margen-superior uxp-linea-corta bg-azul-osc-siigo uxp-margen-inferior"></div>
+            <p><strong class="azul-siigo">Diego Guevara</strong><br><strong>Uno de los referentes en impuestos de Colombia.</strong></p>
+            <p class="uxp-relleno-derecho">Contador público y especialista en tributación, reconocido a nivel nacional por su trayectoria como consultor, conferencista y analista técnico en materia fiscal. Es líder de investigación tributaria en Actualícese y referente permanente para contadores y asesores que buscan claridad, interpretación técnica y aplicación práctica de la normativa tributaria colombiana.</p>
+            <p class="uxp-relleno-derecho">Su enfoque pedagógico combina el rigor normativo con el análisis práctico de los criterios de la Dian, la jurisprudencia y los principales puntos de fiscalización, facilitando la comprensión y correcta aplicación de las normas en escenarios reales.</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- BLOQUE 6 - Esta capacitación es para ti si -->
+      <section class="uxp-ancho-completo uxp-fondo-blanco">
+        <div class="uxp-grid-contenedor-ruta uxp-relleno-inferior uxp-flex-fila uxp-align-items-flex-end">
+          <div>
+            <p class="uxp-texto-precios"><strong class="azul-siigo">Esta capacitación es para ti si…</strong></p>
+            <div class="uxp-margen-superior uxp-linea-corta bg-azul-osc-siigo uxp-margen-inferior"></div>
+            <ul class="uxp-lista-datos">
+              <li>Vas a preparar o revisar declaraciones de renta del AG 2025.</li>
+              <li>Quieres tener control técnico antes de la presión de mayo.</li>
+              <li>Necesitas argumentos sólidos frente a fiscalización de la DIAN.</li>
+              <li>Buscas posicionarte como experto(a) en tu empresa o ante tus clientes.</li>
+              <li>Quieres anticiparte a riesgos y brindar asesoría con mayor seguridad jurídica.</li>
+            </ul>
+          </div>
+          <figure class="uxp-relleno-izquierdo">
+            <img class="uxp-borde-redondeado" src="https://cdn.actualicese.com/wp-content/uploads/2025/12/22161619/Esta-capacitacion-es-para-ti-si-550-180.jpg" alt="Esta capacitación es para profesionales que buscan actualización tributaria" width="550" height="200">
+          </figure>
+        </div>
+      </section>
+
+      <!-- BLOQUE 7 - Bloque producto final -->
+      <section style="background: url('https://cdn.actualicese.com/wp-content/uploads/2025/12/23114339/Prepararse-no-es-opcional.-es-una-ventaja-estrategica-2.jpg') center center/cover no-repeat; width:100%;" class="uxp-ancho-completo uxp-relleno-superior uxp-relleno-inferior">
+        
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-relleno-superior uxp-relleno-inferior">
+          <div class="uxp-flex-2 uxp-txt-negro uxp-texto-centrado">
+            <p class="uxp-texto-precios uxp-margen-superior-cero uxp-margen-inferior-cero"><strong class="azul-siigo">Prepararse no es opcional.</strong></p>
+            <p class="uxp-texto-banner uxp-margen-superior-cero uxp-margen-inferior-cero"><strong class="azul-osc-siigo">Es una ventaja estratégica</strong></p>
+            <div class="uxp-margen-superior uxp-linea-corta uxp-fondo-blanco" style="margin-left:auto; margin-right:auto;"></div>
+            <p class="texto-ancho-limitado uxp-texto-centrado uxp-margen-superior uxp-relleno-inferior uxp-relleno-superior">El cumplimiento seguro marca la diferencia entre el éxito profesional y una contingencia costosa para tu empresa o clientes.</p>
+            <p class="uxp-texto-precios uxp-relleno-inferior"><strong class="azul-osc-siigo">$199.900 + IVA</strong></p>
+            <p class="uxp-margen-inferior"><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=https://actualicese.com/?add-to-cart=1035472">Quiero registrarme</a></p>
+          </div>
+        </div>
+      </section>
+  </body>
+</html>

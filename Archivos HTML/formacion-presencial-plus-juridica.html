@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../hoja-style-mariluz.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/scss/_grid.scss">
+
+<!-- ------------ -->
+
+<link rel='stylesheet' id='tabs-block-css-css' href='https://actualicese.com/wp-content/plugins/tabs-block/css/tabs-block.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='color_section-gosign-style-css-css' href='https://actualicese.com/wp-content/plugins/gosign-background-container/dist/blocks.style.build.css?ver=6.9%27 type='text/css' media='all' />
+<link rel='stylesheet' id='fontAwesome-css' href='https://actualicese.com/wp-content/plugins/lightbox-block/assets/css/font-awesome.min.css?ver=6.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-free-css' href='https://actualicese.com/wp-content/plugins/getwid/vendors/fontawesome-free/css/all.min.css?ver=5.5.0%27 type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css' href='https://actualicese.com/wp-content/plugins/getwid/vendors/slick/slick/slick.min.css?ver=1.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-theme-css' href='https://actualicese.com/wp-content/plugins/getwid/vendors/slick/slick/slick-theme.min.css?ver=1.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mp-fancybox-css' href='https://actualicese.com/wp-content/plugins/getwid/vendors/mp-fancybox/jquery.fancybox.min.css?ver=3.5.7-mp.1%27 type='text/css' media='all' />
+<link rel='stylesheet' id='getwid-blocks-css' href='https://actualicese.com/wp-content/plugins/getwid/assets/css/blocks.style.css?ver=2.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='fca-ept-layout2-css' href='https://actualicese.com/wp-content/plugins/pricing-table-blocks/includes/layouts/block-layout2.css?ver=1.0.1%27 type='text/css' media='all' />
+<link rel='stylesheet' id='gosign-gallery-box-slick-slider-css-css' href='https://actualicese.com/wp-content/plugins/gosign-gallery-box-block/assets/vendor/slick/css/slick.min.css?ver=6.9%27 type='text/css' media='all' />
+<link rel='stylesheet' id='gosign-gallery-box-slick-slider-css-theme-css' href='https://actualicese.com/wp-content/plugins/gosign-gallery-box-block/assets/vendor/slick/css/slick-theme.min.css?ver=6.9%27 type='text/css' media='all' />
+<link rel='stylesheet' id='gosign-gallery-box-fancybox-css-css' href='https://actualicese.com/wp-content/plugins/gosign-gallery-box-block/assets/vendor/fancybox/dist/jquery.fancybox.min.css?ver=6.9%27 type='text/css' media='all' />
+<link rel='stylesheet' id='gosign-gallery-box-block-frontend-css-css' href='https://actualicese.com/wp-content/plugins/gosign-gallery-box-block/blocks/style.min.css?ver=1678218751%27 type='text/css' media='all' />
+<link rel='stylesheet' id='cta-gutenberg-font-css' href='https://fonts.googleapis.com/css2?family=Lato%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C700&#038;display=swap&#038;ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='act-bootstrap-style-css' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='act-fontawesome-style-css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='act-main-style-css' href='https://actualicese.com/wp-content/themes/actualicese2025/assets/css/styles.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='act-main-style-responsive-css' href='https://actualicese.com/wp-content/themes/actualicese2025/assets/css/responsive.css?ver=6.9' type='text/css' media='all' />
+
+<!-- ------------ -->
+
+
+
+
+<style>
+  .azul-siigo {color: #00a4ff;}
+  .azul-osc-siigo {color: #003468;}
+  .amarillo-siigo {color: #ffc413;}
+
+  .bg-azul-siigo {background-color: #00a4ff;}
+  .bg-azul-osc-siigo {background-color: #003468;}
+  .amarillo-osc-siigo {background-color: #ffc413;}
+
+  .uxp-lista-datos li::marker { color: #00a4ff !important;}
+
+    /* Contenedor de tarjetas */
+    .contenedor-tarjetas {
+    justify-content: center;
+    margin-top: -70px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Clases reutilizables para tarjetas */
+  .tarjeta-info {
+    box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+    background: #fff;
+    padding: 30px 50px;
+    text-align: center;
+  }
+  
+  /* Cajas de contenido */
+  .caja-contenido {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+    /* Cajas de contenido */
+    .caja-contenido2 {
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  /* Clases de visibilidad */
+  .uxp-hidden { display: block; }
+  .uxp-hidden-desktop { display: none; }
+
+  .barra-inferior-fija {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #21376a; /* azul siigo */
+      text-align: center;
+      padding: 14px 10px 13px 10px;
+      font-size: 18px;
+      z-index: 1000;
+      font-weight: 600;
+      box-shadow: 0 -2px 12px rgba(33,55,106,0.04);
+      letter-spacing: .01em;
+    }
+
+    .padding_especial {
+      padding: 50px;
+    }
+
+  @media (max-width: 600px) {
+
+    .padding_especial {
+      padding: 30px;
+    }
+
+      #ciudad .uxp-flex-fila{
+      flex-direction: column;
+      align-items: stretch !important;
+    }
+
+    #ciudad figure{
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    #ciudad figure img{
+      width: 100% !important;
+      height: auto !important;
+      display: block;
+      border-radius: 12px 12px 0 0;
+    }
+
+    #ciudad .uxp-flex-1{
+      width: 100%;
+    }
+
+    #ciudad .uxp-borde-redondeado > div{
+      padding: 16px !important;
+    }
+
+    #ciudad .uxp-align-items-flex-end{
+      align-items: stretch !important;
+    }
+
+    #ciudad a{
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .barra-inferior-fija {
+      font-size: 15px;
+      padding: 12px 5px 11px 5px;
+    }
+
+    .uxp-grid-contenedor-ruta {
+      margin: 24px 8px;
+      max-width: 100%;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .uxp-flex-fila {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .uxp-flex-2, .uxp-flex-1 {
+      width: 100%;
+    }
+    .uxp-texto-banner {
+      font-size: 28px !important;
+      line-height: 32px !important;
+    }
+    .uxp-texto-precios {
+    font-size: 18px !important;
+    line-height: 22px !important;
+    }
+    .uxp-margen-izquierdo img {
+      width: 100% !important;
+      height: auto !important;
+      margin-left: 0 !important;
+    }
+    .uxp-linea-corta {
+      width: 50% !important;
+    }
+    .btn-actu-amarillo {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    }
+    
+    /* BLOQUE 1 */
+    section:first-of-type {
+      height: auto !important;
+      padding: 24px 16px !important;
+    }
+    
+    /* BLOQUE 2 */
+    section:nth-of-type(2) .uxp-grid-contenedor-ruta {
+      margin-top: -40px !important;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    section:nth-of-type(2) article {
+      flex: 1 1 calc(50% - 8px);
+      min-width: calc(50% - 8px);
+    }
+    section:nth-of-type(2) article:last-of-type {
+      flex: 1 1 100%;
+      min-width: 100%;
+    }
+    .uxp-hidden { display: none; }
+    .uxp-hidden-desktop { display: inline; }
+    
+    /* BLOQUE 3 */
+    section:nth-of-type(3) .uxp-flex-fila {
+      flex-direction: column;
+    }
+    section:nth-of-type(3) figure {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    section:nth-of-type(3) figure img {
+      width: 100% !important;
+      height: auto !important;
+    }
+    section:nth-of-type(3) .uxp-margen-izquierdo {
+      margin-left: 0;
+    }
+    
+    /* BLOQUE 4 */
+    section:nth-of-type(4) > div {
+      padding: 24px 16px !important;
+    }
+    section:nth-of-type(4) .uxp-flex-fila {
+      flex-direction: column;
+      align-items: stretch !important;
+    }
+    section:nth-of-type(4) article {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    
+    section:nth-of-type(4) article:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .caja-contenido {
+      padding: 20px !important;
+    }
+    
+    /* BLOQUE 5 */
+    section:nth-of-type(5) .uxp-flex-fila {
+      flex-direction: column;
+      align-items: center !important;
+    }
+    section:nth-of-type(5) figure {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    section:nth-of-type(5) figure img {
+      width: 200px !important;
+      height: auto !important;
+      max-width: 100%;
+    }
+    section:nth-of-type(5) .uxp-relleno-derecho {
+      padding-right: 0;
+    }
+    
+    /* BLOQUE 6 */
+    section:nth-of-type(6) .uxp-flex-fila {
+      flex-direction: column;
+      align-items: stretch !important;
+    }
+    section:nth-of-type(6) figure {
+      width: 100%;
+      margin-top: 16px;
+    }
+    section:nth-of-type(6) figure.uxp-relleno-izquierdo {
+      padding-left: 0;
+    }
+    section:nth-of-type(6) figure img {
+      width: 100% !important;
+      height: auto !important;
+    }
+    
+    /* BLOQUE 7 */
+    section:last-of-type {
+      height: auto !important;
+      padding: 40px 16px !important;
+      background-size: cover !important;
+    }
+    section:last-of-type .uxp-flex-2 {
+      width: 100%;
+    }
+
+    section:last-of-type .uxp-texto-banner {
+    font-size: 32px !important;
+    line-height: 38px !important;
+    }
+
+    .tarjeta-info {
+      padding: 20px 16px;
+    }
+
+    .uxp-tabla-datos {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .uxp-tabla-datos th,
+    .uxp-tabla-datos td {
+      padding: 10px 8px !important;
+      font-size: 14px;
+    }
+  }
+
+</style>
+  
+</head>
+  <body>
+
+    <!-- BLOQUE 1 - Banner principal -->   
+    <section class="uxp-ancho-completo uxp-relleno-superior uxp-relleno-inferior bg-azul-osc-siigo">        
+  
+      <div class="uxp-grid-contenedor-ruta uxp-flex-fila">
+
+        <div class="uxp-flex-2 uxp-texto-izquierda uxp-margen-inferior">
+
+          <p style="margin-bottom: 7px;">
+
+            <span style="display: inline-block; padding: 2px 4px;" class="bg-azul-siigo uxp-txt-blanco uxp-borde-redondeado">&nbsp;Capacitación presencial +&nbsp;</span>&nbsp;
+
+            <span style="display: inline-block; padding: 2px 4px;" class="bg-azul-siigo uxp-txt-blanco uxp-borde-redondeado">&nbsp;Marzo y abril 2026&nbsp;</span>&nbsp;
+
+            <span style="display: inline-block; padding: 2px 4px;" class="bg-azul-siigo uxp-txt-blanco uxp-borde-redondeado">&nbsp;5 Ciudades&nbsp;</span>
+
+          </p>
+
+          <p class="uxp-texto-banner uxp-margen-superior-cero uxp-margen-inferior-cero uxp-txt-blanco"><strong>Presenta la Renta de tus empresas sin errores, sin sanciones y sin improvisar. </strong></p>
+
+          <p class="uxp-relleno-superior uxp-txt-blanco"><strong class="amarillo-siigo">Actualícese Capacitación Presencial+</strong> es la única experiencia que combina actualización con IA, capacitación presencial con los mejores expertos del país, herramientas listas para ejecutar el Formulario 110 y asesoría personalizada — todo en un solo producto, con un solo pago. </p>
+
+          <div class="uxp-margen-inferior uxp-relleno-superior uxp-relleno-inferior uxp-margen-superior">
+            <a class="uxp-margen-superior btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="#ciudad">Quiero prepararme y asegurar mi cupo</a>
+          </div>
+
+        </div>
+
+        <div class="uxp-margen-inferior">
+
+          <figure class="uxp-flex-1 uxp-hidden">
+            <img class="uxp-margen-izquierdo uxp-borde-redondeado" src="https://actualicese.com/wp-content/uploads/2026/03/Capacitacion-plus3.jpg" width="600" height="450" loading="eager" alt="Capacitación presencial sobre declaración de renta de personas jurídicas AG 2025">
+          </figure>
+
+        </div>
+
+      </div>
+  
+    </section>
+  
+    <!-- BLOQUE 2 - Tarjetas con iconos -->   
+    <section class="uxp-ancho-completo uxp-relleno-superior uxp-fondo-gris-claro">
+
+      <div style="max-width: 800px;" class="uxp-grid-contenedor-ruta contenedor-tarjetas">
+
+        <article class="tarjeta-info" style="border-radius: 15px 15px 0px 0px;">
+          <p class="uxp-margen-superior-cero uxp-margen-inferior-cero" style="font-size:20px;">⭐⭐⭐⭐⭐</p>
+
+          <p class="uxp-margen-superior-cero uxp-margen-inferior-cero"><strong style="color: #6cb9f1;">"</strong> Por primera vez llegué al vencimiento de renta con claridad total. <br> Supe exactamente cómo depurar, qué deducir y cómo sustentarlo."</p>
+
+          <p class="uxp-margen-inferior-cero"><strong> — Carlos M., Director Financiero, Bogotá</strong></p>
+        </article>
+
+        <article class="bg-azul-siigo uxp-txt-blanco" style="padding: 5px 2px; border-radius: 0px 0px 15px 15px;">
+          <p class="uxp-texto-centrado uxp-margen-inferior-cero">🎓 +30.000 profesionales formados por Actualícese · 📍 Medellín · Cali · Bogotá · Barranquilla </p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- BLOQUE 3 - Esta capacitación es para ti si -->
+    <section class="uxp-ancho-completo uxp-fondo-gris-claro">
+
+      <div class="uxp-grid-contenedor-ruta uxp-margen-superior uxp-margen-inferior">
+
+        <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong>¿Alguna de estas situaciones te resulta conocida?</strong></p>
+        <span class="uxp-elemento-centrado"><span class="uxp-linea-corta bg-azul-siigo"></span></span>
+      
+      </div>
+
+      <!-- Bloque 1 -->
+      <div style="margin-top: 50px;" class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-align-items-flex-end">
+
+        <div>
+
+          <div style="padding: 20px 25px; margin-bottom: 25px;" class="uxp-bloque-dato uxp-borde-redondeado uxp-fondo-blanco">
+            <strong class="azul-siigo">
+              
+              <span style="display: inline-block; padding: 1px 3px; border-radius: 5px;" class="bg-azul-siigo "><i class="fa-solid fa-question uxp-txt-blanco"></i>
+              </span>
+              
+              &nbsp;Llegas al vencimiento con dudas sin resolver</strong> — estudias la norma, pero no tienes certeza de que la estás aplicando bien en tus empresas o clientes
+          </div>
+
+          <div style="padding: 20px 25px; margin-bottom: 25px;" class="uxp-bloque-dato uxp-borde-redondeado uxp-fondo-blanco">
+            <strong class="azul-siigo">
+              
+              <span style="display: inline-block; padding: 1px 3px; border-radius: 5px;" class="bg-azul-siigo uxp-txt-blanco"><i class="fas fa-hourglass-half"></i>
+              </span>
+              
+              &nbsp;La norma cambia cada año y el tiempo para asimilarla no alcanza</strong> — reformas, decretos y resoluciones nuevas que impactan directamente la declaración del año gravable 2025
+          </div>
+
+          <div style="padding: 20px 25px;" class="uxp-bloque-dato uxp-borde-redondeado uxp-fondo-blanco">
+            <strong class="azul-siigo">
+              
+              <span style="display: inline-block; padding: 1px 3px; border-radius: 5px;" class="bg-azul-siigo uxp-txt-blanco"><i class="fas fa-search"></i>
+              </span>
+
+              &nbsp;La DIAN cruza tu declaración contra todo</strong> — exógena, retenciones, factura electrónica y estados financieros. Un dato inconsistente puede detonar un requerimiento que arrastre otras obligaciones
+          </div>
+          
+        </div>
+
+        <figure class="uxp-relleno-izquierdo uxp-margen-inferior-cero uxp-hidden">
+          <img class="uxp-borde-redondeado" src="https://actualicese.com/wp-content/uploads/2026/03/Ren-jurid.jpg" alt="Esta capacitación es para profesionales que buscan actualización tributaria" width="322" height="314">
+        </figure>
+
+      </div>
+
+      <!-- Bloque 2 -->
+      <div style="margin-top: 50px;" class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-align-items-flex-end">
+
+        <figure class="uxp-relleno-derecho uxp-margen-inferior-cero">
+          <img class="uxp-borde-redondeado" src="https://actualicese.com/wp-content/uploads/2026/03/Ren-jurid-2.jpg" alt="Esta capacitación es para profesionales que buscan actualización tributaria" width="322" height="314">
+        </figure>
+
+        <div>
+
+          <div style="padding: 20px 25px; margin-bottom: 25px;" class="uxp-bloque-dato uxp-fondo-blanco uxp-borde-redondeado">
+            <strong class="azul-siigo">
+              
+              <span style="display: inline-block; padding: 1px 3px; border-radius: 5px;" class="bg-azul-siigo uxp-txt-blanco"><i class="fas fa-balance-scale"></i>
+              </span>
+
+              &nbsp;Las diferencias contable-fiscales te generan inseguridad</strong> — sabes cerrar contablemente, pero traducir eso al Formulario 110 con los ajustes fiscales correctos es otra historia
+          </div>
+
+          <div style="padding: 20px 25px; margin-bottom: 25px;" class="uxp-bloque-dato uxp-fondo-blanco uxp-borde-redondeado">
+            <strong class="azul-siigo">
+
+              <span style="display: inline-block; padding: 1px 3px; border-radius: 5px;" class="bg-azul-siigo uxp-txt-blanco"><i class="fas fa-dollar-sign"></i>
+              </span>
+              
+              &nbsp;No estás seguro de si tus clientes están aprovechando todos los beneficios tributarios</strong> — deducciones y rentas exentas que existen, que son legales, y que por desconocimiento no se aplican
+          </div>
+
+          <div style="padding: 20px 25px;" class="uxp-bloque-dato uxp-fondo-blanco uxp-borde-redondeado">
+            <strong class="azul-siigo">
+              
+              <span style="display: inline-block; padding: 1px 3px; border-radius: 5px;" class="bg-azul-siigo uxp-txt-blanco"><i class="fas fa-exclamation-triangle"></i>
+              </span>
+
+              &nbsp;El miedo a la sanción siempre está presente</strong> — una inexactitud puede costar el 100% del mayor impuesto liquidado, y eso no es un riesgo que quieras correr
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- BLOQUE 4 - Tabla - Actualícese Capacitación Presencial -->
+    <section class="uxp-ancho-completo uxp-relleno-superior uxp-relleno-inferior uxp-fondo-blanco">
+
+      <div class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-align-items-flex-end ">
+        
+        <div class="uxp-flex-1 uxp-margen-superior">
+
+          <img class="uxp-relleno-inferior" src="https://actualicese.com/wp-content/uploads/2026/03/Logo-actualicese-presencial.jpg" alt="">
+
+          <p class="uxp-texto-precios uxp-relleno-superior uxp-margen-derecho uxp-relleno-derecho"><strong>Cierra todas esas brechas. De una sola vez.</strong></p>
+
+          <div class="uxp-margen-superior uxp-linea-corta bg-azul-siigo uxp-margen-inferior"></div>
+
+          <p class="uxp-relleno-superior uxp-margen-derecho">Durante más de 20 años, <strong>Actualícese ha formado a los profesionales contables y tributarios</strong> más preparados de Colombia.</p>
+          
+          <p class="uxp-margen-derecho uxp-relleno-derecho uxp-margen-inferior-cero"><strong>Actualícese Capacitación Presencial+</strong> es nuestra experiencia más completa: diseñada específicamente para que llegues al vencimiento de mayo<strong> sin una sola duda</strong> sin resolver.</p>
+          
+        </div>
+
+        <!-- Tabla -->
+        <div class="uxp-flex-2 uxp-margen-inferior-cero">
+          <table class="uxp-tabla-datos" style="width:100%; border-collapse: collapse;">
+            <thead>
+              <tr class="uxp-margen-inferior uxp-relleno-inferior uxp-texto-centrado">
+                <th style="padding: 12px 18px; border: 3px solid #fff !important; border-radius: 15px 15px 0px 0px;" class="uxp-txt-blanco bg-azul-osc-siigo">Resultado que obtienes</th>
+                <th style="padding: 12px 18px; border: 3px solid #fff !important; border-radius: 15px 15px 0px 0px;" class="uxp-txt-blanco bg-azul-osc-siigo">Cómo lo logras</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;" class="azul-osc-siigo">
+                  <strong>
+                    <span style="display: inline-block; padding: 1px 3px; border-radius: 5px; background-color: #4dbc25;"><i class="fas fa-file-alt uxp-txt-blanco"></i></span>
+                    Llegas preparado a la capacitación, con las preguntas que importan
+                  </strong>
+
+                </td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important;">
+                  <strong>Actualización</strong><br>
+                  Google Notebook LM entrenado con el conocimiento de Actualícese sobre Renta de Jurídicas año gravable 2025
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 13px 20px 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;" class="azul-osc-siigo">
+                  <strong>
+                    <span style="display: inline-block; padding: 1px 3px; border-radius: 5px;" class="bg-azul-siigo "><i class="fas fa-book uxp-txt-blanco"></i></span>
+                    Dominas los casos reales, no solo la teoría
+                  </strong>
+                </td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important;">
+                  <strong>Capacitación presencial</strong><br>
+                  Con Alexander Cobo en Bogotá, Medellín, Cali y Barranquilla 
+                  </td>
+              </tr>
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;" class="azul-osc-siigo">
+                  <strong>
+                    <span style="display: inline-block; padding: 1px 3px; border-radius: 5px; background-color: #ffc413;"><i class="fas fa-tools uxp-txt-blanco"></i></span>
+                    Ejecutas el Formulario 110 sin construir nada desde cero
+                  </strong>
+                </td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important;">
+                  <strong>Herramientas</strong><br>
+                  Con Actualícese 110.xls, nuestra herramienta avanzada en Excel para generar el borrador del formulario 110 y formato 2516 para AG 2025. Rápida, fácil y precisa.   
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;" class="azul-osc-siigo">
+                  <strong>
+                    <span style="display: inline-block; padding: 1px 3px; border-radius: 5px; background-color: #ff224e;"><i class="fas fa-hands-helping uxp-txt-blanco"></i></span>
+                    Tienes respaldo experto cuando aparecen los casos difíciles
+                  </strong>
+                </td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important;">
+                  <strong>Asesoría</strong><br>
+                  Sesión virtual grupal de 1 hora con experto en el tema <br>
+                  + IA especializada <br>
+                  + Asesor personal disponible durante todo el proceso <br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    <div class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-margen-superior">
+
+      <div class="caja-contenido2 uxp-flex-fila uxp-align-items-flex-start">
+
+        <article style="padding: 25px;" class="uxp-borde-redondeado uxp-flex-1 uxp-fondo-gris-claro uxp-texto-centrado">
+          <div class="simple-carousel" style="position:relative; max-width:340px; margin:auto;">
+            <img src="https://actualicese.com/wp-content/uploads/2025/12/Notebook-cp-plus-exogena.png" class="carousel-img" style="width:100%; display:block; border-radius:10px;">
+            <img src="https://actualicese.com/wp-content/uploads/2025/12/Notebook-cp-plus-exogena-2.png" class="carousel-img" style="width:100%; display:none; border-radius:10px;">
+            <img src="https://actualicese.com/wp-content/uploads/2025/12/Notebook-cp-plus-exogena-3.png" class="carousel-img" style="width:100%; display:none; border-radius:10px;">
+            <button type="button" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; padding:6px 10px; cursor:pointer; font-weight:bold;">&#10094;</button>
+            <button type="button" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; padding:6px 10px; cursor:pointer; font-weight:bold;">&#10095;</button>
+          </div>
+          <p class="uxp-texto-precios uxp-relleno-superior uxp-margen-derecho uxp-relleno-derecho azul-siigo"><strong>Actualización</strong></p>
+          <p class="uxp-margen-superior-cero uxp-margen-inferior-cero"> Google Notebook LM entrenado con el conocimiento de Actualícese sobre la resolución de Exógena año gravable 2025 — analiza cambios, responde preguntas específicas por formato</p>
+        </article>
+
+        <article style="padding: 25px;" class="uxp-borde-redondeado uxp-flex-1 uxp-fondo-gris-claro uxp-texto-centrado">
+          <div class="simple-carousel" style="position:relative; max-width:340px; margin:auto;">
+            <img src="https://actualicese.com/wp-content/uploads/2025/12/Asesoria-cp-plus-exogena.png" class="carousel-img" style="width:100%; display:block; border-radius:10px;">
+            <img src="https://actualicese.com/wp-content/uploads/2025/12/Asesoria-cp-plus-exogena-2.png" class="carousel-img" style="width:100%; display:none; border-radius:10px;">
+            <img src="https://actualicese.com/wp-content/uploads/2025/12/Asesoria-cp-plus-exogena-3.png" class="carousel-img" style="width:100%; display:none; border-radius:10px;">
+            <button type="button" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; padding:6px 10px; cursor:pointer; font-weight:bold;">&#10094;</button>
+            <button type="button" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; padding:6px 10px; cursor:pointer; font-weight:bold;">&#10095;</button>
+          </div>
+          <p class="uxp-texto-precios uxp-relleno-superior uxp-margen-derecho uxp-relleno-derecho azul-siigo"><strong>Asesoría</strong></p>
+          <p class="uxp-margen-superior-cero uxp-margen-inferior-cero">Sesión virtual grupal con experto <br>+ IA especializada en exógena <br>+ Asesor personal disponible durante todo tu proceso de preparación.</p>
+        </article>
+
+        <article style="padding: 25px;" class="uxp-borde-redondeado uxp-flex-1 uxp-fondo-gris-claro uxp-texto-centrado">
+          <div class="simple-carousel" style="position:relative; max-width:340px; margin:auto;">
+            <img src="https://cdn.actualicese.com/wp-content/uploads/2026/01/13163015/Img2-hi-exogena-2025.png" class="carousel-img" style="width:100%; display:block; border-radius:10px;">
+            <img src="https://cdn.actualicese.com/wp-content/uploads/2026/01/13163307/Img4-hi-exogena-2025.png" class="carousel-img" style="width:100%; display:none; border-radius:10px;">
+            <img src="https://cdn.actualicese.com/wp-content/uploads/2026/01/13163310/Img5-hi-exogena-2025.png" class="carousel-img" style="width:100%; display:none; border-radius:10px;">
+            <button type="button" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; padding:6px 10px; cursor:pointer; font-weight:bold;">&#10094;</button>
+            <button type="button" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; padding:6px 10px; cursor:pointer; font-weight:bold;">&#10095;</button>
+          </div>
+          <p class="uxp-texto-precios uxp-relleno-superior uxp-margen-derecho uxp-relleno-derecho azul-siigo"><strong>Herramientas</strong></p>
+          <p class="uxp-margen-superior-cero uxp-margen-inferior-cero">Actualícese Exógena.xls AG 2025. Nuestra herramienta avanzada en Excel que transforma la complejidad de los formatos en un proceso fluido, automatizado y seguro.</p>
+        </article>
+
+        <script>
+          // Carrusel independiente por cada .simple-carousel
+          function initCarousels() {
+            var carousels = document.querySelectorAll('.simple-carousel');
+            carousels.forEach(function(carousel) {
+              var imgs = carousel.querySelectorAll('.carousel-img');
+              var prevBtn = carousel.querySelectorAll('button')[0];
+              var nextBtn = carousel.querySelectorAll('button')[1];
+              var curIdx = 0;
+
+              function showImg(idx) {
+                imgs.forEach(function(img, i) {
+                  img.style.display = i === idx ? 'block' : 'none';
+                });
+              }
+
+              prevBtn.addEventListener('click', function() {
+                curIdx = (curIdx - 1 + imgs.length) % imgs.length;
+                showImg(curIdx);
+              });
+
+              nextBtn.addEventListener('click', function() {
+                curIdx = (curIdx + 1) % imgs.length;
+                showImg(curIdx);
+              });
+
+              showImg(curIdx);
+            });
+          }
+          // Esperar a que el DOM cargue
+          if (document.readyState !== 'loading') {
+            initCarousels();
+          } else {
+            document.addEventListener('DOMContentLoaded', initCarousels);
+          }
+        </script>
+
+      </div>
+
+    </div>
+
+    </section>
+
+    <!-- BLOQUE * - ¿Que incluye la experiencia Actualícese? -->
+    <section class="uxp-ancho-completo bg-azul-siigo">
+
+      <div class="uxp-grid-contenedor-ruta uxp-margen-inferior uxp-relleno-inferior">
+      
+        <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior uxp-txt-blanco"><strong>¿Cómo te gustaría participar en esta capacitación presencial?</strong></p>
+        <span class="uxp-elemento-centrado"><span class="uxp-linea-corta uxp-fondo-blanco"></span></span>
+
+      </div>
+
+      <div class="uxp-grid-contenedor-ruta uxp-margen-superior-cero uxp-margen-inferior-cero uxp-flex-fila">
+
+        <!-- Columna 1: Experiencia Actualícese -->
+          <div class="caja-contenido uxp-margen-inferior">
+
+            <p class="uxp-texto-precios"><strong class="azul-siigo">Experiencia general</strong></p>
+            <ul class="uxp-lista-datos">
+              <li>4 horas de formación presencial técnica de alto nivel.</li>
+              <li>Espacio de conexión con colegas y expertos.</li>
+              <li>Sesión de preguntas*: Resolución de inquietudes en vivo con el conferencista.</li>
+              <li>Certificado de asistencia: Respaldo de tu actualización profesional.</li>
+              <li>Kit de apuntes: Libreta y Lapicero para que anotes lo más relevante de tu experiencia.</li>
+            </ul>
+            <p class=""><i>*No garantizamos que todas las preguntas sean contestadas.</i></p>
+
+          </div>
+
+        <!-- Columna 2: Experiencia VIP -->
+          <div class="caja-contenido uxp-flex-1 uxp-margen-inferior">
+            <p class="uxp-texto-precios"><strong class="azul-siigo">Experiencia VIP</strong></p>
+
+            <p><strong>Todo lo de la experiencia general y además: </strong></p>
+            <ul class="uxp-lista-datos">
+              <li>20 sillas exclusivas disponibles.</li>
+              <li>Ubicación VIP en la primera fila.</li>
+              <li>Sesión privada al finalizar con el conferencista.</li>
+              <li>Tu pregunta recibe respuesta garantizada.</li>
+              <li>Foto individual con el ponente.</li>
+            </ul>
+
+          </div>
+
+      </div>
+
+      <div class="uxp-grid-contenedor-ruta uxp-margen-superior-cero">
+
+      </div>
+
+    </section>
+
+
+
+    <!-- BLOQUE 5 - Ciudades -->
+    <section id="ciudad" class="uxp-ancho-completo uxp-fondo-blanco">
+
+      <div class="uxp-grid-contenedor-ruta">
+
+        <div class="uxp-relleno-inferior uxp-margen-inferior">
+
+          <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong>Elige tu ciudad y asegura tu cupo antes de que se llene:</strong></p>
+          <span class="uxp-elemento-centrado"><span class="uxp-linea-corta bg-azul-siigo"></span></span>
+
+        </div>
+
+        <div style="gap: 25px !important; margin-bottom: 25px;" class="uxp-margen-superior-cero uxp-flex-fila uxp-align-items-flex-start">
+
+          <!-- Ciudad Medellin -->
+          <article class="uxp-flex-1">
+
+            <div style="background-color: #f5f5f5; border-radius: 10px 10px 0 0;" class="card-ciudad uxp-flex-fila">
+
+              <figure class="uxp-margen-inferior-cero">
+              <img style="border-radius: 10px 10px 0 0;" src="https://actualicese.com/wp-content/uploads/2026/03/Medellin-2.jpg" alt="" width="200" height="300">
+              </figure>
+
+              <div style="padding: 15px 15px 10px 5px;">
+
+                <p><strong style="font-size: 18px;" class="bg-azul-siigo uxp-txt-blanco uxp-borde-redondeado">&nbsp;&nbsp;Medellín – 16 de marzo 2026&nbsp;&nbsp;</strong></p>
+                <p class="uxp-margen-superior-cero"><strong>Lugar:</strong> Fundación Universitaria CEIPA Calle 77 Sur No. 40 - 165. Sabaneta. Auditorio Fundadores, piso 3.</p>
+
+                <div style="gap: 15px !important;" class="uxp-flex-fila uxp-align-items-flex-end">
+
+                  <div class="uxp-flex-1">
+                    <p class="uxp-margen-inferior-cero"><strong class="azul-siigo">Exp. General:</strong></p>
+                    <p class="uxp-margen-inferior-cero"><strong class="azul-osc-siigo">$249.950* + IVA</strong></p>
+                    <p style="font-size: 14px;">Antes: <s>$ 499.900 + IVA</s></p>
+                      
+                    <p><a style="padding: 6px 15px; display: block;" class="uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-texto-centrado" href="https://actualicese.com/?add-to-cart=1052816&coupon_code=20off_presenciales">Comprar</a></p>
+                  </div>
+
+                  <div class="uxp-flex-1">
+                    <p class="uxp-margen-inferior-cero"><strong class="azul-siigo">Exp. VIP:</strong></p>
+                    <p class="uxp-margen-inferior-cero"><strong class="azul-osc-siigo">$349.950* + IVA</strong></p>
+                    <p style="font-size: 14px;">Antes: <s>$ 699.900 + IVA</s></p>
+                    <p><a style="padding: 6px 15px; display: block;" class="uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-texto-centrado" href="https://actualicese.com/?add-to-cart=1052881&coupon_code=20off_presenciales_vip">Comprar</a></p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="uxp-texto-centrado uxp-txt-blanco" style="padding: 4px; background-color: #22a7f0; border-radius: 0 0 10px 10px; margin-bottom: 10px;">
+            <strong>Asesoría grupal virtual:</strong> <br> 18 de marzo de 2 a 3 p.m con Juan Fernando Mejía            
+            </div>
+
+          </article>
+
+          <!-- Ciudad Cali -->
+          <article class="uxp-flex-1">
+
+            <div style="background-color: #f5f5f5; border-radius: 10px 10px 0 0;" class="card-ciudad uxp-flex-fila">
+
+              <figure class="uxp-margen-inferior-cero">
+                <img style="border-radius: 10px 10px 0 0;" src="https://actualicese.com/wp-content/uploads/2026/03/Cali-1.jpg" alt="" width="200" height="300">
+              </figure>
+  
+              <div style="padding: 20px 15px 15px 5px;">
+                
+                <p><strong style="font-size: 18px;" class="bg-azul-siigo uxp-txt-blanco uxp-borde-redondeado">&nbsp;&nbsp;Cali - 17 de marzo 2026&nbsp;&nbsp;</strong></p>
+  
+                <p class="uxp-margen-superior-cero"><strong>Lugar:</strong> Universidad Santiago de Cali / Aula virtual: 6311; Bloque 6 Piso 3</p>
+  
+                <div style="gap: 15px !important;" class="uxp-flex-fila uxp-align-items-flex-end">
+  
+                  <div class="uxp-flex-1">
+                    <p class="uxp-margen-inferior-cero"><strong class="azul-siigo">Exp. General:</strong></p>
+                    <p class="uxp-margen-inferior-cero"><strong class="azul-osc-siigo">$249.950* + IVA</strong></p>
+                    <p style="font-size: 14px;">Antes: <s>$ 499.900 + IVA</s></p>
+                      
+                    <p><a style="padding: 6px 15px; display: block;" class="uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-texto-centrado" href="https://actualicese.com/?add-to-cart=1051581&coupon_code=20off_presenciales">Comprar</a></p>
+                  </div>
+  
+                  <div class="uxp-flex-1">
+  
+                    <p class="uxp-margen-inferior-cero"><strong class="azul-siigo">Exp. VIP:</strong></p>
+                    <p class="uxp-margen-inferior-cero"><strong class="azul-osc-siigo">$349.950* + IVA</strong></p>
+                    <p style="font-size: 14px;">Antes: <s>$ 699.900 + IVA</s></p>
+  
+                    <p><a style="padding: 6px 15px; display: block;" class="uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-texto-centrado" href="https://actualicese.com/?add-to-cart=1051608&coupon_code=20off_presenciales_vip">Comprar</a></p>
+                  </div>
+                </div>
+  
+              </div>
+
+            </div>
+
+            <div class="uxp-texto-centrado uxp-txt-blanco" style="padding: 4px; background-color: #22a7f0; border-radius: 0 0 10px 10px; margin-bottom: 10px;">
+              <strong>Asesoría grupal virtual:</strong> <br> 18 de marzo de 2 a 3 p.m con Juan Fernando Mejía            
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div style="gap: 25px !important; margin-bottom: 25px;" class="uxp-margen-superior-cero  uxp-flex-fila uxp-align-items-flex-start">
+
+          <!-- Ciudad Bogotá -->
+          <div style="background-color: #f5f5f5;" class="card-ciudad uxp-flex-1 uxp-flex-fila uxp-borde-redondeado">
+
+            <figure class="uxp-margen-inferior-cero">
+              <img class="uxp-borde-redondeado" src="https://actualicese.com/wp-content/uploads/2026/03/Bogtoa.jpg" alt="" width="200" height="300">
+            </figure>
+
+            <div style="padding: 20px 15px 15px 5px;">
+
+              <p><strong style="font-size: 18px;" class="bg-azul-siigo uxp-txt-blanco uxp-borde-redondeado">&nbsp;&nbsp;Bogotá - 08 de abril 2026&nbsp;&nbsp;</strong></p>
+              <p class="uxp-margen-superior-cero"><strong>Lugar:</strong> Calle 92 #11-51 piso 10. <br>Auditorio Edificio Microsoft</p>
+
+              <div style="gap: 15px !important;" class="uxp-flex-fila uxp-align-items-flex-end">
+
+                <div class="uxp-flex-1">
+                  <p class="uxp-margen-inferior-cero"><strong class="azul-siigo">Exp. General:</strong></p>
+                  <p class="uxp-margen-inferior-cero"><strong class="azul-osc-siigo">$249.950* + IVA</strong></p>
+                  <p style="font-size: 14px;">Antes: <s>$ 499.900 + IVA</s></p>
+                    
+                  <p><a style="padding: 6px 15px; display: block;" class="uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-texto-centrado" href="https://actualicese.com/?add-to-cart=1058218&coupon_code=20off_presenciales">Comprar</a></p>
+
+                </div>
+
+                <div class="uxp-flex-1">
+
+                  <p class="uxp-margen-inferior-cero"><strong class="azul-siigo">Exp. VIP:</strong></p>
+                  <p class="uxp-margen-inferior-cero"><strong class="azul-osc-siigo">$349.950* + IVA</strong></p>
+                  <p style="font-size: 14px;">Antes: <s>$ 699.900 + IVA</s></p>
+
+                  <p><a style="padding: 6px 15px; display: block;" class="uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-texto-centrado" href="https://actualicese.com/?add-to-cart=1058233&coupon_code=20off_presenciales_vip">Comprar</a></p>
+
+                  
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Ciudad Bquilla -->
+          <div style="background-color: #f5f5f5;" class="card-ciudad uxp-flex-1 uxp-flex-fila uxp-borde-redondeado">
+
+            <figure class="uxp-margen-inferior-cero">
+              <img class="uxp-borde-redondeado" src="https://actualicese.com/wp-content/uploads/2026/03/Bquilla.jpg" alt="" width="200" height="300">
+            </figure>
+
+            <div style="padding: 20px 15px 15px 5px;">
+
+              <p><strong style="font-size: 18px;" class="bg-azul-siigo uxp-txt-blanco uxp-borde-redondeado">&nbsp;&nbsp;Bquilla - 22 de abril 2026&nbsp;&nbsp;</strong></p>
+              <p class="uxp-margen-superior-cero"><strong>Lugar:</strong>Gran Salón de la Casa de eventos de la Universidad Autónoma Calle 88 # 46 137</p>
+
+
+              <div style="gap: 15px !important;" class="uxp-flex-fila uxp-align-items-flex-end">
+
+                <div class="uxp-flex-1">
+                  <p class="uxp-margen-inferior-cero"><strong class="azul-siigo">Exp. General:</strong></p>
+                  <p class="uxp-margen-inferior-cero"><strong class="azul-osc-siigo">$249.950* + IVA</strong></p>
+                  <p style="font-size: 14px;">Antes: <s>$ 499.900 + IVA</s></p>
+                    
+                  <p><a style="padding: 6px 15px; display: block;" class="uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-texto-centrado" href="https://actualicese.com/?add-to-cart=1057333&coupon_code=20off_presenciales">Comprar</a></p>
+                </div>
+
+                <div class="uxp-flex-1">
+
+                  <p class="uxp-margen-inferior-cero"><strong class="azul-siigo">Exp. VIP:</strong></p>
+                  <p class="uxp-margen-inferior-cero"><strong class="azul-osc-siigo">$349.950* + IVA</strong></p>
+                  <p style="font-size: 14px;">Antes: <s>$ 699.900 + IVA</s></p>
+
+                  <p><a style="padding: 6px 15px; display: block;" class="uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-texto-centrado" href="https://actualicese.com/?add-to-cart=1057347&coupon_code=20off_presenciales_vip">Comprar</a></p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="caja-contenido2 uxp-flex-fila">
+
+          <article style="padding: 15px;" class="uxp-borde-redondeado uxp-flex-1 uxp-fondo-gris-claro uxp-texto-centrado">
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero">
+              <span><i class="fas fa-user-check azul-siigo"></i></span>&nbsp;
+              <strong>Modalidad:</strong> Presencial
+            </p>
+          </article>
+
+          <article style="padding: 15px;" class="uxp-borde-redondeado uxp-flex-1 uxp-fondo-gris-claro uxp-texto-centrado">
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero">
+              <span><i class="fas fa-clock azul-siigo"></i></span>&nbsp;
+              <strong>Duración:</strong> 4 horas
+            </p>
+          </article>
+
+          <article style="padding: 15px;" class="uxp-borde-redondeado uxp-flex-1 uxp-fondo-gris-claro uxp-texto-centrado">
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero">
+              <span><i class="fas fa-hourglass-half azul-siigo"></i></span>&nbsp;
+              <strong>Hora:</strong> 2 a 6 pm
+            </p>
+          </article>
+
+        </div>
+
+        <p class="uxp-texto-centrado uxp-margen-superior"><i>⏳ Los vencimientos para personas jurídicas son entre <strong>abril y mayo 2026.</strong><br>Una vez se llenen los cupos por ciudad, <strong>no habrá nuevas fechas antes del vencimiento.</strong></i></p>
+
+      </div>
+
+    </section>
+
+    <!-- BLOQUE 6 - Alexander Cobo -->
+    <section class="uxp-ancho-completo uxp-fondo-blanco">
+      <div style="max-width: 1000px; width: 100%;" class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-align-items-flex-end uxp-margen-inferior uxp-relleno-inferior uxp-relleno-superior uxp-margen-superior">
+        <figure style="margin: 0 auto;">
+          <img src="https://actualicese.com/wp-content/uploads/2023/02/Alexander-cobo.png" alt="Alexander Cobo, conferencista especialista en tributación" width="250" height="300">
+        </figure>
+        <div>
+          <p class="uxp-margen-inferior-cero"><strong>Conferencista:</strong></p>
+          <p class="uxp-texto-precios"><strong class="azul-siigo">Alexander Cobo</strong></p>
+          <div class="uxp-margen-superior uxp-linea-corta bg-azul-osc-siigo uxp-margen-inferior"></div>
+
+          <p class="uxp-relleno-derecho">Contador público y experto en información exógena tributaria. Posee una amplia trayectoria en asesoría y acompañamiento a empresas en el cumplimiento de obligaciones ante la Dian. Su metodología combina el rigor normativo con la revisión técnica de formatos, validaciones y la corrección de errores recurrentes detectados en procesos de fiscalización.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 7 - Contenido del Libro Digital -->
+    <section class="uxp-ancho-completo uxp-fondo-blanco">
+
+      <div style="background-color: #7bc0f5; margin-bottom: 0px;" class="padding_especial uxp-grid-contenedor-ruta uxp-relleno-superior uxp-relleno-inferior uxp-borde-redondeado">
+
+        <div class="uxp-flex-fila uxp-align-items-flex-end">
+          <article class="uxp-flex-1 uxp-borde-redondeado">
+
+            <p class="uxp-texto-precios"><strong class="uxp-txt-blanco">Temario de la capacitación presencial</strong></p>
+
+            <div class="uxp-relleno-inferior">
+              <div class="uxp-margen-superior uxp-margen-inferior uxp-linea-corta bg-azul-osc-siigo"></div>
+            </div>
+
+            <div class="caja-contenido">
+              <p><strong class="azul-osc-siigo">Determinación de la renta líquida</strong></p>
+              <p class="uxp-relleno-izquierdo"><strong>A. Ingresos fiscales</strong></p>
+              <ul class="uxp-lista-datos">
+                <li>Realización del ingreso.</li>
+                <li>Ingresos gravados e ingresos no constitutivos de renta ni ganancia ocasional.</li>
+                <li>Tratamiento de ingresos financieros, dividendos y ganancias ocasionales.</li>
+              </ul>
+              <p class="uxp-relleno-izquierdo"><strong>B. Costos y deducciones</strong></p>
+              <ul class="uxp-lista-datos">
+                <li>Requisitos generales y específicos.</li>
+                <li>Costos por ventas, servicios y construcción.</li>
+                <li>Deducciones laborales: nómina electrónica, aportes y provisiones.</li>
+                <li>Intereses, descuentos, deterioros, castigos y provisiones.</li>
+                <li>Límites y rechazos frecuentes por la Dian.</li>
+              </ul>
+              <p class="uxp-relleno-izquierdo"><strong>C. Beneficios tributarios AG 2025</strong></p>
+              <ul class="uxp-lista-datos">
+                <li>Rentas exentas y deducciones especiales.</li>
+                <li>Incentivos: economía naranja, ZOMAC, ZESE, entre otros.</li>
+                <li>Descuentos tributarios: impuestos locales, ICA, energías renovables, donaciones.</li>
+                <li>Límites de beneficios y control por parte de la Dian.</li>
+              </ul>
+            </div>
+            
+          </article>
+          <article class="uxp-flex-1 uxp-borde-redondeado">
+            <div class="caja-contenido uxp-margen-inferior">
+              <p><strong class="azul-osc-siigo">Clasificación y responsabilidades de la persona jurídica</strong></p>
+              <ul class="uxp-lista-datos uxp-margen-inferior-cero">
+                <li>Régimen ordinario vs. régimen especial vs. SIMPLE (impactos en renta).</li>
+                <li>Residencia fiscal y sus efectos.</li>
+                <li>Responsabilidad en IVA, ICA y retenciones, y su incidencia en renta.</li>
+                <li>Entidades no contribuyentes y régimen de excepción.</li>
+              </ul>
+            </div>
+            <div class="caja-contenido uxp-margen-inferior">
+              <p><strong class="azul-osc-siigo">Contabilidad fiscal para el AG 2025</strong></p>
+              <ul class="uxp-lista-datos uxp-margen-inferior-cero">
+                <li>Conciliación contable-fiscal: formato 2516 versión 2026.</li>
+                <li>Políticas NIIF con impacto fiscal (ingresos, deterioros, depreciaciones y estimaciones).</li>
+                <li>Control de diferencias temporarias y permanentes.</li>
+                <li>Documentación soporte para efectos fiscales.</li>
+              </ul>
+            </div>
+            <div class="caja-contenido">
+              <p><strong class="azul-osc-siigo">Tarifa del impuesto y cálculo del impuesto neto de renta</strong></p>
+              <ul class="uxp-lista-datos uxp-margen-inferior-cero">
+                <li>Tarifas generales aplicables al AG 2025.</li>
+                <li>Tarifas especiales por tipo de entidad.</li>
+                <li>Compensaciones: pérdidas fiscales y excesos de renta presuntiva.</li>
+                <li>Anticipos de renta 2026: cálculo y proyección.</li>
+                <li>Descuentos tributarios imputables a la carga fiscal.</li>
+                <li>Tasa mínima de tributación.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="uxp-texto-centrado uxp-margen-superior uxp-relleno-superior">
+          <a class="uxp-margen-superior btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="#ciudad">Comprar ahora</a>
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- BLOQUE 8 - Tabla grande -->
+    <section class="uxp-ancho-completo uxp-fondo-blanco">
+      <div class="uxp-grid-contenedor-ruta">
+
+        <div class="uxp-relleno-inferior uxp-relleno-superior uxp-margen-superior">
+          <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong>Si eres Suscriptor Actualícese, estos son tus beneficios</strong></p>
+          <span class="uxp-elemento-centrado"><span class="uxp-linea-corta bg-azul-siigo"></span></span>
+        </div>
+
+        <!-- Tabla -->
+        <div class="uxp-relleno-superior uxp-relleno-inferior">
+          <table class="uxp-tabla-datos uxp-margen-inferior" style="width:100%; border-collapse: collapse;">
+            <thead>
+              <tr class="uxp-margen-inferior uxp-relleno-inferior uxp-texto-centrado">
+                <th style="padding: 12px 18px; border: 3px solid #fff !important; border-radius: 15px 15px 0px 0px; text-align: center;" class="uxp-txt-blanco bg-azul-osc-siigo">&nbsp;</th>
+                <th style="padding: 12px 18px; border: 3px solid #fff !important; border-radius: 15px 15px 0px 0px; text-align: center;" class="uxp-txt-blanco bg-azul-osc-siigo">Acceso General</th>
+                <th style="padding: 12px 18px; border: 3px solid #fff !important; border-radius: 15px 15px 0px 0px; text-align: center;" class="uxp-txt-blanco bg-azul-osc-siigo">Acceso VIP</th>
+                <th style="padding: 12px 18px; border: 3px solid #fff !important; border-radius: 15px 15px 0px 0px; text-align: center;" class="uxp-txt-blanco bg-azul-osc-siigo">Suscriptor Oro ⭐</th>
+                <th style="padding: 12px 18px; border: 3px solid #fff !important; border-radius: 15px 15px 0px 0px; text-align: center;" class="uxp-txt-blanco bg-azul-osc-siigo">Suscriptor Platino 👑</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important; text-align: center;" class="azul-osc-siigo">
+                  <strong>Precio</strong>
+                </td>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important; text-align: center;" class="azul-osc-siigo">
+                  <strong>$499.900 + IVA</strong>
+                </td>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important; text-align: center;" class="azul-osc-siigo">
+                  <strong>$699.900 + IVA</strong>
+                </td>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important; text-align: center;" class="azul-osc-siigo">
+                  <strong>Desde $349.930 + IVA</strong>
+                </td>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important; text-align: center;" class="azul-osc-siigo">
+                  <strong>$99.000 + IVA (titular)</strong>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;"class="azul-osc-siigo"><strong>Actualización con IA (Notebook LM)</strong></td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+              </tr>
+
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;"class="azul-osc-siigo"><strong>Capacitación presencial (ciudad a elección)</strong></td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+              </tr>
+
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;"class="azul-osc-siigo"><strong>Actualícese exógena AG  2025</strong></td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+              </tr>
+
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;"class="azul-osc-siigo"><strong>Sesión expertos en vivo (2h)</strong></td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+              </tr>
+
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;"class="azul-osc-siigo"><strong>IA especializada en Información Exógena</strong></td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+              </tr>
+
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;"class="azul-osc-siigo"><strong>Asesor de Experiencia Actualícese</strong></td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+              </tr>
+
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;"class="azul-osc-siigo"><strong>Sesión privada con el conferencista.</strong></td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✖</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✖</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✖</td>
+              </tr>
+
+              <tr>
+                <td style="padding: 13px 18px; border: 3px solid #fff !important; background-color: #d5f1ff !important;"class="azul-osc-siigo"><strong>Asientos en primera fila</strong></td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✖</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✅</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✖</td>
+                <td style="background-color: #f5f5f5 !important; padding: 13px 18px; border: 3px solid #fff !important; text-align: center;">✖</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <p class="uxp-texto-centrado uxp-margen-superior uxp-relleno-superior"><strong>⏳ ¿Necesitas preparar a todo tu equipo?</strong> Cupos adicionales para Suscriptores Platino desde <strong class="azul-siigo">$249.950 + IVA</strong>.</p>
+
+          <p class="uxp-texto-centrado uxp-margen-superior uxp-relleno-superior">
+            <a class="uxp-margen-superior btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="#ciudad">Seleccionar mi ciudad</a>
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- BLOQUE 9 - Terminos y condiciones -->
+    <section class="uxp-ancho-completo uxp-fondo-gris-claro">
+      <div class="uxp-grid-contenedor-ruta">
+
+          <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong>Términos y Condiciones</strong></p>
+          <span class="uxp-elemento-centrado"><span class="uxp-linea-corta bg-azul-siigo"></span></span>
+
+          <p><strong class="azul-siigo">Evento Presencial</strong></p>
+          <p>
+            El CLIENTE acepta irrevocablemente los siguientes términos y condiciones generales en la compra de cupos para eventos presenciales que se comercialicen por ACTUALÍCESE:
+          </p>
+
+          <ul class="uxp-lista-datos" style="margin-top: 14px; padding-left: 22px;">
+            <li style="margin-bottom: 15px;">
+              <strong>Acceso al Evento:</strong> La entrada al evento será autorizada únicamente a las personas previamente registradas por el CLIENTE al momento de realizar la compra. No se permitirá el ingreso a personas no inscritas.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Hora de Registro:</strong> El proceso de registro e ingreso comenzará a las 1:00 p.m. Para ello, el CLIENTE deberá haber realizado previamente la inscripción en la página web de ACTUALÍCESE y presentar el código QR que le será suministrado al completar dicho registro. ACTUALÍCESE se reserva el derecho de admisión al evento.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Hora de Inicio:</strong> El evento iniciará las 2:00 p.m., por lo que se recomienda llegar con suficiente anticipación.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>En caso de que un cliente inscrito</strong> en un evento presencial ya pagado no pueda participar por cualquier circunstancia, el valor abonado será objeto de reembolso, cumpliendo con una antelación mínima de cuarenta y ocho (48) horas previas a la realización del evento. El monto pagado quedará como saldo a favor, el cual podrá ser utilizado en otro evento organizado por Actualícese. La adquisición del cupo implica la reserva anticipada de un espacio limitado, lo cual restringe su disponibilidad para otros clientes interesados.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Material Digital:</strong> El material digital correspondiente al evento estará disponible para los asistentes el mismo día de su realización.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Certificado de Asistencia:</strong> El certificado digital de asistencia estará disponible por medio de código QR para generar una vez finalizado el evento.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Ubicación en el auditorio:</strong> La asignación de sillas se realizará en orden de llegada. Solo los cupos VIP cuentan con sillas numeradas. El personal logístico se encargará de ubicar a los asistentes.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Realización del evento:</strong> Actualícese, advierte que la realización de eventos está sujeta a completar los cupos mínimos determinados por la empresa. Si desea asistir a un evento en una ciudad diferente a su lugar de residencia y va a incurrir en gastos de tiquetes aéreos y/o hoteles, tenga en cuenta que deberá tomar planes y tarifas que le permitan mover o cancelar su reserva sin penalidades; esto debido a que Actualícese no reconocerá ningún costo adicional incurrido por un cliente para asistir a un evento, cuya cancelación o cambio de fecha haya sido notificado anticipadamente con tres (3) días calendario.
+              <br><br>
+              El CLIENTE declara conocer que la realización de cualquier evento organizado por ACTUALÍCESE no depende exclusivamente de la compañía, por lo cual ACTUALÍCESE se reserva el derecho de modificar fechas, horarios, lugares, conferencistas y/o contenido temático, informando con la debida anticipación. La apertura de cada evento requiere un número mínimo de participantes; en caso de no cumplirse, el evento podrá ser cancelado, notificando al CLIENTE con al menos tres (3) días calendario de anticipación y reprogramando la fecha o devolviendo los dineros recibidos.
+              <br><br>
+              Es responsabilidad del CLIENTE leer detenidamente la información publicada sobre cada evento antes de realizar la compra de su cupo. En consecuencia, ACTUALÍCESE no estará obligado a realizar devoluciones de dinero por errores atribuibles al CLIENTE en la selección de fechas, horarios, valores, nombre del evento o cualquier otra circunstancia ajena a la organización.
+            </li>
+          </ul>
+
+      </div>
+    </section>
+
+    <!-- BLOQUE 10 - Barra inferior -->
+    <div style="padding: 15px;" class="barra-inferior-fija uxp-txt-blanco">
+      <span class="amarillo-siigo">Desde $99.000 + IVA</span> para 
+      
+      <span class="azul-siigo">Suscriptores Platino</span> →
+
+      <a class="amarillo-osc-siigo uxp-borde-redondeado uxp-txt-negro" href="#ciudad" style="cursor: pointer; text-decoration: none !important; padding: 1px 3px;"><span>&nbsp;&nbsp;Escoge tu ciudad&nbsp;&nbsp;</span></a>
+    </div>
+
+    <!-- Chat flotante WhatsApp -->
+
+    <style>
+    #waWidget {
+        position: fixed;
+        right: 24px;
+        bottom: 100px;
+        z-index: 9999;
+        font-family: Arial, sans-serif;
+    }
+    #waWidget input {
+        display: none;
+    }
+
+    #waChat {
+        position: absolute;
+        right: 0;
+        bottom: 70px;
+        width: 320px;
+        background: #ececec;
+        border: 1px solid #ddd;
+        border-radius: 14px;
+        padding: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.15);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: .25s;
+    }
+
+    #waToggle:checked + #waChat {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    #waChat h3 {
+        margin: 0 0 10px;
+        font-size: 26px;
+        color: #111;
+    }
+
+    #waChat p {
+        margin: 0 0 18px;
+        font-size: 15px;
+        line-height: 1.4;
+        color: #333;
+    }
+
+    #waBtn {
+        display: block;
+        background: #28d163;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        padding: 15px;
+        border-radius: 30px;
+        font-weight: 700;
+    }
+
+    #waTag {
+        display: inline-block;
+        background: #dcecdf;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    #waClose {
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #666;
+    }
+
+    #waIcon {
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 0;
+        border: none;
+        padding: 0;
+        transition: box-shadow .2s;
+    }
+
+    #waIcon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border: none;
+        display: block;
+        transition: background 0.2s;
+    }
+
+    @media(max-width:480px) {
+        #waWidget {
+            right: 8px;
+        }
+        #waChat {
+            width: calc(100vw - 40px);
+        }
+    }
+    </style>
+    
+    <div id="waWidget">
+
+    <input type="checkbox" id="waToggle">
+
+    <div id="waChat">
+        <label id="waClose" for="waToggle">×</label>
+        <span id="waTag">💬 Acompañamiento directo</span>
+        <h3>¿Tienes dudas?</h3>
+        <p>Puedes llamarnos ya al <strong>(601) 744 6402</strong> o escribirnos por WhatsApp aquí</p>
+        <a id="waBtn"
+        href="https://api.whatsapp.com/send?phone=5717446402&text=Estoy%20interesad%40%20en%20la%20capacitaci%C3%B3n"
+        target="_blank">
+        Escribir por WhatsApp
+        </a>
+    </div>
+
+    <label id="waIcon" for="waToggle">
+        <img src="https://actualicese.com/wp-content/uploads/2026/03/Whatapp2.png" alt="WhatsApp" />
+    </label>
+
+    </div>
+    
+  </body>
+</html>

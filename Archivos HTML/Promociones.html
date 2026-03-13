@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dia del contador 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+        --color-bg: #f5f9ff;          /* fondo general */
+        --color-card: #ffffff;        /* tarjetas */
+        --color-accent: #00a4ff;      /* principal */
+        --color-accent-dark: #007fd1; /* hover / tono más fuerte */
+        --color-text: #0f172a;        /* texto principal */
+        --color-muted: #55627a;       /* texto secundario */
+        --color-border: #dde6f3;      /* bordes suaves */
+        --color-danger: #ef4444;
+
+        --shadow-soft: 0 6px 20px rgba(15, 23, 42, 0.10);
+        --radius-lg: 18px;
+        --radius-xl: 24px;
+    }
+
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+
+    .contenido-black {font-family: Arial, Helvetica, sans-serif;background: radial-gradient(circle at top, #ffffff 0, #f2f7ff 45%, #eaf2ff 100%);color: var(--color-text);line-height: 1.5;}
+    a {text-decoration: none; color: inherit;}
+    .pagina {max-width: 1200px;margin: 0 auto;padding: 24px 16px 64px;}
+    .cabeza {text-align: center;padding: 0px 0px 30px;}
+
+    .badge {display: inline-flex; align-items: center; gap: 6px; padding: 10px 32px; border-radius: 999px; background: #d9f1ff;color: #000;font-size: 18px;margin-bottom: 20px; text-decoration: underline;}
+    .hero-title {font-size: clamp(23px, 4vw, 33px); font-weight: 800; letter-spacing: 0.02em; margin-bottom: 5px; line-height: 1.4; color: var(--color-muted);}
+    .hero-title span {background-color: var(--color-danger); color: #ffffff; padding: 0px 10px; border-radius: 10px;}
+    .hero-subtitle {color: var(--color-muted); margin: 0 auto 18px;font-size: 18px;}
+
+    .btn {display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 18px; border-radius: 999px; border: 1px solid transparent; font-size: 14px; cursor: pointer; transition: all 0.18s ease-out; white-space: nowrap;}
+    .btn-primary {background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)); color: #ffffff; font-weight: 700;}
+    .btn-primary:hover {transform: translateY(-1px) scale(1.01); box-shadow: 0px 0px 30px rgba(0, 157, 255, 0.25); color: #fff !important; border-color: var(--color-accent) !important; }
+    .btn-ghost {background: transparent; border-color: var(--color-border); color: var(--color-muted);}
+    .btn-ghost:hover {border-color: var(--color-accent); color: var(--color-accent); background: #eef6ff;}
+
+    .section {margin-bottom: 40px;}
+    .section-header {display: flex;justify-content: space-between; align-items: center;gap: 12px;margin-bottom: 20px;}
+    .section-title {font-size: 23px; font-weight: 700; color: var(--color-accent); line-height: 1.3; }
+    .section-subtitle {font-size: 16px; color: var(--color-muted);}
+
+    .product-grid-suscripciones {display: grid; grid-template-columns: repeat(2,2fr); gap: 18px;}
+
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));gap: 18px; justify-content: center;}
+    #otros-productos .product-card{ width: 100%; max-width: 320px; justify-self: center;}
+
+    .product-card {background: var(--color-card); border-radius: var(--radius-lg); border: 1px solid var(--color-border); overflow: hidden; display: flex; flex-direction: column; position: relative;}
+    .product-tag-top {position: absolute; top: 12px; left: 12px; padding: 4px 10px; border-radius: 999px; font-size: 11px; background: rgba(0, 157, 255, 0.12); color: var(--color-accent-dark);}
+    .product-img {width: 100%; height: 140px; object-fit: cover; display: block; background: #020617;}
+    .product-body {padding: 14px 14px 12px; display: flex; flex-direction: column; gap: 10px;}
+    .body-agenda {padding: 14px 14px 12px; display: flex; flex-direction: column; gap: 10px; overflow-y: scroll; height: 317px; scrollbar-color: #167ac6 #00a4ff3b; scrollbar-width: thin;}
+    .product-title {font-size: 16px; font-weight: 700; line-height: 1.3;}
+    .product-label {font-size: 12px; color: var(--color-muted);}
+    .product-nota {font-size: 12px; color: #919fbb; font-weight: 400; padding: 5px 14px 12px;}
+    .product-price-row {display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px;}
+    .product-price-promo {font-size: 18px; font-weight: 800; color: var(--color-accent);}
+    .product-price-regular {font-size: 12px; color: var(--color-muted); text-decoration: line-through;}
+    .product-tag-etiqueta {font-size: 11px; background: rgba(0, 157, 255, 0.12); color: var(--color-accent-dark); border-radius: 999px; padding: 2px 8px; display: inline-block; margin-bottom: 6px; width: 150px;
+      text-align: center;}
+    .product-price-tag {font-size: 11px; background: rgba(0, 157, 255, 0.12); color: var(--color-accent-dark); border-radius: 999px; padding: 2px 8px;}
+
+    details.product-details {margin-top: 8px; background: #f7faff; border-radius: 12px; border: 1px solid var(--color-border); padding: 6px 10px; font-size: 12px; cursor: pointer;}
+    details.product-details summary {list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--color-muted);}
+    details.product-details summary::-webkit-details-marker {display: none;}
+    details.product-details[open] {border-color: var(--color-accent); background: #eef6ff;}
+    details.product-details p {margin-top: 6px; color: var(--color-muted);}
+
+    .product-actions {display: flex; gap: 8px; margin-top: 0px; padding: 0px 14px 10px;}
+    .btn-full {flex: 1;}
+    .btn-secondary {background: #f0f6ff; border-color: var(--color-border); color: var(--color-text);}
+    .btn-secondary:hover {border-color: var(--color-accent); color: var(--color-accent) !important; background: #e6f2ff;}
+
+    /* --- Modal de suscripciones --- */
+    .modal-sus {position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: none; align-items: center; justify-content: center; padding: 18px; z-index: 50; }
+    .modal-sus[aria-hidden="false"]{display:flex}
+    .modal-sus__dialog {background:#fff; width:min(980px, 96vw); border-radius: 20px; border:1px solid var(--color-border); box-shadow: var(--shadow-soft); overflow:hidden;}
+    .modal-sus__head {display:flex; align-items:center; justify-content:space-between; padding:16px 18px 0px;}
+    .modal-sus__title {font-size: 30px; font-weight:800; color: var(--color-accent);}
+    .modal-sus__close {border:0; background:transparent; font-size:22px; cursor:pointer; color:var(--color-muted);}
+    .modal-sus__body {display:grid; grid-template-columns: 40% 58%; gap:14px; padding:16px; max-height:75vh; overflow:auto;}
+    .modal-sus__img {width:100%; border-radius:16px; object-fit:cover; height:100%; min-height:220px; background:#020617;}
+    .modal-sus__content{display:flex; flex-direction:column; gap:10px;}
+    .modal-sus__desc{font-size:13px; color:var(--color-muted); line-height:1.55;}
+    .modal-sus__desc ul {padding-left:18px; margin-top:6px;}
+    .modal-sus__desc ul li b {color: var(--color-accent);}
+    .modal-sus__desc-lista {column-count: 2; font-size: 12px; text-align: left; column-gap: 30px;}
+    .modal-sus__prices{display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; background:#f7faff; padding:10px 12px; border-radius:14px;border:1px solid var(--color-border);}
+    .modal-sus__promo{font-size:20px; font-weight:900; color:var(--color-accent);}
+    .modal-sus__regular{font-size:12px; color:var(--color-muted); text-decoration:line-through;}
+    .modal-sus__tag{font-size:11px; background:rgba(0,157,255,.12); color:var(--color-accent-dark); border-radius:999px; padding:2px 8px;}
+    .modal-sus__actions{display:flex; gap:8px; margin-top:4px;}
+    .modal-sus__actions .btn{flex:1;}
+
+    /* --- Filtros de productos --- */
+    .filter-bar{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px;}
+    .filter-btn{padding:8px 12px; font-size:12px; border-radius:999px; cursor:pointer; border:1px solid var(--color-border); background:#fff; color:var(--color-muted); transition:.18s ease;}
+    .filter-btn.active, .filter-btn:hover{border-color:var(--color-accent); color:var(--color-accent); background:#eef6ff;}
+
+    /* WhatsApp section */
+    .whatsapp-section {background: radial-gradient(circle at top left, #ffffff, #f2f8ff); border-radius: var(--radius-xl); border: 1px solid var(--color-border); padding: 18px 16px; display: grid;grid-template-columns: 30% 40% 30%; gap: 18px; align-items: center;}
+    .whatsapp-section-2 {background: radial-gradient(circle at top left, #ffffff, #f2f8ff); border-radius: var(--radius-xl); border: 1px solid var(--color-border); padding: 18px 16px; display: grid;grid-template-columns: 1fr; gap: 18px; align-items: center; text-align: center;}
+    .whatsapp-badge {font-size: 11px; color: #0f5132; background: rgba(34, 197, 94, 0.12);display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px;margin-bottom: 10px;}
+    .wp-imagen {width: 100%; height: 203px; border-radius: 20px; object-fit: cover; display: block;margin: 0 auto 6px;}
+    .whatsapp-title {font-size: 18px; font-weight: 700; margin-bottom: 6px;}
+    .whatsapp-text {font-size: 13px; color: var(--color-muted);margin-bottom: 10px;}
+    .whatsapp-cta {display: flex;flex-wrap: wrap;gap: 8px;align-items: center;}
+    .btn-whatsapp {background: #22c55e; color: #ffffff; font-weight: 700; padding-left: 14px; padding-right: 14px; border-radius: 999px; border-color: transparent;}
+    .btn-whatsapp:hover {background: #16a34a; transform: translateY(-1px);}
+    .whatsapp-number {font-size: 12px; color: #3aa760;}
+    .whatsapp-qr-wrap {justify-self: center; text-align: center; font-size: 11px; color: var(--color-muted);}
+    .whatsapp-qr {width: 120px; height: 120px; border-radius: 16px; border: 1px solid rgba(148, 163, 184, 0.4); background: #020617; object-fit: cover; display: block; margin: 0 auto 6px;}
+
+    /* Modal comparativo */
+    .compare-wrap{display:flex; justify-content:center; margin-top:10px}
+    .modal{ position: fixed;inset: 0;background: rgba(15, 23, 42, 0.35); display: none;align-items: center;justify-content: center;padding: 20px;z-index: 40;}
+    .modal[aria-hidden="false"]{display:flex}
+    .modal__dialog{background: #ffffff;width: min(960px,96vw);border-radius: 18px;border: 1px solid var(--color-border); box-shadow: var(--shadow-soft);}
+    .modal__head{display:flex; align-items:center; justify-content:space-between; padding: 20px 20px 10px;}
+    .modal__body{padding:16px; overflow:auto; max-height:70vh}
+    .modal__body td{border-width: 0 !important;}
+    .close{border:0; background:transparent; font-size:20px; cursor:pointer; color: var(--color-muted);}
+    .list-benefits{text-align:left; font-weight: 400;}
+    .tabla-beneficio tr td {text-align: center; }
+    .tabla-beneficio tr {background: #f8fbff !important;color: var(--color-text);border-bottom: 1px solid var(--color-border) !important;}
+    .tabla-beneficio th {font-size: 15px !important;padding: 7px 10px;}
+    .check {color: var(--color-accent);font-size: 16px;font-weight: 800; padding: 0px 10px;}
+
+    .formulario-crucero {max-width: 900px; margin: 0 auto;}
+
+    /* Bullets */
+    .section-footer { margin-top: 20px; font-size: 14px; color: var(--color-muted); text-align: left;}
+    .bullet{padding: 0px 20px;border: 1px solid var(--color-border); border-radius: 12px;margin: 20px 0px;text-align: left;background: #ffffff;}
+    .bullet p {margin-top: 12px;}
+
+    @media (max-width: 720px) {
+      .whatsapp-section {grid-template-columns: minmax(0, 1fr);}
+      .hero {padding-top: 18px;}
+      .img-head {display: none;}
+      .img-head-responsive {display: block !important; width: 100%; height: auto; margin-bottom: 12px;}
+      .section-header {flex-direction: column; align-items: flex-start; gap: 8px;}
+      .product-img {height: auto;}
+      .product-card-destacado {grid-template-columns: 1fr; gap: 12px;}
+      .product-grid-suscripciones {grid-template-columns: 1fr;}
+      .modal-sus__body{grid-template-columns: 1fr;}
+      .modal-sus__img{min-height: 400px;}
+      .modal-sus__desc-lista {column-count: 1; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="contenido-black">
+    <div class="pagina">
+    <!-- HERO -->
+    <header class="cabeza">
+      <!--<div class="badge">
+        <a href="https://actualicese.com/home/">Ir a Actualícese.com</a>
+      </div>-->
+      <a href="https://actualicese.com/dia-del-contador-2026/#suscripciones-dos"><img class="img-head-responsive" src="https://actualicese.com/wp-content/uploads/2026/02/Head-lp-dia-del-contador-2026-reponsive.jpg" style="display: none;" alt=""></a>
+      
+      <a href="https://actualicese.com/dia-del-contador-2026/#suscripciones-dos"><img class="img-head" src="https://actualicese.com/wp-content/uploads/2026/02/Head-lp-dia-del-contador-2026.jpg" style="width: 100%;" alt=""></a>
+
+      <div style="padding-top: 30px;" class="product-grid-suscripciones">
+        <div>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/N24lR5cczMQ?si=LeYk75k2rCe6gQRr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="product-card body-agenda" style="text-align: left;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <p class="section-title">Jueves 26 de febrero</p>
+            <p class="product-price-tag">Desliza para conocer toda la agenda</p>
+          </div>
+
+          <div style="padding: 15px; background: #f7faff; border-radius: 12px;border: 1px solid var(--color-border); margin-bottom: 0px;">
+            <p class="product-title" style="margin-bottom: 0;"><b>Omisión del agente retenedor o delito por no pago de impuestos</b></p>
+            <p class="product-label" style="margin-bottom: 0;">
+              🕙 Hora: 11:00 a.m. - 12:00 a.m. 
+              🎤 Experto: Nicolás Alviar
+            </p>
+          </div>
+
+          <div style="padding: 15px; background: #f7faff; border-radius: 12px;border: 1px solid var(--color-border); margin-bottom: 0px;">
+            <p class="product-title" style="margin-bottom: 0;"><b>Consultorio exclusivo: Información exógena AG 2025: obligaciones, plazos y errores frecuentes</b></p>
+            <p class="product-label" style="margin-bottom: 0;">
+            🕙 Hora: 2:00 p.m. - 3:00 p.m.
+            🎤 Experto: Diego Guevara
+            </p>
+          </div>
+
+          <div style="padding: 15px; background: #f7faff; border-radius: 12px;border: 1px solid var(--color-border); margin-bottom: 0px;">
+            <p class="product-title" style="margin-bottom: 0;"><b>Panel: Ajustes en cuotas de administración 2026, fundamentos legales y efectos financieros</b></p>
+            <p class="product-label" style="margin-bottom: 0;">
+            🕙 Hora: 4:00 p.m. - 5:00 p.m.
+            </p>
+          </div>
+
+          <div>
+            <p class="section-title">Viernes 27 de febrero</p>
+          </div>
+
+          <div style="padding: 15px; background: #f7faff; border-radius: 12px;border: 1px solid var(--color-border); margin-bottom: 0px;">
+            <p class="product-title" style="margin-bottom: 0;"><b>Cuestionario: ¿Qué tan actualizado te sientes sobre el cálculo del impuesto diferido?</b></p>
+            <p class="product-label" style="margin-bottom: 0;">
+            🕙 Hora: 9:00 a.m. - 10:00 a.m.
+            🎤 Experto: Germán Torres
+            </p>
+          </div>
+
+          <div style="padding: 15px; background: #f7faff; border-radius: 12px;border: 1px solid var(--color-border); margin-bottom: 0px;">
+            <p class="product-title" style="margin-bottom: 0;"><b>Herramienta Actualícese 110.xls AG 2025 </b></p>
+            <p class="product-label" style="margin-bottom: 0;">
+            🕙 Hora: 4:00 p.m. - 5:00 p.m.
+            🎤 Experto: Sergio Peraza
+            </p>
+          </div>
+
+          <div>
+            <p class="section-title">Lunes 2 de marzo</p>
+          </div>
+
+          <div style="padding: 15px; background: #f7faff; border-radius: 12px;border: 1px solid var(--color-border); margin-bottom: 0px;">
+            <p class="product-title" style="margin-bottom: 0;"><b>La automatización de la exógena: auditoría, preparación y presentación </b></p>
+            <p class="product-label" style="margin-bottom: 0;">
+            🕙 Hora: 11:00 a.m. - 12:00 a.m.
+            🎤 Experto: Norbey Lasso
+            </p>
+          </div>
+
+          <div style="padding: 15px; background: #f7faff; border-radius: 12px;border: 1px solid var(--color-border); margin-bottom: 0px;">
+            <p class="product-title" style="margin-bottom: 0;"><b>Conociendo la tercera edición de las NIIF para Pymes </b></p>
+            <p class="product-label" style="margin-bottom: 0;">
+            🕙 Hora: 4:00 p.m. - 5:00 p.m.
+            🎤 Experto: Andrés Felipe Tovar
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <!--<h1 class="hero-title">
+       Equípate en diciembre para cerrar 2025 sin errores, Kits para cierre 🔥<span> Desde $71.991 y Suscripciones al 50% off.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Desliza y descubre las ofertas.
+      </p>-->
+    </header>
+
+    <!-- SUSCRIPCIONES -->
+    <section class="section" id="suscripciones-dos">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Suscripciones Actualícese:</h2>
+          <p class="section-subtitle">Herramientas en Excel, capacitación constante y la actualización normativa más confiable de Colombia en un solo lugar.</p>
+        </div>
+      </div>
+
+      <div class="product-grid-suscripciones">
+
+        <!-- Producto Oro 12 meses -->
+        <article class="product-card">
+          <!--<div class="product-tag-top">Más elegida</div>-->
+          <img src="https://cdn.actualicese.com/wp-content/uploads/2025/11/13142513/Sus-oro-black-days.png" alt="Suscripción Oro Actualícese" class="product-img"/>
+
+          <div class="product-body">
+            <div class="product-price-row" style="margin: 0 auto;">
+              <span class="product-price-promo">$244.200</span>
+              <span class="product-price-regular">$555.000</span>
+              <span class="product-price-tag">56% OFF</span>
+            </div>
+
+            <!--<button class="btn btn-ghost" data-open-sus="#modal-oro" aria-haspopup="dialog">
+              Ver más información ➜
+            </button> -->
+
+            <div class="product-actions">
+              <a href="https://actualicese.com/?add-to-cart=91113&coupon_code=promo_suscriptor_oro_56off&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full"> Comprar ahora </a>
+              <!--<a href="https://actualicese.com/producto/suscripciones-actualicese/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full"> Ver más </a>-->
+            </div>
+
+            <div class="product-label">
+              <p><b>Top recursos de temporada:</b><br><br></p>
+
+              <ul style="padding: 18px 30px 18px 40px; background: #f7faff; border-radius: 12px;border: 1px solid var(--color-border); margin-bottom: 0px;">
+                <li style="padding-bottom: 10px;"><b>Guía de Referencia</b> Contable y tributaria año 2026</li>
+                <li style="padding-bottom: 10px;"><b>Planner</b> / Calendario Tributario</li>
+                <li style="padding-bottom: 10px;"><b>Guía</b> Régimen Simple (Novedad Oro)</li>
+                <li style="padding-bottom: 10px;"><b>Guía Actualícese</b> para Declaración de renta de Personas Jurídicas.</li>
+                <li style="padding-bottom: 10px;"><b>Guía Actualícese</b> para el cálculo de la Retención en la fuente.</li>
+                <li><b>Descuento del 30%</b> en capacitación presencial en Renta Jurídicas y Exógena.</li>
+            
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Modal Suscripción Oro -->
+        <!--<section class="modal-sus" id="modal-oro" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-oro-title">
+          <div class="modal-sus__dialog">
+            <div class="modal-sus__head">
+              <h3 class="modal-sus__title" id="modal-oro-title">Suscripción Oro</h3>
+              <button class="modal-sus__close" aria-label="Cerrar" data-close-sus>&times;</button>
+            </div>
+
+            <div class="modal-sus__body">
+              <img class="modal-sus__img" src="https://cdn.actualicese.com/wp-content/uploads/2025/12/02142045/Oro-img-madrugon-2025.jpg" alt="Suscripción Oro Actualícese">
+
+              <div class="modal-sus__content">
+                <div class="modal-sus__desc">
+                  <ul class="modal-sus__desc-lista">
+                      <li ><b>Actualidad</b></li>
+                        <ul style="padding-left: 15px;">
+                          <li>Boletín diario </li>
+                          <li>Base normativa </li>
+                          <li>Publicaciones</li> 
+                          <ul style="padding-left: 15px;">
+                            <li>Artículos</li> 
+                            <li>Rutas de actualización</li>  
+                            <li>Librería (cartillas, especiales y exceles AAA)</li>
+                          </ul>
+                        </ul>
+
+                      <li style="padding-top: 10px;text-align: left;"><b>Capacitación</b></li> 
+                        <ul style="padding-left: 15px;">
+                          <li>Conferencias </li>
+                          <li>Magazine  </li>
+                          <li>Webinars </li>
+                          <li>Certificación </li>
+                        </ul>
+                      
+                      <li style="padding-top: 10px; text-align: left;"><b >Herramientas</b></li>
+                        <ul style="padding-left: 15px;">
+                          <li>Plantillas en Excel & Office </li>
+                          <li>Packs de formatos </li>
+                          <li>Listas de chequeo </li>
+                          <li>Asistentes digitales</li>
+                          <ul style="padding-left: 15px;">
+                            <li>Planner</li>
+                            <li>Calendarios</li>
+                            <li>Calculadoras</li>
+                          </ul>
+                        </ul>
+                      
+                      <li style="padding-top: 10px;text-align: left;"><b>Asesoría</b></li>
+                        <ul style="padding-left: 15px;">
+                          <li>AsesorÍA </li>
+                          <li>Consultorios </li>
+                        </ul>
+                        
+                      <li style="padding-top: 10px;text-align: left;"><b>Guías Actualícese</b></li>
+                        <ul style="padding-left: 15px;">
+                          <li>Planeación tributaria </li>
+                          <li>Planeación financiera </li>
+                          <li>Cierre contable y conciliación fiscal </li>
+                          <li>Información exógena </li>
+                          <li>Renta personas jurídicas </li>
+                          <li>Rentas personas naturales </li>
+                        </ul>
+                    </ul>
+
+                    <p style="text-align: center; color: var(--color-accent);" ><b>Descuentos de hasta el 30% en productos seleccionados</b></p>
+                </div>
+
+                <div class="modal-sus__prices">
+                  <span class="modal-sus__promo">$249.750</span>
+                  <span class="modal-sus__regular">$555.000</span>
+                  <span class="modal-sus__tag">Precio congelado 50% OFF</span>
+                </div>
+
+                <div class="modal-sus__actions">
+                  <a href="https://actualicese.com/?add-to-cart=91113&coupon_code=55off_suscripcion_oro_ene&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary">Comprar ahora</a>
+                  <a href="https://actualicese.com/producto/suscripciones-actualicese/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>-->
+
+        <!-- Producto Platino 12 meses -->
+        <article class="product-card">
+          <!--<div class="product-tag-top">Todo incluido</div>-->
+          <img src="https://cdn.actualicese.com/wp-content/uploads/2025/11/13143733/Sus-platino-black-days.png" alt="Suscripción Platino Actualícese" class="product-img"
+          />
+          <div class="product-body">
+
+            <div class="product-price-row" style="margin: 0 auto;">
+              <span class="product-price-promo">$616.000</span>
+              <span class="product-price-regular">$1.400.000</span>
+              <span class="product-price-tag">56% OFF</span>
+            </div>
+
+            <!-- <button class="btn btn-ghost" data-open-sus="#modal-platino" aria-haspopup="dialog">
+              Ver más información ➜
+            </button>-->
+
+            <div class="product-actions">
+              <a href="https://actualicese.com/?add-to-cart=237481&coupon_code=promo_suscriptor_platino_56off&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full"> Comprar ahora </a>
+              <!-- <a href="https://actualicese.com/producto/suscripciones-actualicese/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full"> Ver más </a>-->
+            </div>
+
+            <div class="product-label">
+              <p style="padding-bottom: 20px; ">
+                <b>Top de recursos de temporada:</b><br>
+                Todo lo de Suscripción Oro y además
+              </p>
+              
+              <ul style="padding: 0px 30px 0px 30px; padding: 18px 30px 18px 40px; background: #f7faff; border-radius: 12px;border: 1px solid var(--color-border); margin-bottom: 0px;">
+                <li style="padding-bottom: 10px;"><b>Herramienta Interactiva</b> Auditoría y Revisoría Fiscal</a></li>
+                <li style="padding-bottom: 10px;"><b>Herramienta Interactiva</b> para el cálculo del impuesto diferido</a></li>
+                <li style="padding-bottom: 10px;"><b>Herramienta</b> Actualícese 110.xls</li>
+                <li>Cupo para capacitaciones presenciales a <b>$99.900 +IVA</b></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Modal Suscripción Platino -->
+        <!--<section class="modal-sus" id="modal-platino" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-platino-title">
+          <div class="modal-sus__dialog">
+            <div class="modal-sus__head">
+              <h3 class="modal-sus__title" id="modal-platino-title">Suscripción Platino</h3>
+              <button class="modal-sus__close" aria-label="Cerrar" data-close-sus>&times;</button>
+            </div>
+
+            <div class="modal-sus__body">
+              <img class="modal-sus__img" src="https://cdn.actualicese.com/wp-content/uploads/2025/12/02142043/Platino-img-madrugon-2025.jpg" alt="Suscripción Platino Actualícese">
+
+              <div class="modal-sus__content">
+                <div class="modal-sus__desc">
+                  <ul class="modal-sus__desc-lista">
+                      <li ><b>Actualidad</b></li>
+                        <ul style="padding-left: 15px;">
+                          <li>Boletín diario </li>
+                          <li>Base normativa </li>
+                          <li>Publicaciones</li> 
+                          <ul style="padding-left: 15px;">
+                            <li>Artículos</li> 
+                            <li>Rutas de actualización</li>  
+                            <li>Librería (cartillas, especiales y exceles AAA)</li>
+                          </ul>
+                        </ul>
+
+                      <li style="padding-top: 10px;text-align: left;"><b>Capacitación</b></li> 
+                        <ul style="padding-left: 15px;">
+                          <li>Capacitaciones</li>
+                          <li>Cursos certificables</li>
+                          <li>Master class</li>
+                          <li>Conferencias </li>
+                          <li>Magazine  </li>
+                          <li>Webinars </li>
+                          <li>Certificación </li>
+                        </ul>
+                      
+                      <li style="padding-top: 10px;text-align: left;"><b>Herramientas</b></li>
+                        <ul style="padding-left: 15px;">
+                          <li>Plantillas en Excel & Office </li>
+                          <li>Packs de formatos </li>
+                          <li>Listas de chequeo </li>
+                          <li>Apps tributarias</li>
+                          <ul style="padding-left: 15px;">
+                            <li>Actualícese impuesto diferido </li>
+                            <li>Actualícese 110.xls </li>
+                            <li>Actualícese exógena </li>
+                            <li>Actualícese 210.xls</li>
+                            <li>NUEVA Actualícese Auditoría y Revisoría fiscal</li>
+                          </ul>
+                          <li style="padding-top: 10px;text-align: left;"><b>Asistentes digitales</b></li>
+                          <ul style="padding-left: 15px;">
+                            <li>Planner</li>
+                            <li>Calendarios</li>
+                            <li>Calculadoras</li>
+                          </ul>
+                        </ul>
+                      
+                      <li style="padding-top: 10px;text-align: left;"><b>Asesoría</b></li>
+                        <ul style="padding-left: 15px;">
+                          <li>AsesorÍA </li>
+                          <li>Consultorios </li>
+                        </ul>
+                        
+                      <li style="padding-top: 10px;text-align: left;"><b>Guías Actualícese</b></li>
+                        <ul style="padding-left: 15px;">
+                          <li>Planeación tributaria </li>
+                          <li>Planeación financiera </li>
+                          <li>Cierre contable y conciliación fiscal </li>
+                          <li>Información exógena </li>
+                          <li>Renta personas jurídicas </li>
+                          <li>Rentas personas naturales </li>
+                        </ul>
+                    </ul>
+                    <p style="text-align: center; color: var(--color-accent);"><b>Descuentos de hasta el 50% en productos seleccionados</b></p>
+                </div>
+
+                <div class="modal-sus__prices">
+                  <span class="modal-sus__promo">$630.000</span>
+                  <span class="modal-sus__regular">$1.400.000</span>
+                  <span class="modal-sus__tag">Precio congelado 50% OFF</span>
+                </div>
+
+                <div class="modal-sus__actions">
+                  <a href="https://actualicese.com/?add-to-cart=237481&coupon_code=55off_suscripcion_plat_ene&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary">Comprar ahora</a>
+                  <a href="https://actualicese.com/producto/suscripciones-actualicese/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>-->
+
+      </div>
+        <div id="comparar" class="compare-wrap" style="margin: 30px 0px">
+          <a href="https://actualicese.com/producto/suscripciones-actualicese/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary"> Comparar suscripciones </a>
+          <!--<button class="btn btn-secondary" data-open-modal aria-haspopup="dialog" aria-controls="modal-compare"></button>-->
+        </div>
+
+        <!-- Modal comparativo accesible -->
+        <!--<section class="modal" id="modal-compare" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+          <div class="modal__dialog">
+            <div class="modal__head">
+              <h2 id="modal-title" style="margin:0">Comparativa rápida de la Suscripción Oro vs Platino</h3>
+              <button class="close" title="Cerrar" aria-label="Cerrar" data-close-modal>&times;</button>
+            </div>
+
+            <div class="modal__body">
+              <div style="overflow:auto">
+                <table class="tabla-beneficio" aria-describedby="modal-title">
+                  <thead>
+                    <tr>
+                      <th style="background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)) !important; color: #fff; border: none !important;" scope="col">Beneficios</th>
+                      <th style="background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)) !important; color: #fff; text-align: center; border: none !important;" scope="col">Oro</th>
+                      <th style="background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)) !important; color: #fff; text-align: center; border: none !important;" scope="col">Platino</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class="list-benefits" scope="row">Plantillas editables en Excel y Word para la gestión profesional y el control del negocio.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr class="list-b">
+                      <th class="list-benefits" scope="row">Boletín de Actualización Diario con lo que sabemos que debes saber para estar al día.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Base normativa con más de 16.000 normas actualizadas y analizadas para su correcta implementación</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Acceso ilimitado a contenido Premium del portal en las Rutas de actualización, con análisis de nuestros expertos para actualizarse, entender y aplicar cualquier tema necesario de tu práctica profesional.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Calendario tributario AUTOMATIZADO para la gestión centralizada y en línea de las obligaciones de tus clientes.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">AsesorÍA: Inteligencia artificial entrenada por nuestros expertos y con nuestro conocimiento para resolver dudas en los grandes temas de tu práctica profesional.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Prompts para IA: set de instrucciones para pedirle a cualquier Inteligencia Artificial que te ayude a resolver tareas de tu práctica profesional.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+
+                    <tr>
+                      <th style="text-align: left; background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)) !important; color: #fff;" colspan="4">Más de 40 libros digitales incluidos. Entre ellos:</th>
+                    </tr>
+
+                    <tr>
+                      <th class="list-benefits" scope="row">Guía Actualícese renta personas jurídicas.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Guía Actualícese rentas personas naturales.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Guía Actualícese información exógena.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Guía Actualícese planeación tributaria.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Guía Actualícese planeación financiera.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Guía Actualícese cierre contable y conciliación fiscal.</th>
+                      <td class="check">✓</td>
+                      <td class="check">✓</td>
+                    </tr>
+
+                    <tr>
+                      <th style="text-align: left; background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)); color: #fff;" colspan="4">Apps y Formatos Avanzados en Excel.</th>
+                    </tr>
+
+                    <tr>
+                      <th class="list-benefits" scope="row">Actualícese 210.xls.</th>
+                      <td>X</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Actualícese Impuesto diferido.</th>
+                      <td>X</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Actualícese 110.xls</th>
+                      <td>X</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Actualícese Exógena.</th>
+                      <td>X</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row"><b>NUEVA:</b> Auditoría y revisoría fiscal.</th>
+                      <td>X</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Capacitación en línea con certificación.</th>
+                      <td>X</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Comparte tu Suscripción hasta con 13 personas.</th>
+                      <td>X</td>
+                      <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                      <th class="list-benefits" scope="row">Descuentos en productos Actualícese.</th>
+                      <td class="check">30%</td>
+                      <td class="check">50%</td>
+                    </tr>
+
+                    <tr>
+                      <th class="list-benefits" scope="row"><b>Precio Madrugon</b></th>
+                      <td class="check">$249.750</td>
+                      <td class="check">$630.000</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+              <div style="display:flex; gap:8px; justify-content:flex-end; margin: 20px">
+                <a class="btn btn-secondary" href="#planes" data-close-modal>Volver</a>
+                <a class="btn btn-primary" href="https://actualicese.com/?add-to-cart=91113&coupon_code=55off_suscripcion_oro_ene&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" target="_blank" rel="noopener">Elegir Oro</a>
+                <a class="btn btn-primary" href="https://actualicese.com/?add-to-cart=237481&coupon_code=55off_suscripcion_plat_ene&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" target="_blank" rel="noopener">Elegir Platino</a>
+              </div>
+            </div>
+          </div>
+        </section>
+    </section>-->
+
+    <!-- SECCIÓN WHATSAPP -->
+    <section class="section" id="contacto-whatsapp">
+      <div class="whatsapp-section">
+        <div>
+          <img src="https://cdn.actualicese.com/wp-content/uploads/2025/11/13175620/Img-wp-black-days.png" class="wp-imagen"  alt="wp imagen">
+        </div>
+        <div>
+          <div class="whatsapp-badge">
+            💬 Acompañamiento directo
+          </div>
+          <h2 class="whatsapp-title">¿Tienes dudas? Conversemos por WhatsApp</h2>
+          <p class="whatsapp-text">
+            Te ayudamos a elegir la suscripción ideal según tu tipo de cliente, nivel de actualización y presupuesto.
+          </p>
+          <div class="whatsapp-cta">
+            <a href="https://xn--actualcese-p8a.trb.ai/wa/1hQe9t" target="_blank" class="btn btn-whatsapp">
+              Escribir por WhatsApp
+            </a>
+            <span class="whatsapp-number">También puedes escanear el código QR →</span>
+          </div>
+        </div>
+
+        <div class="whatsapp-qr-wrap">
+          <!-- Reemplaza la imagen por el QR real -->
+          <img src="https://actualicese.com/wp-content/uploads/2025/07/whatsapp-qr-2-1.png" alt="QR WhatsApp Actualícese"class="whatsapp-qr"
+          />
+          <span>Escanea para abrir el chat en tu celular</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECCIÓN 4 PRODUCTOS (OTROS DESTACADOS) -->
+    <section class="section" id="otros-productos">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">¿Todo listo para presentar renta de personas jurídicas y exógena?</h2>
+          <p class="section-subtitle">
+            Selecciona una categoría y descubre el producto perfecto para ti.
+          </p>
+        </div>
+
+        <div class="filter-bar" id="product-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="cp">Capacitaciones presenciales</button>
+          <button class="filter-btn" data-filter="herramienta">Herramientas</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+
+         <!-- Preventa 1 -->
+        <article class="product-card" data-category="cp">
+          <img src="https://actualicese.com/wp-content/uploads/2026/02/Cp-diego-guevara.jpg" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Capacitación presencial</span>
+            <h3 class="product-title">Información exógena AG 2025</h3>
+            <details class="product-details">
+              <summary>
+                Ver fechas disponibles
+                <span>➜</span>
+              </summary>
+              <p>
+                Capacitación presencial en Bogotá para reportar la Exógena 2025 sin errores, dominar los nuevos formatos y evitar el régimen sancionatorio. Incluye plantillas de Excel que simulan los prevalidadores de la DIAN <br><br>
+
+                Bogotá 24 de abril 2026
+              </p>
+            </details>
+
+            <div class="product-price-row">
+              <span class="product-price-promo">Desde $249.950 + IVA</span>
+              <span class="product-price-regular">$499.900 + iva</span>
+              <span class="product-price-tag">50% Dcto.</span>
+            </div>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/producto/capacitacion-presencial-para-preparar-y-presentar-informacion-exogena-tributaria-a-la-dian-ag-2025-diego-guevara/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra#ciudad" class="btn btn-primary btn-full">Asegurar mi cupo</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>
+            Aplica dcto para suscriptores <br>
+          </div> 
+        </article>
+
+        <!-- Preventa 1 -->
+        <article class="product-card" data-category="cp">
+          <img src="https://actualicese.com/wp-content/uploads/2026/02/Cp-diego-guevara-2.jpg" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Capacitación presencial</span>
+            <h3 class="product-title">Declaración de renta de personas Jurídicas y régimen simple AG 2025 </h3>
+            <details class="product-details">
+              <summary>
+                Ver fechas disponibles
+                <span>➜</span>
+              </summary>
+              <p>
+                Actualízate este 20 de marzo en Bogotá de forma presencial con el Dr. Guevara y llévate las plantillas de Excel definitivas para declarar con confianza.
+              </p>
+            </details>
+
+            <div class="product-price-row">
+              <span class="product-price-promo">Desde $249.950 + IVA</span>
+              <span class="product-price-regular">$499.900 + iva</span>
+              <span class="product-price-tag">50% Dcto.</span>
+            </div>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/producto/capacitacion-presencial-declaracion-renta-personas-juridicas-simple-ag-2025-bogota/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra#ciudad" class="btn btn-primary btn-full">Asegurar mi cupo</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>
+            Aplica dcto para suscriptores <br>
+          </div> 
+        </article>
+
+        <!-- Preventa 1 -->
+        <article class="product-card" data-category="cp">
+          <img src="https://actualicese.com/wp-content/uploads/2026/02/Cp-alexander-cobo.jpg" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Capacitación presencial</span>
+            <h3 class="product-title">Taller de información exógena tributaria AG 2025</h3>
+            <details class="product-details">
+              <summary>
+                Ver fechas disponibles
+                <span>➜</span>
+              </summary>
+              <p>
+                Bogotá - 26 de febrero / 09 de abril 2026 <br>
+                Medellín - 27 de marzo 2026 <br>
+                Cali - 14 de abril 2026 <br>
+                Barranquilla - 24 de marzo 2026
+              </p>
+            </details>
+
+            <div class="product-price-row">
+              <span class="product-price-promo">Desde $249.950 + IVA</span>
+              <span class="product-price-regular">$499.900 + iva</span>
+              <span class="product-price-tag">50% Dcto.</span>
+            </div>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/producto/capacitacion-presencial-taller-de-informacion-exogena-tributaria-ag-2025/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra#ciudad" class="btn btn-primary btn-full">Asegurar mi cupo</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>
+            Aplica dcto para suscriptores <br>
+          </div> 
+        </article>
+
+        <!-- Preventa 2 -->
+        <article class="product-card" data-category="cp">
+          <img src="https://actualicese.com/wp-content/uploads/2026/02/Cp-alexander-cobo-2.jpg" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Capacitación presencial</span>
+            <h3 class="product-title">Declaración de renta de personas jurídicas AG 2025</h3>
+            <details class="product-details">
+              <summary>
+                Ver fechas disponibles
+                <span>➜</span>
+              </summary>
+              <p>
+                Bogotá - 13 de febrero / 08 de abril 2026 <br>
+                Medellín - 16 de marzo 2026 <br>
+                Cali - 17 de marzo 2026 <br>
+                Barranquilla - 22 de abril 2026
+              </p>
+            </details>
+
+            <div class="product-price-row">
+              <span class="product-price-promo">Desde $249.950 + IVA </span>
+              <span class="product-price-regular">$499.900 + iva</span>
+              <span class="product-price-tag">50% Dcto.</span>
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <a href="https://actualicese.com/producto/capacitacion-presencial-declaracion-de-renta-personas-juridicas-2025/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra#ciudad" class="btn btn-primary btn-full">Asegurar mi cupo</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>Aplica dcto para suscriptores</p>
+          </div> 
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="product-card" data-category="herramienta">
+          <img src="https://cdn.actualicese.com/wp-content/uploads/2026/01/13163312/Img6-hi-exogena-2025.png" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Herramienta interactiva</span>
+            <h3 class="product-title">Actualícese Exógena AG 2025</h3>
+            <p class="product-label">Disponible en abril 2026</p>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                <b>Incluye  Libro digital- Guía Actualícese para la presentación de la Información Exógena</b> <br><br>
+                La herramienta interactiva que transforma la complejidad de los formatos en un proceso fluido, automatizado y seguro.
+              </p>
+            </details>
+
+            <div class="product-price-row">
+              <span class="product-price-promo">$94.950</span>
+              <span class="product-price-regular">$189.900</span>
+              <span class="product-price-tag">50% Dcto.</span>
+            </div>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/?add-to-cart=1050845&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/herramienta-actualicese-exogena-ag-2025/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>Incluida en la Suscripción Platino.</p>
+          </div> 
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="product-card" data-category="herramienta">
+          <img src="https://cdn.actualicese.com/wp-content/uploads/2025/10/21194902/Herramienta-impuesto-diferido.png" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Herramienta interactiva</span>
+            <h3 class="product-title">Impuesto diferido AG  2025 - Actualícese </h3>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                Esta herramienta nos permite elaborar los anexos necesarios para determinar las diferencias que surgen por la aplicación de la normatividad contable y fiscal, que conllevan al cálculo de este impuesto.
+              </p>
+            </details>
+
+            <div class="product-price-row">
+              <span class="product-price-promo">$94.950</span>
+              <span class="product-price-regular">$189.900</span>
+              <span class="product-price-tag">50% Dcto.</span>
+            </div>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/?add-to-cart=1012958&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/actualicese-impuesto-diferido-2025/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>Incluida en la Suscripción Platino.</p>
+          </div> 
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="product-card" data-category="herramienta">
+          <img src="https://cdn.actualicese.com/wp-content/uploads/2025/11/04112127/Herramienta-auditoria-revisoria-fiscal.png" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Herramienta interactiva</span>
+            <h3 class="product-title">Auditoría y Revisoría fiscal - Actualícese </h3>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                Optimiza tu trabajo con formatos listos, fórmulas automáticas y alertas que reducen errores y te hacen ganar tiempo en cada revisión, todo alineado con las principales normativas.
+              </p>
+            </details>
+
+            <div class="product-price-row">
+              <span class="product-price-promo">$94.950</span>
+              <span class="product-price-regular">$189.900</span>
+              <span class="product-price-tag">50% Dcto.</span>
+            </div>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/?add-to-cart=948518&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/libro-de-auditoria-y-revisoria-fiscal-papeles-de-trabajo-herramienta-actualicese-auditoria/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>Incluida en la Suscripción Platino.</p>
+          </div> 
+        </article>
+
+        <!-- Producto 4 -->
+        <!--<article class="product-card" data-category="herramienta">
+          <img src="https://actualicese.com/wp-content/uploads/2025/03/Captura-de-pantalla-2025-04-12-135231-1-768x317.png" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Herramienta interactiva</span>
+            <h3 class="product-title">Integral para el ejercicio de la revisoría fiscal, con el apoyo de la Inteligencia Artificial Versión 8.0 - Walter Ante</h3>
+            <div class="product-price-row">
+              <span class="product-price-promo">$139.300 </span>
+              <span class="product-price-regular">$199.000</span>
+              <span class="product-price-tag">30% Dcto.</span>
+            </div>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                 La herramienta más completa para revisoría fiscal ahora integra Inteligencia Artificial con prompts listos para la planeación, evaluación del control interno y programas de auditoría por áreas, adaptables a cualquier sector económico y mucho más.
+              </p>
+            </details>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/?add-to-cart=917694&coupon_code=30off_hi_auditoria_walter&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/herramienta-integral-para-el-ejercicio-de-la-revisoria-fiscal-v-8-walter-ante/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+
+          <div class="product-nota">
+            <p>Precio no incluye IVA</p>
+          </div>
+        </article>-->
+
+         <!-- Producto 4 -->
+        <!--<article class="product-card" data-category="herramienta">
+          <img src="https://actualicese.com/wp-content/uploads/2021/10/Imagen2.png" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Herramienta interactiva</span>
+            <h3 class="product-title">Análisis financiero y control presupuestal - Alberto Sánchez</h3>
+            <div class="product-price-row">
+              <span class="product-price-promo">$83.930 </span>
+              <span class="product-price-regular">$119.900</span>
+              <span class="product-price-tag">30% Dcto.</span>
+            </div>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                 Esta macro autogenera más de 70 hojas con un análisis completo de los estados financieros a partir de tus balances de pruebas, esencial para evaluar el desempeño, garantizar el cumplimiento normativo, tomar decisiones estratégicas, preparar informes precisos y mejorar la eficiencia operativa de la empresa.
+              </p>
+            </details>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/?add-to-cart=242005&coupon_code=30off_hi_financiera_alberto&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/herramienta-analisis-financiero-y-control-presupuestal-en-excel-alberto-sanchez/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+
+          <div class="product-nota">
+            <p>Precio no incluye IVA</p>
+          </div> 
+        </article>-->
+
+        <!-- Producto 5 -->
+        <article class="product-card" data-category="seminario">
+          <img src="https://actualicese.com/wp-content/uploads/2023/11/Herramienta-110-4-300x195.png" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Herramienta interactiva</span>
+            <h3 class="product-title">Actualícese 110.xls Año gravable 2025 </h3>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                Incluye: Libro de declaración de renta de personas jurídicas AG 2025. Sin enredos. Automatiza tu declaración HOY.
+              </p>
+            </details>
+
+            <div class="product-price-row">
+              <span class="product-price-promo">$94.950</span>
+              <span class="product-price-regular">$189.900</span>
+              <span class="product-price-tag">50% Dcto.</span>
+            </div>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/tienda/?add-to-cart=1033565&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/libro-de-declaracion-de-renta-de-personas-juridicas-ag-2025-actualicese-110-xls/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>Incluida en la Suscripción Platino</p>
+          </div> 
+        </article>
+
+        <!-- Producto 5 -->
+        <!--<article class="product-card" data-category="seminario">
+          <img src="https://cdn.actualicese.com/wp-content/uploads/2025/10/14112134/Temario-completo-del-curso.jpg" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Seminario en línea</span>
+            <h3 class="product-title">Cierre contable y fiscal 2025: depuración, conciliación y estados de resultados - Actualícese</h3>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                Aproximadamente 3 horas de capacitación con Germán Torres y Juan Fernando Mejía sobre este tema.
+              </p>
+            </details>
+
+            <div class="product-price-row">
+              <span class="product-price-promo">$149.900</span>
+              <span class="product-price-regular">$149.900</span>
+              <span class="product-price-tag">27% Dcto.</span>
+            </div>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/?add-to-cart=1010065&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/cierre-contable-y-fiscal-2025-depuracion-conciliacion-y-estados-financieros/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>Precio no incluye IVA <br> Incluido en la Suscripción Platino</p>
+          </div> 
+        </article> -->
+
+        <!-- Producto 6 -->
+        <!--<article class="product-card" data-category="seminario">
+          <img src="https://8907390.fs1.hubspotusercontent-na1.net/hubfs/8907390/escuela-finanzas-negocios.jpg" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Capacitación</span>
+            <h3 class="product-title">Cierre contable y fiscal 2025 - Escuela de Finanzas y Negocios</h3>
+            <div class="product-price-row">
+              <span class="product-price-promo">$63.992</span>
+              <span class="product-price-regular">$79.990</span>
+              <span class="product-price-tag">20% Dcto.</span>
+            </div>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                Aproximadamente 4 horas de capacitación con Yenifer Solanilla sobre este tema.
+              </p>
+            </details>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/?add-to-cart=1010645&coupon_code=20off_seminario_cierre_escuela&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/seminario-cierre-contable-y-fiscal-2025/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>Precio no incluye IVA <br> Incluido en la Suscripción Platino <br> 30% de descuento para suscriptores oro</p>
+          </div> 
+        </article>-->
+
+        <!-- Producto 7 -->
+        <!--<article class="product-card" data-category="seminario">
+          <img src="https://8907390.fs1.hubspotusercontent-na1.net/hubfs/8907390/Imported%20sitepage%20images/440x270_icef_sagrilaft_manera_eficiente_empresa.png" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Seminario en línea</span>
+            <h3 class="product-title">Seminario taller de cierre contable y fiscal AG 2025 - ICEF</h3>
+            <div class="product-price-row">
+              <span class="product-price-promo">$175.500</span>
+              <span class="product-price-regular">$195.000</span>
+              <span class="product-price-tag">10% Dcto.</span>
+            </div>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                Aproximadamente 4 horas de capacitación con Cesar Anzola sobre este tema.
+              </p>
+            </details>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/?add-to-cart=1014066&coupon_code=10off_capacitacion_cierre_icef&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/seminario-taller-de-cierre-contable-y-fiscal-ano-gravable-2025-icef/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>Precio no incluye IVA <br></p>
+          </div> 
+        </article>-->
+
+        <!-- Producto 8 -->
+        <!--<article class="product-card" data-category="seminario">
+          <img src="https://8907390.fs1.hubspotusercontent-na1.net/hubfs/8907390/Imported%20sitepage%20images/440x270_icef_sagrilaft_manera_eficiente_empresa.png" alt="Producto 1" class="product-img"/>
+          <div class="product-body">
+            <span class="product-tag-etiqueta">Seminario en línea</span>
+            <h3 class="product-title">Taller práctico impuesto diferido - ICEF</h3>
+            <div class="product-price-row">
+              <span class="product-price-promo">$178.200</span>
+              <span class="product-price-regular">$198.000</span>
+              <span class="product-price-tag">10% Dcto.</span>
+            </div>
+            <details class="product-details">
+              <summary>
+                Ver más información
+                <span>➜</span>
+              </summary>
+              <p>
+                Aproximadamente 7 horas de capacitación con Juan Fernando Mejía sobre este tema.
+              </p>
+            </details>
+          </div>
+          <div class="product-actions">
+            <a href="https://actualicese.com/?add-to-cart=990524&coupon_code=10off_capacitacion_diferido_icef&utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=botones_compra" class="btn btn-primary btn-full">Comprar ahora</a>
+            <a href="https://actualicese.com/producto/taller-practico-impuesto-diferido-icef/?utm_source=actualicese_landing_promociones&utm_medium=actualicese&utm_campaign=multiproducto-dia-del-contador-2026&utm_content=ver-mas" class="btn btn-secondary btn-full">Ver más</a>
+          </div>
+          
+          <div class="product-nota">
+            <p>Precio no incluye IVA </p>
+          </div> 
+        </article>-->
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN WHATSAPP -->
+    <section class="section" id="contacto-whatsapp">
+      <div class="whatsapp-section-2">
+        <div>
+          <h2 class="whatsapp-title">¿Tienes dudas? Llámanos ya al 6017446402 y nuestro equipo te atenderá</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="formulario" class="section formulario-crucero">
+      <script src="https://js.hsforms.net/forms/embed/8907390.js" defer></script>
+      <div class="hs-form-frame" data-region="na1" data-form-id="24d65d60-7721-4220-8927-4ea07511bea5" data-portal-id="8907390"></div>
+    </section>
+
+    <footer class="section-footer">
+      <h2 class="section-title">Condiciones y restricciones</h2>
+        <div class="bullet"><p>Promoción disponible por tiempo limitado.</p></div>
+        <div class="bullet"><p>Promoción no acumulable con otras promociones.</p></div>
+        <div class="bullet"><p>Promoción no canjeable en dinero u otro producto.</p></div>
+        <div class="bullet"><p>Aplica para órdenes de compra generadas y pagadas durante el tiempo de vigencia de la promoción.</p></div>
+        <div class="bullet"><p>Si tienes una Suscripción debes estar logueado/a para que liquide el descuento.</p></div>
+    </footer>
+    </div>
+  </div>
+
+  <script>
+
+  // ====== MODALES (comparador + suscripciones) accesibles ======
+  const modals = document.querySelectorAll('.modal, .modal-sus');
+  let lastFocus;
+
+  function openModalById(id){
+    const modal = document.querySelector(id);
+    if(!modal) return;
+    lastFocus = document.activeElement;
+    modal.setAttribute('aria-hidden','false');
+
+    const focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    focusable && focusable.focus();
+
+    document.addEventListener('keydown', onEsc);
+    modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(modal); });
+  }
+
+  function closeModal(modal){
+    modal.setAttribute('aria-hidden','true');
+    document.removeEventListener('keydown', onEsc);
+    lastFocus && lastFocus.focus();
+  }
+
+  function onEsc(e){
+    if(e.key==='Escape'){
+      modals.forEach(m=> m.getAttribute('aria-hidden')==='false' && closeModal(m));
+    }
+  }
+
+  // Comparador
+  document.querySelector('[data-open-modal]')?.addEventListener('click',
+    ()=> openModalById('#modal-compare')
+  );
+  document.querySelectorAll('[data-close-modal]').forEach(btn =>
+    btn.addEventListener('click', (e)=> closeModal(e.target.closest('.modal')))
+  );
+
+  // Suscripciones
+  document.querySelectorAll('[data-open-sus]').forEach(btn=>{
+    btn.addEventListener('click', ()=> openModalById(btn.getAttribute('data-open-sus')));
+  });
+  document.querySelectorAll('[data-close-sus]').forEach(btn=>{
+    btn.addEventListener('click', (e)=> closeModal(e.target.closest('.modal-sus')));
+  });
+
+  // ====== FILTRO DE PRODUCTOS ======
+  const filterBar = document.getElementById('product-filters');
+  const products = document.querySelectorAll('#otros-productos .product-grid .product-card');
+
+  filterBar?.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.filter-btn');
+    if(!btn) return;
+
+    filterBar.querySelectorAll('.filter-btn').forEach(b=> b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    products.forEach(card=>{
+      const cat = card.dataset.category;
+      card.style.display = (filter === 'all' || cat === filter) ? '' : 'none';
+    });
+  });
+  
+    
+  </script>
+</body>
+</html>

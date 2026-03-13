@@ -1,0 +1,492 @@
+# Biblioteca de bloques y plantilla base para el agente web de Actualícese
+
+## Objetivo
+
+Este documento complementa el manual maestro del agente. Aquí se define una biblioteca base de bloques reutilizables y una plantilla inicial para que el agente construya páginas consistentes, rápidas de producir y compatibles con el ecosistema visual de Actualícese.
+
+El agente no debe empezar desde cero. Debe empezar desde una plantilla y ensamblar bloques.
+
+---
+
+# 1. Filosofía de construcción
+
+## Regla principal
+
+Cada página debe construirse con esta lógica:
+
+1. elegir el tipo de página,
+2. seleccionar una plantilla base,
+3. insertar bloques reutilizables,
+4. personalizar copy, imágenes, CTA y detalles,
+5. agregar solo el CSS y JS estrictamente necesarios.
+
+## Orden de trabajo obligatorio del agente
+
+Antes de escribir código, el agente debe decidir:
+
+* qué tipo de página es,
+* cuál es el CTA principal,
+* qué bloques necesita,
+* qué clases corporativas ya resuelven el diseño,
+* qué CSS adicional debe encapsular.
+
+---
+
+# 2. Plantilla base universal
+
+Esta es la estructura madre que debe usar el agente como punto de partida.
+
+## Estructura general recomendada
+
+```html
+<main class="uxp-ancho-completo actlp-page">
+  <section class="actlp-hero uxp-relleno-superior uxp-relleno-inferior">
+    <!-- bloque hero -->
+  </section>
+
+  <section class="actlp-section actlp-beneficios uxp-relleno-superior uxp-relleno-inferior">
+    <!-- bloque de beneficios -->
+  </section>
+
+  <section class="actlp-section actlp-detalle uxp-relleno-superior uxp-relleno-inferior">
+    <!-- bloque informativo -->
+  </section>
+
+  <section class="actlp-section actlp-prueba-social uxp-relleno-superior uxp-relleno-inferior">
+    <!-- testimonios, argumentos o respaldo -->
+  </section>
+
+  <section class="actlp-section actlp-cta-final uxp-relleno-superior uxp-relleno-inferior">
+    <!-- cierre con llamado a la acción -->
+  </section>
+</main>
+```
+
+## Reglas de la plantilla base
+
+* usar `main` como contenedor principal,
+* dividir por secciones claras,
+* cada sección debe tener una responsabilidad única,
+* cada bloque puede quitarse o repetirse según la necesidad,
+* el nombre funcional del bloque debe mantenerse,
+* el CSS nuevo siempre debe ir con prefijo `actlp-`.
+
+---
+
+# 3. Bloques reutilizables obligatorios
+
+## Bloque 1. Hero comercial 50/50
+
+**Uso:** productos, promociones, suscripciones, herramientas, eventos.
+
+### Estructura
+
+```html
+<section class="actlp-hero uxp-fondo-blanco uxp-relleno-superior uxp-relleno-inferior">
+  <div class="uxp-grid-contenedor-ruta">
+    <div class="uxp-flex-fila uxp-align-items-flex-start">
+      <div class="uxp-flex-1 uxp-relleno-derecho">
+        <p class="uxp-texto-banner uxp-margen-inferior-cero">Texto de apoyo</p>
+        <h1 class="uxp-texto-precios uxp-margen-superior-cero">
+          Título principal <span class="uxp-txt-azul">con énfasis</span>
+        </h1>
+        <div class="uxp-linea-corta uxp-fondo-verde-lima uxp-margen-inferior"></div>
+        <p>Descripción breve del beneficio principal.</p>
+        <a href="#cta" class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado">Quiero más información</a>
+      </div>
+      <div class="uxp-flex-1 uxp-elemento-derecha">
+        <img src="URL-IMAGEN" alt="Descripción visual" class="actlp-img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+### Cuándo usarlo
+
+* cuando hay una oferta clara,
+* cuando el usuario debe entender el beneficio en los primeros segundos,
+* cuando hay apoyo visual fuerte.
+
+---
+
+## Bloque 2. Encabezado de sección
+
+**Uso:** iniciar cualquier bloque importante.
+
+```html
+<div class="actlp-heading uxp-margen-inferior">
+  <h2 class="uxp-texto-precios uxp-margen-inferior-cero">
+    Título de sección <span class="uxp-txt-azul">destacado</span>
+  </h2>
+  <div class="uxp-linea-corta uxp-fondo-verde-lima uxp-margen-inferior"></div>
+  <p>Texto breve que introduce la sección.</p>
+</div>
+```
+
+### Regla
+
+No debe usarse un bloque largo sin un encabezado visible y fácil de escanear.
+
+---
+
+## Bloque 3. Beneficios en tarjetas
+
+**Uso:** beneficios, módulos, entregables, razones de compra.
+
+```html
+<section class="actlp-beneficios uxp-fondo-gris-claro uxp-relleno-superior uxp-relleno-inferior">
+  <div class="uxp-grid-contenedor-ruta">
+    <div class="actlp-heading uxp-texto-centrado">
+      <h2 class="uxp-texto-precios">¿Qué obtienes con <span class="uxp-txt-azul">esta solución</span>?</h2>
+      <div class="uxp-linea-corta uxp-fondo-verde-lima uxp-margen-auto"></div>
+    </div>
+
+    <div class="actlp-cards-grid">
+      <article class="actlp-card uxp-fondo-blanco uxp-borde-redondeado">
+        <h3>Beneficio 1</h3>
+        <p>Descripción corta y útil.</p>
+      </article>
+      <article class="actlp-card uxp-fondo-blanco uxp-borde-redondeado">
+        <h3>Beneficio 2</h3>
+        <p>Descripción corta y útil.</p>
+      </article>
+      <article class="actlp-card uxp-fondo-blanco uxp-borde-redondeado">
+        <h3>Beneficio 3</h3>
+        <p>Descripción corta y útil.</p>
+      </article>
+    </div>
+  </div>
+</section>
+```
+
+### Regla
+
+Máximo 3 o 4 tarjetas por fila visual. Nada de zoológico de cajas infinitas.
+
+---
+
+## Bloque 4. Imagen + lista de valor
+
+**Uso:** explicar por qué comprar, qué incluye o cómo funciona.
+
+```html
+<section class="actlp-info-list uxp-relleno-superior uxp-relleno-inferior">
+  <div class="uxp-grid-contenedor-ruta">
+    <div class="uxp-flex-fila uxp-align-items-flex-start">
+      <div class="uxp-flex-1 uxp-relleno-derecho">
+        <img src="URL-IMAGEN" alt="Descripción" class="actlp-img-fluid">
+      </div>
+      <div class="uxp-flex-1">
+        <h2 class="uxp-texto-precios">Lo que incluye <span class="uxp-txt-azul">tu compra</span></h2>
+        <div class="uxp-linea-corta uxp-fondo-verde-lima uxp-margen-inferior"></div>
+        <ul class="uxp-lista-datos">
+          <li>Punto clave 1</li>
+          <li>Punto clave 2</li>
+          <li>Punto clave 3</li>
+          <li>Punto clave 4</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Bloque 5. Comparativo simple
+
+**Uso:** planes, versiones, antes/después, incluido/no incluido.
+
+```html
+<section class="actlp-comparativo uxp-fondo-azul-claro uxp-relleno-superior uxp-relleno-inferior">
+  <div class="uxp-grid-contenedor-ruta">
+    <div class="actlp-heading uxp-texto-centrado">
+      <h2 class="uxp-texto-precios">Compara y elige <span class="uxp-txt-azul">la mejor opción</span></h2>
+      <div class="uxp-linea-corta uxp-fondo-verde-lima uxp-margen-auto"></div>
+    </div>
+
+    <div class="actlp-table-wrap">
+      <table class="actlp-table">
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>Opción A</th>
+            <th>Opción B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Elemento 1</td>
+            <td>Sí</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Elemento 2</td>
+            <td>Incluido</td>
+            <td>Adicional</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+```
+
+### Regla
+
+Las tablas deben ser pocas, legibles y con versión responsive simple.
+
+---
+
+## Bloque 6. FAQ / acordeón
+
+**Uso:** objeciones, preguntas frecuentes, soporte comercial.
+
+```html
+<section class="actlp-faq uxp-relleno-superior uxp-relleno-inferior">
+  <div class="uxp-grid-contenedor-ruta">
+    <div class="actlp-heading">
+      <h2 class="uxp-texto-precios">Preguntas <span class="uxp-txt-azul">frecuentes</span></h2>
+      <div class="uxp-linea-corta uxp-fondo-verde-lima uxp-margen-inferior"></div>
+    </div>
+
+    <div class="actlp-faq-item">
+      <button class="actlp-faq-question" type="button">Pregunta 1</button>
+      <div class="actlp-faq-answer">
+        <p>Respuesta clara y concreta.</p>
+      </div>
+    </div>
+
+    <div class="actlp-faq-item">
+      <button class="actlp-faq-question" type="button">Pregunta 2</button>
+      <div class="actlp-faq-answer">
+        <p>Respuesta clara y concreta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## Bloque 7. CTA final
+
+**Uso:** cierre fuerte de la página.
+
+```html
+<section id="cta" class="actlp-cta-final uxp-fondo-azul uxp-relleno-superior uxp-relleno-inferior">
+  <div class="uxp-grid-contenedor-ruta uxp-texto-centrado">
+    <h2 class="uxp-texto-precios uxp-txt-blanco">Da el siguiente paso <span class="uxp-txt-verde-lima">hoy</span></h2>
+    <div class="uxp-linea-corta uxp-fondo-verde-lima uxp-margen-auto"></div>
+    <p class="uxp-txt-blanco">Texto corto que refuerza la acción.</p>
+    <a href="URL-CTA" class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado">Comprar ahora</a>
+  </div>
+</section>
+```
+
+### Regla
+
+Toda landing o página promocional debe cerrar con un CTA claro. No dejar al usuario flotando en el vacío cósmico del scroll.
+
+---
+
+# 4. Bloques opcionales recomendados
+
+## Bloque 8. Cifras o indicadores
+
+Útil para confianza, resultados o contexto.
+
+## Bloque 9. Testimonios
+
+Solo si hay contenido real. Nada de muñecos de cartón con frases genéricas.
+
+## Bloque 10. Agenda o cronograma
+
+Muy útil para eventos y capacitaciones.
+
+## Bloque 11. Perfil del conferencista
+
+Para páginas de evento.
+
+## Bloque 12. Navegación interna con anclas
+
+Para especiales editoriales o páginas largas.
+
+---
+
+# 5. CSS base sugerido para complementar el sistema
+
+Este CSS no reemplaza los estilos corporativos. Solo ayuda a los bloques nuevos.
+
+```css
+.actlp-page {
+  width: 100%;
+}
+
+.actlp-section {
+  width: 100%;
+}
+
+.actlp-img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.actlp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.actlp-card {
+  padding: 24px;
+}
+
+.actlp-table-wrap {
+  overflow-x: auto;
+  margin-top: 24px;
+}
+
+.actlp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.actlp-table th,
+.actlp-table td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.actlp-faq-item {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.actlp-faq-question {
+  width: 100%;
+  padding: 18px 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.actlp-faq-answer {
+  display: none;
+  padding-bottom: 16px;
+}
+
+.actlp-faq-item.is-open .actlp-faq-answer {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .actlp-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .actlp-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+```
+
+---
+
+# 6. JS base sugerido
+
+```javascript
+document.addEventListener('DOMContentLoaded', function () {
+  var faqButtons = document.querySelectorAll('.actlp-faq-question');
+
+  faqButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var item = button.closest('.actlp-faq-item');
+      item.classList.toggle('is-open');
+    });
+  });
+});
+```
+
+### Regla
+
+El agente solo debe incluir JS base cuando el bloque lo necesita. Si no hay interacción, debe entregar un `script.js` vacío o con comentario mínimo.
+
+---
+
+# 7. Plantillas maestras por tipo de página
+
+## Plantilla A. Landing de producto
+
+Bloques recomendados:
+
+1. Hero comercial 50/50
+2. Beneficios en tarjetas
+3. Imagen + lista de valor
+4. Comparativo o detalle
+5. FAQ o prueba social
+6. CTA final
+
+## Plantilla B. Ruta editorial
+
+Bloques recomendados:
+
+1. Hero informativo
+2. Navegación interna
+3. Secciones de contenido con encabezado
+4. Recursos destacados
+5. CTA contextual
+
+## Plantilla C. Evento o capacitación
+
+Bloques recomendados:
+
+1. Hero del evento
+2. Datos clave
+3. Qué aprenderás
+4. Perfil del conferencista
+5. Agenda o metodología
+6. CTA final
+
+## Plantilla D. Promo simple
+
+Bloques recomendados:
+
+1. Hero directo
+2. Oferta o beneficio
+3. Razones para actuar
+4. CTA final
+
+---
+
+# 8. Instrucción adicional para el agente
+
+Pega también esto como parte de sus reglas de trabajo:
+
+```text
+No empieces una página desde cero. Primero elige una plantilla maestra. Luego selecciona bloques reutilizables y arma la página con ellos.
+
+Cuando construyas una página, usa primero estos bloques: hero comercial 50/50, encabezado de sección, tarjetas de beneficios, imagen + lista, comparativo simple, FAQ y CTA final.
+
+No inventes estructuras nuevas si una plantilla existente ya resuelve el objetivo.
+```
+
+---
+
+# 9. Qué sigue después de este documento
+
+Después de esta biblioteca, el siguiente nivel para dejar el agente realmente fino es crear:
+
+1. un archivo de prompts de uso interno para el equipo,
+2. una biblioteca de copys estructurados por tipo de bloque,
+3. una guía de naming para clases nuevas,
+4. una checklist de QA antes de publicar,
+5. una plantilla de brief para pedir páginas al agente.
+
+Eso ya convierte el agente en una línea de ensamblaje bien aceitada, no en una ruleta con HTML.

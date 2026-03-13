@@ -1,0 +1,680 @@
+<!---------------------------------------------->
+
+<!-- NOTA PARA CHATGPT CON QUIEN ESTOY HABLANDO AHORA MISMO, LA ESTRUCTURA BASE QUE TE COMENTO, ES LA QUE VOY A COLOCAR A CONTINUACIÓN:
+INICIO DE LA ESTRUCTURA BASE PARA TODAS LAS PÁGINAS-->
+
+  <!DOCTYPE html>
+  <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>nombre de la página</title>
+      <link rel="stylesheet" href="../main-style-act-2025.css">
+    </head>
+    <body>
+
+      <!-- 
+      AQUÍ VA EL CONTENIDO DE LA PÁGINA CUANDO EL USUARIO LO SOLICITE MEDIANTE EL WEB AGENT STY
+      LA ESTRUCTURA PRESENTE A CONTINUACIÓN, NO REPRESENTA EL ORDEN OBLIGATORIO DE LOS BLOQUES, EXCEPTO EL PRIMERO QUE SIEMPRE SERÁ EL BANNER PRINCIPAL, QUE ES EL ENCABEZADO DE LA PÁGINA, LOS DEMÁS BLOQUES SON ESTRUCTURAS GUÍAS PARA ARMAR LAS NUEVAS PÁGINAS SEGÚN EL DOCUMENTO QUE SUMINISTRE EL USUARIO
+      -->
+
+    <!---------------------------------------------->
+
+      <!-- BLOQUE PRINCIPAL ENCABEZADO-->
+
+        <!--
+        En un banner principal siempre debe ir en fondo gris por ahora, a medida que vayamos trabajando en nuevas páginas, podemos ir cambiando de color el fondo, pero eso lo haría yo manualmente, si más adelante llegar a crear más fondo, yo lo crearía. Por ahora la estructura para el bloque del banner será de la siguinte forma:
+        -->
+        <section class="uxp-ancho-completo uxp-fondo-gris-claro uxp-relleno-superior uxp-relleno-inferior">
+
+          <div class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-relleno-superior uxp-relleno-inferior">
+
+          <!-- Este banner está dividido en dos partes, y siempre son al 50% para el lado izquierdo y 50% para el lado derecho, es decir, cada uno tendrá "uxp-flex-1" -->
+
+            <!-- columna izquierda del banner -->
+            <div class="uxp-flex-1 uxp-texto-izquierda">
+              <p class="uxp-texto-banner uxp-margen-superior-cero "><strong class="uxp-txt-azul">Título</p>
+
+              <p>Copy</p>
+
+              <p class="uxp-texto-centrado uxp-relleno-inferior"><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=91113&amp;coupon_code=sku2194_50off">Suscribirme</a></p>
+
+              <section class="uxp-flex-fila">
+                <article
+                class="uxp-ancho-completo uxp-fondo-blanco uxp-borde-redondeado uxp-texto-centrado 
+                uxp-relleno-superior uxp-relleno-derecho uxp-relleno-izquierdo uxp-relleno-inferior">
+                      <p class="uxp-margen-superior-cero uxp-texto-precios uxp-relleno-superior uxp-relleno-derecho uxp-relleno-izquierdo">Suscripción<br><strong class="uxp-fondo-verde-lima uxp-borde-redondeado">&nbsp;Oro&nbsp;</strong></p>
+
+                      <p class="uxp-texto-precios uxp-relleno-derecho uxp-relleno-izquierdo uxp-margen-inferior-cero"><strong>$275.500/año</strong></p>
+                      <p class="uxp-relleno-derecho uxp-relleno-izquierdo uxp-margen-superior-cero uxp-relleno-inferior">Precio regular: <s>$555.000</s></p>
+
+
+                </article>
+
+                <article
+                class="uxp-ancho-completo uxp-fondo-blanco uxp-borde-redondeado uxp-texto-centrado 
+                uxp-relleno-superior uxp-relleno-derecho uxp-relleno-izquierdo uxp-relleno-inferior">
+                      <p class="uxp-margen-superior-cero uxp-texto-precios uxp-relleno-superior uxp-relleno-derecho uxp-relleno-izquierdo">Suscripción<br><strong class="uxp-fondo-azul uxp-borde-redondeado uxp-txt-blanco">&nbsp;Platino&nbsp;</strong></p>
+
+                      <p class="uxp-texto-precios uxp-relleno-derecho uxp-relleno-izquierdo uxp-margen-inferior-cero"><strong>$700.000/año</strong></p>
+                      <p class="uxp-relleno-derecho uxp-relleno-izquierdo uxp-margen-superior-cero uxp-relleno-inferior">Precio regular: <s>$1.400.000</s></p>
+
+                      <p class="uxp-texto-centrado uxp-relleno-inferior"><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=237481&amp;coupon_code=sku2596_50off">Suscribirme</a></p>
+                </article>           
+              </section>
+
+            </div>
+
+            <!-- columna derecha del banner 
+            Por ahora en la columna de la derecha, siempre se acompañará con una imagen, la imagen la colocaré yo-->
+            <div class="uxp-flex-1">
+              <img class="uxp-ancho-completo"
+                src="#" alt="Nombre alternativo para la imagen"/>
+            </div>
+
+          </div>
+
+        </section>
+
+    <!---------------------------------------------->
+
+      <!-- BLOQUE DE TEXTO A LA IZQUIERDA E IMAGEN DE LA DERECHA -->
+
+        <!--
+        Este tipo de banner por lo general son sin fondo, es decir, todo completamente en blanco, así que el div principal iría casi siempre con la clase "uxp-grid-contenedor-ruta".
+        -->
+        <section class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-relleno-superior uxp-relleno-inferior">
+
+          <!-- columna izquierda del banner -->
+          <!-- En este lugar iría la información o contenido del bloque, que puede ser un título, con un copy o parrafo. También podría ir una lista, así que dependiendo del tipo de información que esté en el documento, iría o una cosa o la otra. -->
+          <div class="uxp-flex-1 uxp-borde-redondeado uxp-relleno-derecho uxp-relleno-izquierdo">
+              <!-- Título -->
+              <p class=" uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong class="uxp-txt-azul">Título</p>
+              <!-- Línea decorativa verde -->
+              <div class="uxp-linea-corta uxp-fondo-verde-lima"></div>
+
+              <!-- Párrafo -->
+              <p class="uxp-relleno-superior uxp-margen-superior"> Parrafo - Copy</p>
+
+              <!-- Lista -->
+              <ul class="uxp-lista-datos uxp-margen-superior uxp-relleno-inferior">
+                <li><!-- Agregar aquí la lista--></li>
+                <li><!-- Agregar aquí la lista--></li>
+                <!-- Replicar de aquí para abajo, dependiendo de la cantidad de bullet que aparece en el documento. -->
+              </ul>
+
+          </div>
+
+          <!-- columna derecha del banner -->
+          <!-- la columna de la derecha, siempre se acompañará con una imagen -->
+          <div class="uxp-flex-1 uxp-borde-redondeado uxp-relleno-derecho uxp-relleno-izquierdo">
+            <img class="uxp-ancho-completo"
+              src="#" alt="Nombre alternativo para la imagen"/>
+          </div>
+        </section>
+
+    <!---------------------------------------------->
+
+      <!-- BLOQUE DE IMAGEN A LA IZQUIERDA Y TEXTO A LA DERECHA -->
+
+        <!--
+        Este tipo de banner por lo general son sin fondo, es decir, todo completamente en blanco, así que el div principal iría casi siempre con la clase "uxp-grid-contenedor-ruta".
+        -->
+        <section class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-relleno-superior uxp-relleno-inferior">
+
+          <!-- columna izquierda del banner -->
+          <!-- la columna de la izquierda, siempre se acompañará con una imagen. -->
+          <div class="uxp-flex-1 uxp-borde-redondeado uxp-relleno-derecho uxp-relleno-izquierdo">
+            <img class="uxp-ancho-completo"
+              src="#" alt="Nombre alternativo para la imagen"/>
+          </div>
+
+          <!-- columna izquierda del banner -->
+
+          <!-- En este lugar iría la información o contenido del bloque, que puede ser un título, con un copy o parrafo. También podría ir una lista, así que dependiendo del tipo de información que esté en el documento, iría o una cosa o la otra. -->
+          <div class="uxp-flex-1 uxp-borde-redondeado uxp-relleno-derecho uxp-relleno-izquierdo">
+
+            <!-- Título -->
+            <p class=" uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong class="uxp-txt-azul">Título</p>
+            <!-- Línea decorativa verde -->
+            <div class="uxp-linea-corta uxp-fondo-verde-lima"></div>
+
+            <!-- Párrafo -->
+            <p class="uxp-relleno-superior uxp-margen-superior"> Parrafo - Copy</p>
+
+            <!-- Lista -->
+            <ul class="uxp-lista-datos uxp-margen-superior uxp-relleno-inferior">
+              <li><!-- Agregar aquí la lista--></li>
+              <li><!-- Agregar aquí la lista--></li>
+              <!-- Replicar de aquí para abajo, dependiendo de la cantidad de bullet que aparece en el documento. -->
+            </ul>
+
+          </div>
+
+
+        </section>
+
+    <!---------------------------------------------->
+
+      <!-- BLOQUE BARRA SEPARADORA -->
+
+        <!--
+        Bloque Barra separadora.
+        La barra espaciadora siempre se usará en medio de dos bloques que no tiene fondo, esto con la idea de separa un poco su información y que no se vea amontonado.
+        -->
+        <section class="uxp-grid-contenedor-ruta uxp-margen-auto">
+          <div class="uxp-barra-separadora">&nbsp;</div>
+        </section>
+
+    <!---------------------------------------------->
+
+      <!-- BLOQUE TÍTULO CENTROAL + 2 MÓDULOS -->
+
+      <section class="uxp-grid-contenedor-ruta uxp-relleno-superior uxp-relleno-inferior">
+
+        <!-- columna central del bloque -->
+         <div class="uxp-relleno-inferior">
+
+          <!-- En este lugar iría la información o contenido del bloque, que puede ser un título, con un copy o parrafo. Dependiendo del tipo de información que esté en el documento, iría o una cosa o la otra. -->
+
+          <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior">Título</p>
+          <!-- Línea decorativa verde -->
+          <span class="uxp-elemento-centrado uxp-relleno-inferior">
+            <span class="uxp-linea-corta uxp-fondo-verde-lima"></span>
+          </span>
+
+          <p class="uxp-margen-superior uxp-texto-centrado">párrafo, texto o copy</p>
+        </div>
+
+        <!-- Despues del bloque central donde estará el título, texto, copy, etc. Iría un bloque de 3 módulos. Los módulos por lo general irían de color gris de fondo y si en algún momento deseo cambiar los colores de los bloques, se lo haré saber. -->
+
+        <!-- Contenedor de las 3 columnas -->
+          <div class="uxp-flex-fila uxp-margen-superior uxp-relleno-inferior uxp-align-items-flex-start">
+
+            <!-- Módulo 1 -->
+            <article class="uxp-flex-1">
+
+              <!-- En este lugar iría la información o contenido del bloque, que puede ser un título, con un copy o parrafo. También podría ir una lista, así que dependiendo del tipo de información que esté en el documento, iría o una cosa o la otra. -->
+              <div class="uxp-flex-1 uxp-borde-redondeado uxp-relleno-derecho uxp-relleno-izquierdo">
+
+                <!-- Título -->
+                <p class=" uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong class="uxp-txt-azul">Título</p>
+                <!-- Línea decorativa verde -->
+                <div class="uxp-linea-corta uxp-fondo-verde-lima"></div>
+
+                <!-- Párrafo -->
+                <p class="uxp-relleno-superior uxp-margen-superior"> Parrafo - Copy</p>
+
+                <!-- Lista -->
+                <ul class="uxp-lista-datos uxp-margen-superior uxp-relleno-inferior">
+                  <li><!-- Agregar aquí la lista--></li>
+                  <li><!-- Agregar aquí la lista--></li>
+                  <!-- Replicar de aquí para abajo, dependiendo de la cantidad de bullet que aparece en el documento. -->
+                </ul>
+
+              </div>
+
+            </article>
+
+            <!-- Módulo 2 -->
+            <article class="uxp-flex-1">
+
+              <!-- En este lugar iría la información o contenido del bloque, que puede ser un título, con un copy o parrafo. También podría ir una lista, así que dependiendo del tipo de información que esté en el documento, iría o una cosa o la otra. -->
+              <div class="uxp-flex-1 uxp-borde-redondeado uxp-relleno-derecho uxp-relleno-izquierdo">
+
+                <!-- Título -->
+                <p class=" uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong class="uxp-txt-azul">Título</p>
+                <!-- Línea decorativa verde -->
+                <div class="uxp-linea-corta uxp-fondo-verde-lima"></div>
+
+                <!-- Párrafo -->
+                <p class="uxp-relleno-superior uxp-margen-superior"> Parrafo - Copy</p>
+
+                <!-- Lista -->
+                <ul class="uxp-lista-datos uxp-margen-superior uxp-relleno-inferior">
+                  <li><!-- Agregar aquí la lista--></li>
+                  <li><!-- Agregar aquí la lista--></li>
+                  <!-- Replicar de aquí para abajo, dependiendo de la cantidad de bullet que aparece en el documento. -->
+                </ul>
+
+              </div>
+
+            </article>
+
+          </div>
+
+      </section>
+
+    <!---------------------------------------------->
+
+      <!-- BLOQUE TÍTULO CENTROAL + 3 MÓDULOS -->
+
+      <section class="uxp-grid-contenedor-ruta uxp-relleno-superior uxp-relleno-inferior">
+
+        <!-- columna central del bloque -->
+         <div class="uxp-relleno-inferior">
+
+          <!-- En este lugar iría la información o contenido del bloque, que puede ser un título, con un copy o parrafo. Dependiendo del tipo de información que esté en el documento, iría o una cosa o la otra. -->
+
+          <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior">Título</p>
+          <!-- Línea decorativa verde -->
+          <span class="uxp-elemento-centrado uxp-relleno-inferior">
+            <span class="uxp-linea-corta uxp-fondo-verde-lima"></span>
+          </span>
+
+          <p class="uxp-margen-superior uxp-texto-centrado">párrafo, texto o copy</p>
+        </div>
+
+        <!-- Despues del bloque central donde estará el título, texto, copy, etc. Iría un bloque de 3 módulos. Los módulos por lo general irían de color gris de fondo y si en algún momento deseo cambiar los colores de los bloques, se lo haré saber. -->
+
+        <!-- Contenedor de las 3 columnas -->
+          <div class="uxp-flex-fila uxp-margen-superior uxp-relleno-inferior uxp-align-items-flex-start">
+
+            <!-- Módulo 1 -->
+            <article class="uxp-flex-1">
+
+              <!-- En este lugar iría la información o contenido del bloque, que puede ser un título, con un copy o parrafo. También podría ir una lista, así que dependiendo del tipo de información que esté en el documento, iría o una cosa o la otra. -->
+              <div class="uxp-flex-1 uxp-borde-redondeado uxp-relleno-derecho uxp-relleno-izquierdo">
+
+                <!-- Título -->
+                <p class=" uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong class="uxp-txt-azul">Título</p>
+                <!-- Línea decorativa verde -->
+                <div class="uxp-linea-corta uxp-fondo-verde-lima"></div>
+
+                <!-- Párrafo -->
+                <p class="uxp-relleno-superior uxp-margen-superior"> Parrafo - Copy</p>
+
+                <!-- Lista -->
+                <ul class="uxp-lista-datos uxp-margen-superior uxp-relleno-inferior">
+                  <li><!-- Agregar aquí la lista--></li>
+                  <li><!-- Agregar aquí la lista--></li>
+                  <!-- Replicar de aquí para abajo, dependiendo de la cantidad de bullet que aparece en el documento. -->
+                </ul>
+
+              </div>
+
+            </article>
+
+            <!-- Módulo 2 -->
+            <article class="uxp-flex-1">
+
+              <!-- En este lugar iría la información o contenido del bloque, que puede ser un título, con un copy o parrafo. También podría ir una lista, así que dependiendo del tipo de información que esté en el documento, iría o una cosa o la otra. -->
+              <div class="uxp-flex-1 uxp-borde-redondeado uxp-relleno-derecho uxp-relleno-izquierdo">
+
+                <!-- Título -->
+                <p class=" uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong class="uxp-txt-azul">Título</p>
+                <!-- Línea decorativa verde -->
+                <div class="uxp-linea-corta uxp-fondo-verde-lima"></div>
+
+                <!-- Párrafo -->
+                <p class="uxp-relleno-superior uxp-margen-superior"> Parrafo - Copy</p>
+
+                <!-- Lista -->
+                <ul class="uxp-lista-datos uxp-margen-superior uxp-relleno-inferior">
+                  <li><!-- Agregar aquí la lista--></li>
+                  <li><!-- Agregar aquí la lista--></li>
+                  <!-- Replicar de aquí para abajo, dependiendo de la cantidad de bullet que aparece en el documento. -->
+                </ul>
+
+              </div>
+
+            </article>
+
+            <!-- Módulo 3 -->
+            <article class="uxp-flex-1">
+
+              <!-- En este lugar iría la información o contenido del bloque, que puede ser un título, con un copy o parrafo. También podría ir una lista, así que dependiendo del tipo de información que esté en el documento, iría o una cosa o la otra. -->
+              <div class="uxp-flex-1 uxp-borde-redondeado uxp-relleno-derecho uxp-relleno-izquierdo">
+
+                <!-- Título -->
+                <p class=" uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong class="uxp-txt-azul">Título</p>
+                <!-- Línea decorativa verde -->
+                <div class="uxp-linea-corta uxp-fondo-verde-lima"></div>
+
+                <!-- Párrafo -->
+                <p class="uxp-relleno-superior uxp-margen-superior"> Parrafo - Copy</p>
+
+                <!-- Lista -->
+                <ul class="uxp-lista-datos uxp-margen-superior uxp-relleno-inferior">
+                  <li><!-- Agregar aquí la lista--></li>
+                  <li><!-- Agregar aquí la lista--></li>
+                  <!-- Replicar de aquí para abajo, dependiendo de la cantidad de bullet que aparece en el documento. -->
+                </ul>
+
+              </div>
+
+            </article>
+
+          </div>
+
+      </section>
+
+    <!---------------------------------------------->
+
+      <!-- BLOQUE PARA FAQ PREGUNTAS Y RESPUESTAS -->
+
+        <!--
+        Bloque para FAQ Preguntas y despuestas.
+        Para tener en cuenta: Este bloque siempre será fondo blanco, cada pregunta en fondo gris individualmente.
+        Los estilos que tienen este bloque, respetarse al pie de la letra, manteniendo los márgenes y padding.
+        -->
+        <section class="uxp-grid-contenedor-ruta uxp-relleno-superior uxp-relleno-inferior">
+          <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"> <!--El título de este bloque, siempre será el mismo que está a continuación, por ahora dejarlo tal cual como aparece aquí y si se requiere un cambio, yo lo haría manualmente--> Preguntas <strong class="uxp-txt-azul">frecuentes</strong></p>
+
+          <!-- El título siempre se va acompañar de la línea decorativa. -->
+          <span class="uxp-elemento-centrado uxp-relleno-inferior">
+            <span class="uxp-linea-corta uxp-fondo-verde-lima"></span>
+          </span>
+
+          <!-- El bloque gris a continuación, serán los que siempre se van a crear a medida que salgan preguntas, es decir, los estilos, colores, márgenes, etc. siempre serán los mismos. Replicar el div según la cantidad de preguntas que vayan surgiendo.  -->
+          <div class="uxp-margen-superior uxp-relleno-inferior">
+            <div class="uxp-fondo-gris-claro uxp-borde-redondeado uxp-relleno-superior uxp-relleno-inferior uxp-relleno-derecho uxp-relleno-izquierdo uxp-margen-inferior">
+              <p class="uxp-margen-inferior-cero uxp-margen-superior-cero"><strong> <!--Aqui iría las preguntas--> </strong></p>
+              <p class="uxp-margen-inferior-cero uxp-margen-superior-cero"> <!--Aqui iría las respuestas de la pregunta anterior--></p>
+            </div>
+          </div>
+        </section>
+
+    <!---------------------------------------------->
+
+      <!-- BLOQUE PARA TABLA -->
+
+        <!-- 
+        Por ahora, van a existir dos tipos de tablas: tabla general y tabla de suscripciones. -->
+
+          <!-- La tabla generar, será de la siguiente forma: -->
+          <!-- TABLA GENERAL -->
+
+          <div id="comparar" class="uxp-grid-contenedor-ruta uxp-relleno-superior uxp-relleno-inferior">
+
+          <!-- Título -->
+          <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong class="uxp-txt-azul">Título</p>
+
+          <!-- Línea decorativa verde -->
+          <span class="uxp-elemento-centrado uxp-relleno-inferior">
+            <span class="uxp-linea-corta uxp-fondo-verde-lima"></span>
+          </span>
+          
+          <!-- Diseño de la tabla general -->
+          <figure class="wp-block-table uxp-relleno-superior uxp-relleno-inferior">
+            <table class="has-fixed-layout">
+              
+              <!-- DENTRO DE LA EMPRESA MANEJAMOS 3 TIPOS DE SUSCRIPCIONES: BÁSICA (VA DE COLOR AZUL), ORO (VA DE COLOR VERDE) Y PLATINO (VA DE COLOR NEGRO O GRIS). A CONTINUACIÓN VOY A PRESENTAR EL ENCABEZADO DE LA TABLA. -->
+
+              <thead>
+                <tr>
+                  <th><!-- EL TEXTO IRÍA AQUÍ --></th>
+                  <th><!-- EL TEXTO IRÍA AQUÍ --></th>                  
+                  <th><!-- EL TEXTO IRÍA AQUÍ --></th>                  
+                  <th><!-- EL TEXTO IRÍA AQUÍ --></th>
+                </tr>
+              </thead>
+
+              <!-- Y DE AQUÍ EN ADELANTE, SERÍA LA TABLA COMÚN Y CORRIENTE -->
+
+              <tbody>
+                <tr>
+                  <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                  <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                  <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                  <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                </tr>
+                <tr>
+                  <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                  <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                  <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                  <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                </tr>
+
+                <!-- ESTA LÍNEA DE CÓDIGO A CONTINUACIÓN ES LA QUE SE VA A USAR CUANDO SE NECESITA JUNTAR 4 CELDAS EN UNA SOLA PARA FORMA UNA ESPECI DE TÍTULO. EN ESTE CASO EL COLSPAN ES DE 4 PORQUE HAY COLUMNAS, PERO DEPENDIENDO DE LA CANTIDAD DE COLUMNAS, SE MODIFICARÍA DICHO NÚMERO. -->
+
+                <tr>
+                  <td class="uxp-fondo-azul uxp-txt-blanco" colspan="4"><!-- EL TEXTO IRÍA AQUÍ --></td>
+                </tr>
+
+              </tbody>
+
+            </table>
+          </figure>
+      
+          <div class="uxp-elemento-centrado uxp-relleno-superior">
+            <a href="#planes" class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado">Comprar</a>
+          </div>
+      
+          </div>
+
+          <!-- La tabla de suscripciones, será la siguiente: -->
+          <!-- TABLA PARA SUSCRIPCIONES -->
+
+          <div id="comparar" class="uxp-grid-contenedor-ruta uxp-relleno-superior uxp-relleno-inferior">
+
+            <!-- Título -->
+            <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong class="uxp-txt-azul">Título</p>
+
+            <!-- Línea decorativa verde -->
+            <span class="uxp-elemento-centrado uxp-relleno-inferior">
+              <span class="uxp-linea-corta uxp-fondo-verde-lima"></span>
+            </span>
+      
+            <!-- Diseño de la tabla de suscripciones -->
+            <figure class="wp-block-table uxp-relleno-superior uxp-relleno-inferior">
+              <table class="has-fixed-layout">
+                
+                <!-- DENTRO DE LA EMPRESA MANEJAMOS 3 TIPOS DE SUSCRIPCIONES: BÁSICA (VA DE COLOR AZUL), ORO (VA DE COLOR VERDE) Y PLATINO (VA DE COLOR NEGRO O GRIS). A CONTINUACIÓN VOY A PRESENTAR EL ENCABEZADO DE LA TABLA. -->
+
+                <thead>
+                  <tr>
+                    <th class="uxp-fondo-azul uxp-txt-blanco">Beneficio</th>
+                    <th class="uxp-fondo-azul uxp-txt-blanco 
+                    uxp-texto-centrado uxp-columna-pequena">Básica</th>
+                    <th class="uxp-fondo-verde-lima uxp-txt-negro 
+                    uxp-texto-centrado uxp-columna-pequena">Oro</th>
+                    <th class="uxp-fondo-negro uxp-txt-blanco 
+                    uxp-texto-centrado uxp-columna-pequena">Platino</th>
+                  </tr>
+                </thead>
+
+                <!-- Y DE AQUÍ EN ADELANTE, SERÍA LA TABLA COMÚN Y CORRIENTE -->
+
+                <tbody>
+                  <tr>
+                    <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                    <td class="uxp-fondo-verde-lima uxp-txt-negro uxp-texto-centrado uxp-columna-pequena">X</td>
+                    <td class="uxp-fondo-negro uxp-txt-blanco uxp-texto-centrado uxp-columna-pequena">X</td>
+                  </tr>
+                  <tr>
+                    <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                    <td class="uxp-fondo-verde-lima uxp-txt-negro uxp-texto-centrado uxp-columna-pequena">✓</td>
+                    <td class="uxp-fondo-negro uxp-txt-blanco uxp-texto-centrado uxp-columna-pequena">✓</td>
+                  </tr>
+                  <tr>
+                    <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                    <td class="uxp-fondo-verde-lima uxp-txt-negro uxp-texto-centrado uxp-columna-pequena">X</td>
+                    <td class="uxp-fondo-negro uxp-txt-blanco uxp-texto-centrado uxp-columna-pequena">✓</td>
+                  </tr>
+                  <tr>
+                    <td><!-- EL TEXTO IRÍA AQUÍ --></td>
+                    <td class="uxp-fondo-verde-lima uxp-txt-negro uxp-texto-centrado uxp-columna-pequena">✓</td>
+                    <td class="uxp-fondo-negro uxp-txt-blanco uxp-texto-centrado uxp-columna-pequena">✓</td>
+                  </tr>
+
+                  <!-- ESTA LÍNEA DE CÓDIGO A CONTINUACIÓN ES LA QUE SE VA A USAR CUANDO SE NECESITA JUNTAR 4 CELDAS EN UNA SOLA PARA FORMA UNA ESPECI DE TÍTULO. EN ESTE CASO EL COLSPAN ES DE 4 PORQUE HAY COLUMNAS, PERO DEPENDIENDO DE LA CANTIDAD DE COLUMNAS, SE MODIFICARÍA DICHO NÚMERO. -->
+
+                  <tr>
+                    <td class="uxp-fondo-azul uxp-txt-blanco" colspan="4">Texto</td>
+                  </tr>
+
+                  <!-- SOLO EN LA TABLA DE SUSCRIPCIONES, AL FINAL SE AGREGA EL PORCENTAJE SEGÚN EL TIPO DE SUSCRIPCIÍON. -->
+
+                  <tr>
+                    <td>Descuentos en productos Actualícese.</td>
+                    <td class="uxp-fondo-azul uxp-txt-blanco uxp-texto-centrado uxp-columna-pequena">10%</td>
+                    <td class="uxp-fondo-verde-lima uxp-txt-negro uxp-texto-centrado uxp-columna-pequena">30%</td>
+                    <td class="uxp-fondo-negro uxp-txt-blanco uxp-texto-centrado uxp-columna-pequena">50%</td>
+                  </tr>
+                </tbody>
+
+              </table>
+            </figure>
+      
+          <div class="uxp-elemento-centrado uxp-relleno-superior">
+            <a href="#planes" class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado">Comprar</a>
+          </div>
+      
+          </div>
+
+    <!---------------------------------------------->
+
+      <!-- BLOQUE FECHA DE 3 MÓDULOS -->
+
+      <section  class="uxp-grid-contenedor-ruta uxp-relleno-superior uxp-relleno-inferior uxp-relleno-derecho uxp-relleno-izquierdo uxp-fondo-verde-lima uxp-borde-redondeado">
+
+        <div class="uxp-flex-fila uxp-align-items-flex-start uxp-relleno-superior uxp-relleno-inferior uxp-relleno-derecho uxp-relleno-izquierdo">
+      
+          <!-- Tarjeta 1 -->
+          <article class="uxp-flex-1 uxp-fondo-blanco uxp-borde-redondeado uxp-relleno-superior uxp-relleno-inferior uxp-relleno-derecho uxp-relleno-izquierdo uxp-texto-centrado">
+    
+            <p class="uxp-margen-superior-cero uxp-texto-precios uxp-texto-centrado uxp-margen-inferior-cero uxp-relleno-derecho uxp-relleno-izquierdo"><strong>Fecha:</strong></p>  
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero">11 de agosto 2025</p>
+    
+          </article>
+    
+          <!-- Tarjeta 2 -->
+          <article class="uxp-flex-1 uxp-fondo-blanco uxp-borde-redondeado uxp-relleno-superior uxp-relleno-inferior uxp-relleno-derecho uxp-relleno-izquierdo uxp-texto-centrado">
+    
+            <p class="uxp-margen-superior-cero uxp-texto-precios uxp-texto-centrado uxp-margen-inferior-cero uxp-relleno-derecho 
+            uxp-relleno-izquierdo"><strong>Modalidad:</strong></p>   
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero">Diferido</p>
+    
+          </article>
+    
+          <!-- Tarjeta 3 -->
+          <article class="uxp-flex-1 uxp-fondo-blanco uxp-borde-redondeado uxp-relleno-superior uxp-relleno-inferior uxp-relleno-derecho uxp-relleno-izquierdo uxp-texto-centrado">
+    
+            <p class="uxp-margen-superior-cero uxp-texto-precios uxp-texto-centrado uxp-margen-inferior-cero uxp-relleno-derecho uxp-relleno-izquierdo"><strong>Duración:</strong></p>
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero">6 horas</p>
+    
+          </article>
+    
+        </div>
+    
+      </section>
+
+    <!---------------------------------------------->
+
+      <!-- BOTÓN NARANJA -->
+
+      <div class="uxp-elemento-centrado uxp-margen-superior">
+        <a href="#" class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado">
+          <!-- El texto del botón, iría aquí -->
+        </a>
+      </div>
+
+    <!---------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+  </html>
+
+<!---------------------------------------------->

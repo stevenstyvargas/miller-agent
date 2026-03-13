@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Guía de referencia 2026</title>
+   <link rel="stylesheet" href="../main-style-act-2025.css">
+   <link rel="stylesheet" href="../hoja-style-mariluz.css">
+
+  <style>
+    
+    body {margin: 0;padding-bottom: 60px;}
+
+    .menu-pantalla {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 65px;
+    }
+
+    .menu-pantalla {
+        justify-content: flex-start;
+        position: sticky;
+        top: 0;
+      }
+
+    .menu {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+      background: #fff;
+      flex-wrap: wrap;
+      padding: 15px 0px;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 0px 0px 60px 0px;
+      margin: -1px 0px -23px 0px;
+      background: #fff;
+      height: auto;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .nav-btn {
+      background-color: #f5f5f5;
+      border: none;
+      color: #222;
+      padding: 9px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      outline: none;
+      border-radius: 10px;
+    }
+
+    .nav-btn:hover,
+    .nav-btn:focus {
+      background: #ecf4ff;
+      border-radius: 10px;
+      color: #222;
+    }
+    .nav-btn.active {
+      background: #4666ff;
+      color: #fff;
+      font-weight: 500;
+      border-radius: 10px;
+    }
+
+    .contenido-centro {
+      max-width: 1076px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .contenido-centro-evento {
+      max-width: 1076px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 20px;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1039px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        width: 100%;
+      }
+      .menu.open {
+        display: flex;
+        position: absolute;
+        top: 64px;
+        right: 0;
+        width: 301px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        padding: 20px;
+        border-radius: 0px 0px 0px 30px;
+      }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 20;
+      }
+
+      .collapsible {
+      width: 100% !important;
+      }
+      .content {
+      width: 100% !important;
+      }
+      .division {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin: 0;
+      }
+      .division div {
+      width: 100%; 
+      text-align: center;
+      align-content: center;
+      }
+      .tab {
+      width: 90% !important;
+      }
+      .progress-bar-container {
+      width: 84% !important;
+      }
+      .productos {
+      width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .titulo {
+      font-size: 20px;
+      line-height: 27px;
+      }
+      .parrafo {
+      font-size: 16px;
+      line-height: 23px;
+      }
+      .tab {
+      width: 90% !important;
+      display: block !important;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <section style="background-image: url(https://cdn.actualicese.com/wp-content/uploads/2025/11/27173518/Guia-de-referencia-contable-laboral-y-tributaria-20263.jpg);" class="uxp-relleno-superior uxp-relleno-inferior">
+           
+      <div class="uxp-grid-contenedor-ruta uxp-flex-fila">
+
+
+        <!-- columna izquierda del banner -->
+          <div class="uxp-flex-1 uxp-texto-izquierda">
+
+            <p class="uxp-margen-superior-cero">
+              <strong style="font-size: 100px; line-height: 100px;" class="uxp-txt-azul">
+                GUIA DE REFERENCIA
+              </strong><br>
+            
+              <span style="font-size: 55px; line-height: 60px;">
+                CONTABLE, LABORAL Y TRIBUTARIA
+                <mark class="uxp-fondo-verde-lima" style="display: inline-block; padding: 5px 15px; border-radius: 15px; line-height: 1;"><strong>2026</strong></mark>
+              </span>
+            </p>
+
+            <div class="uxp-linea-corta uxp-fondo-verde-lima uxp-margen-inferior"></div>
+
+            <p class="uxp-relleno-derecho">Encuentra en este compendio unificado <strong clas
+              uxp-txt-verde-lima>todos los datos, indicadores, tarifas y herramientas esenciales</strong> que cambian al cierre de 2025, y que necesitas para ejercer tu labor profesional de manera ágil y segura <strong>durante el 2026.</strong></p>
+
+            <p class="uxp-relleno-inferior uxp-margen-inferior-cero uxp-relleno-superior"><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/qsm_quiz/evaluacion-sobre-preparacion-y-presentacion-de-informacion-exogena-ag2024/"><strong>Descargar aquí</strong></a></p>
+
+          </div>
+
+          <div class="uxp-flex-1">
+          </div>
+
+      </div>
+    </section>
+
+    <!-- Botones de cada pestaña -->
+    <nav class="menu-pantalla uxp-relleno-superior uxp-relleno-inferior">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">&#9776;</button>
+      <div class="menu" id="navTabs">
+        <button class="nav-btn" data-tab="inicio">Inicio</button>
+        <button class="nav-btn" data-tab="calendario">Calendario tributario</button>
+        <button class="nav-btn active" data-tab="tributarios">Indicadores tributarios</button>
+        <button class="nav-btn" data-tab="laborales">Indicadores laborales</button>
+        <button class="nav-btn" data-tab="financieros">Indicadores financieros</button>
+        <button class="nav-btn" data-tab="comerciales">Indicadores comerciales</button>
+        <button class="nav-btn" data-tab="otros">Otros</button>
+      </div>
+    </nav>
+
+    <!----------------------------------------------->
+
+    <!-- Pestaña de Inicio -->
+    <div class="tab-content" id="inicio">
+    
+      <!-- Contenido -->
+      <section id="contenido" style="margin-top: 30px;" class="grid-wrapper-ruta">
+
+        <!-- Menú lateral -->
+        <nav class="sidebar_ruta" aria-label="Índice del especial">
+            <p class="text-sidebar-ruta">En este especial <br>te hablaremos de:</p>
+
+            <div class="cont-ul-sidbar-ruta uxp-borde-redondeado">
+              <ul>
+                <li> <a style="line-height: 24px;" href="#informacion">Calendario Tributario 2026</a></li>
+                <li> <a style="line-height: 24px;" href="#normas">Calendario pago de aportes a Seguridad Social 2026</a></li>
+                <li> <a style="line-height: 24px;" href="#">Obligados a declarar renta en 2026</a></li>
+                <li> <a style="line-height: 24px;" href="#">Tabla de retención en la fuente por renta para el año fiscal 2026</a></li>
+                <li> <a style="line-height: 24px;" href="#">Retención en la fuente con procedimiento 1 sobre rentas de trabajo</a></li>
+                <li> <a style="line-height: 24px;" href="#">Retención en la fuente con procedimiento 2 sobre salarios</a></li>
+                <li> <a style="line-height: 24px;" href="#">Requisitos para operar como no responsables de IVA durante el 2026</a></li>
+                <li> <a style="line-height: 24px;" href="#">Costo de la contratación de un trabajador que devenga un salario mínimo en 2026</a></li>
+              </ul>
+            </div>
+
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="content_ruta">
+
+          <!-- ¿Qué es la información exógena? -->
+          <h2 id="informacion" class="uxp-margen-inferior uxp-texto-precios"><strong class="uxp-txt-azul">¿Qué es la información exógena?</strong></h2>
+          <hr class="stk-block-divider__hr uxp-fondo-verde-lima"/>
+
+          <p class="stk-block-text__text has-text-align-left">La <strong>información exógena</strong>, antes conocida como <strong>medios magnéticos</strong>, es aquel informe que periódicamente <strong>entregan las personas naturales y jurídicas a la Dian</strong> sobre las operaciones realizadas con sus clientes, usuarios o aquellos que intervengan en el desarrollo del objeto social de la entidad, mediante los servicios informáticos dispuestos para tal fin y cumpliendo con las resoluciones y especificaciones técnicas expedidas por la administración tributaria.</p>
+          
+          <figure><a class="stk-link" href="https://actualicese.com/actualicese-exogena/" target="_blank" rel="noreferrer noopener"><span class="stk-img-wrapper stk-image--shape-stretch"><img decoding="async" class="stk-img" src="https://cdn.actualicese.com/images-mail/Ruta-Exogena-2.jpg" srcset="https://cdn.actualicese.com/100x/images-mail/Ruta-Exogena-2.jpg 100w, https://cdn.actualicese.com/200x/images-mail/Ruta-Exogena-2.jpg 200w, https://cdn.actualicese.com/300x/images-mail/Ruta-Exogena-2.jpg 300w, https://cdn.actualicese.com/400x/images-mail/Ruta-Exogena-2.jpg 400w, https://cdn.actualicese.com/750x/images-mail/Ruta-Exogena-2.jpg 750w" width="150" height="300" alt="Laptop mostrando documentos organizados, asesora señalando y botón de descarga. Actualícese te apoya con herramientas clave al momento de tomar decisiones contables."></span></a></figure>
+
+          <p class="stk-block-text__text has-text-align-left"><strong>En tal contexto, los tres objetivos principales del reporte de información exógena son los siguientes:</strong></p>
+
+          <figure><a class="stk-link" href="https://cdn.actualicese.com/Imagen-editoriales/E1-objetivos-exogena.png"><span class="stk-img-wrapper stk-image--shape-stretch"><img decoding="async" class="stk-img" src="https://cdn.actualicese.com/Imagen-editoriales/E1-objetivos-exogena.png" srcset="https://cdn.actualicese.com/100x/Imagen-editoriales/E1-objetivos-exogena.png 100w, https://cdn.actualicese.com/200x/Imagen-editoriales/E1-objetivos-exogena.png 200w, https://cdn.actualicese.com/300x/Imagen-editoriales/E1-objetivos-exogena.png 300w, https://cdn.actualicese.com/400x/Imagen-editoriales/E1-objetivos-exogena.png 400w, https://cdn.actualicese.com/750x/Imagen-editoriales/E1-objetivos-exogena.png 750w" width="150" height="300" alt="Infografía con lupa, alerta y documentos resalta el valor del reporte exógena. Actualícese te guía para tu labor contable diaria."></span></a></figure>
+
+          <figure><a class="stk-link" href="https://actualicese.com/aun-no-entiendes-la-exogena-en-colombia-7-fundamentos-que-debes-conocer/" target="_blank" rel="noreferrer noopener"><span class="stk-img-wrapper stk-image--shape-stretch stk--has-lightbox"><img decoding="async" class="stk-img" src="https://cdn.actualicese.com/images-mail/Informacion-exogena-B1.jpg" srcset="https://cdn.actualicese.com/100x/images-mail/Informacion-exogena-B1.jpg 100w, https://cdn.actualicese.com/200x/images-mail/Informacion-exogena-B1.jpg 200w, https://cdn.actualicese.com/300x/images-mail/Informacion-exogena-B1.jpg 300w, https://cdn.actualicese.com/400x/images-mail/Informacion-exogena-B1.jpg 400w, https://cdn.actualicese.com/750x/images-mail/Informacion-exogena-B1.jpg 750w" width="150" height="300" alt="Monitor con formatos tributarios y mensaje sobre fundamentos de exógena. Actualícese te orienta en tu actualización continua."></span></a></figure>
+
+          <figure><a class="stk-link" href="https://academia.actualicese.com/courses/actualizacion-fiscal-guia-completa-de-informacion-exogena-ag-2024/" target="_blank" rel="noreferrer noopener"><span class="stk-img-wrapper stk-image--shape-stretch"><img loading="lazy" decoding="async" class="stk-img" src="https://cdn.actualicese.com/images-mail/Informacion-exogena-13.jpg" srcset="https://cdn.actualicese.com/100x/images-mail/Informacion-exogena-13.jpg 100w, https://cdn.actualicese.com/200x/images-mail/Informacion-exogena-13.jpg 200w, https://cdn.actualicese.com/300x/images-mail/Informacion-exogena-13.jpg 300w, https://cdn.actualicese.com/400x/images-mail/Informacion-exogena-13.jpg 400w, https://cdn.actualicese.com/750x/images-mail/Informacion-exogena-13.jpg 750w" width="150" height="300" alt="Tres personas frente a pantalla con gráficos y datos fiscales. Actualícese te capacita para tu cumplimiento con la Dian en 2025."></span></a></figure>
+
+          <!--╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ barra ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬-->
+          <section class="uxp-grid-contenedor-ruta uxp-margen-inferior-cero uxp-margen-superior-cero">
+          <div class="uxp-barra-separadora uxp-margen-inferior-cero uxp-margen-superior-cero">&nbsp;</div>
+          </section>
+
+          <!-- ¿Cuáles normas reglamentan la información exógena del año gravable 2024? -->
+          <h2 id="normas" class="uxp-margen-inferior uxp-texto-precios"><strong class="uxp-txt-azul">¿Cuáles normas reglamentan la información exógena del año gravable 2024?</strong></h2>
+          <hr class="stk-block-divider__hr uxp-fondo-verde-lima"/>
+          <p class="stk-block-text__text has-text-align-left">De acuerdo con el <a href="http://www.secretariasenado.gov.co/senado/basedoc/estatuto_tributario_pr026.html#631">parágrafo 3 del artículo 631 del ET</a>, la Dian debe solicitar la información correspondiente a cada período gravable por lo menos <strong>dos (2) meses antes de la finalización del año gravable anterior a aquel que será objeto del reporte de información</strong>.</p>
+
+          <p class="stk-block-text__text has-text-align-left">Así pues, para requerir la información correspondiente al año gravable 2024, la Dian emitió la<a href="https://normograma.dian.gov.co/dian/compilacion/docs/resolucion_dian_0162_2023.htm">Resolución 000162 del 31 de octubre de 2023</a>, fijando los medios de presentación de la información, así como las precisiones que deben tener en cuenta las personas naturales, jurídicas y demás obligados.</p>
+
+          <p class="stk-block-text__text has-text-align-left">Sin embargo, es menester recordar que el 30 de octubre de 2024, <em>ad portas</em> de concluir el año gravable 2024, la Dian expidió la <a href="https://www.dian.gov.co/normatividad/Normatividad/Resoluci%C3%B3n%20000188%20de%2030-10-2024.pdf">Resolución 000188</a>, por medio de la cual se introdujeron ajustes muy importantes a la <a href="https://normograma.dian.gov.co/dian/compilacion/docs/resolucion_dian_0162_2023.htm">Resolución 000162 de 2023</a>.</p>
+
+          <p class="stk-block-text__text has-text-align-left">De esta manera, tenemos que para preparar el reporte de información exógena del AG 2024 debe revisarse:</p>
+
+          <p class="stk-block-text__text has-text-align-left">La&nbsp;<a href="https://normograma.dian.gov.co/dian/compilacion/docs/resolucion_dian_0162_2023.htm">Resolución 000162 de octubre de 2023</a></p>
+
+          <p class="stk-block-text__text has-text-align-left">La&nbsp;<a href="https://www.dian.gov.co/normatividad/Normatividad/Resoluci%C3%B3n 000188 de 30-10-2024.pdf">Resolución 000188 de octubre de 2024</a></p>
+
+          <figure><a class="stk-link" href="https://actualicese.com/rutas/books/resolucion-188-de-octubre-de-2024-comparativo-de-articulos-normativos-de-informacion-exogena/page/capitulo-1-introduccion" target="_blank" rel="noreferrer noopener"><span class="stk-img-wrapper stk-image--shape-stretch"><img loading="lazy" decoding="async" class="stk-img" src="https://cdn.actualicese.com/images-mail/Informacion-exogena-B2.jpg" srcset="https://cdn.actualicese.com/100x/images-mail/Informacion-exogena-B2.jpg 100w, https://cdn.actualicese.com/200x/images-mail/Informacion-exogena-B2.jpg 200w, https://cdn.actualicese.com/300x/images-mail/Informacion-exogena-B2.jpg 300w, https://cdn.actualicese.com/400x/images-mail/Informacion-exogena-B2.jpg 400w, https://cdn.actualicese.com/750x/images-mail/Informacion-exogena-B2.jpg 750w" width="150" height="300" alt="Profesional revisa comparativo normativo en portátil. Actualícese te informa sobre cambios clave para tu labor contable diaria."></span></a></figure>
+          
+
+          <!--╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ barra ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬-->
+          <section class="uxp-grid-contenedor-ruta uxp-margen-inferior-cero uxp-margen-superior-cero">
+          <div class="uxp-barra-separadora uxp-margen-inferior-cero uxp-margen-superior-cero">&nbsp;</div>
+          </section>
+        
+        </div>
+        
+      </section>
+
+    </div>
+    
+    <!-- Pestaña de Calendario tributario-->
+    <div class="tab-content" id="calendario">
+      
+      <div class="contenido-centro">
+
+        <p align="center"><iframe style="width: 1000px; height: 400px;" src="https://docs.google.com/gview?url=https://cdn.actualicese.com/herramientas/calendario-tributario-2026.pdf&amp;embedded=true" width="1000" height="400" frameborder="0"></iframe></p>
+        
+      </div>
+
+    </div>
+
+    <!-- Pestaña de indicadores tributarios -->
+    <div class="tab-content" id="tributarios">
+      <div class="contenido-centro">
+
+        <p id="bkmrk-en-las-pr%C3%B3ximas-l%C3%ADne" style="text-align: justify;">En las pr&oacute;ximas l&iacute;neas encontrar&aacute;s las cifras, datos y porcentajes esenciales para el 2026 en materia tributaria:</p>
+<table id="bkmrk-indicadores-tributar" class="t1" style="width: 100%; height: 7411.13px;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 37.5px;">
+<td class="align-center" style="background-color: #7585fc; border-color: #000000; border-style: solid; width: 99.9382%; height: 37.5px;" colspan="3">
+<p class="p1" style="text-align: center;"><strong><span style="color: #ffffff;">INDICADORES TRIBUTARIOS</span></strong></p>
+</td>
+</tr>
+<tr style="height: 37.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 37.5px; background-color: #96a3fc; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;"><strong><span style="color: #ffffff;">Concepto</span></strong></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 37.5px; background-color: #96a3fc; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;"><strong><span style="color: #ffffff;">Valor o porcentaje</span></strong></p>
+</td>
+<td class="td1 align-center" style="width: 33.3952%; height: 37.5px; background-color: #96a3fc; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;"><strong><span style="color: #ffffff;">Descripci&oacute;n</span></strong></p>
+</td>
+</tr>
+<tr style="height: 133.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 133.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/uvt-2026/" target="_blank" rel="noopener"><span class="s1">UVT 2026</span></a></strong></span></p>
+<p class="p3"><span style="color: #4666ff;"><strong><span class="s1"><a href="https://media.actualicese.com/VA26-Convertidor-de-UVT.xlsm" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia.png" width="25" /></a> </span></strong><a href="https://media.actualicese.com/VA26-Convertidor-de-UVT.xlsm" target="_blank" rel="noopener"><span class="s1">Convertidor de UVT</span></a></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 133.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$52.374</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 133.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">Mediante la&nbsp;Resoluci&oacute;n 000238 del 15 de diciembre de 2025, la Dian fij&oacute; el valor de la unidad de valor tributario&nbsp;&ndash;UVT&ndash;&nbsp;aplicable para el&nbsp;a&ntilde;o gravable 2026.</p>
+</td>
+</tr>
+<tr style="height: 267.211px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 267.211px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/esta-es-la-sancion-minima-tributaria-2026/" target="_blank" rel="noopener"><span class="s1">Sanci&oacute;n m&iacute;nima tributaria 2026</span></a></strong></span></p>
+<p class="p3"><strong><a href="https://media.actualicese.com/VA26-Sancion-por-no-declarar.xlsx" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia.png" width="25" /></a> </strong>Liquidadores de sanci&oacute;n por no declarar</p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 267.211px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$524.000</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 267.211px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2"><span style="font-size: 1rem;">La Dian public&oacute; en diciembre de 2025 la Resoluci&oacute;n 000238, la cual fija la </span><span style="font-size: 1rem;">UVT en $52.374</span><span style="font-size: 1rem;">, en aplicaci&oacute;n del art&iacute;culo 868 del Estatuto Tributario.&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 277.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/declaraciones-de-iva-en-2026-periodicidad-bimestral-cuatrimestral-y-anual/" target="_blank" rel="noopener"><span class="s1">Declaraci&oacute;n y pago bimestral del IVA</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2">Ingresos brutos iguales o superiores a $4.581.508.000 (92.000 UVT o m&aacute;s)</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 277.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">Los grandes contribuyentes y personas jur&iacute;dicas y naturales cuyos ingresos brutos gravados y exentos a 31 de diciembre de 2025 sean iguales o superiores a 92.000 UVT, as&iacute; como los responsables se&ntilde;alados en los art&iacute;culos 477 y 481 del ET, deber&aacute;n presentar la declaraci&oacute;n del IVA y pagar el impuesto de manera bimestral.</p>
+</td>
+</tr>
+<tr style="height: 205.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 205.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/declaraciones-de-iva-en-2026-periodicidad-bimestral-cuatrimestral-y-anual/" target="_blank" rel="noopener"><span class="s1">Declaraci&oacute;n y pago cuatrimestral del IVA</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 205.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2">Ingresos brutos inferiores a $4.581.508.000 (menos de 92.000 UVT)</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 205.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">Las personas jur&iacute;dicas y naturales cuyos ingresos brutos gravados y exentos a 31 de diciembre de 2025 hayan sido inferiores a 92.000 UVT deber&aacute;n presentar la declaraci&oacute;n del IVA y pagar el impuesto de manera cuatrimestral.</p>
+</td>
+</tr>
+<tr style="height: 205.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 205.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/declaraciones-de-iva-en-2026-periodicidad-bimestral-cuatrimestral-y-anual/" target="_blank" rel="noopener"><span class="s1">Declaraci&oacute;n y pago anual del IVA</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 205.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2">Solo para contribuyentes del r&eacute;gimen simple de tributaci&oacute;n</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 205.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">De acuerdo con lo se&ntilde;alado en el art&iacute;culo 915 del Estatuto Tributario &ndash;ET&ndash;, los contribuyentes inscritos en el r&eacute;gimen simple de tributaci&oacute;n &ndash;RST&ndash;, responsables del IVA, deber&aacute;n presentar una declaraci&oacute;n anual consolidada.</p>
+</td>
+</tr>
+<tr style="height: 565.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 565.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/montos-para-ser-no-responsables-de-iva-en-2026/" target="_blank" rel="noopener"><span class="s1">Montos para ser no responsable de IVA (3.500 UVT)</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 565.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2"><strong>2025: </strong>$174.297.000</p>
+<p class="p2"><strong>2026: </strong>$183.309.000</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 565.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">Las personas naturales que pretendan pertenecer al universo de los no responsables del IVA durante 2026 (antiguo r&eacute;gimen simplificado del IVA) no podr&aacute;n haber percibido en el 2025 ingresos brutos por operaciones gravadas con IVA que hayan estado por encima de los $174.2997.000 (UVT 2025 &times; 3.500).</p>
+<p class="p2">Adem&aacute;s, durante el 2026 no podr&aacute;n celebrar contratos por venta de bienes o prestaci&oacute;n de servicios gravados que superen los $183.309.000 (3.500 UVT &times; $52.374), y sus consignaciones bancarias o inversiones financieras que realicen durante el 2026, provenientes solamente de las actividades gravadas con IVA, tampoco podr&aacute;n exceder ese mismo valor.</p>
+</td>
+</tr>
+<tr style="height: 277.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/personas-naturales-retenedoras-2026/" target="_blank" rel="noopener"><span class="s1">Ingresos brutos de comerciantes para ser retenedores en la fuente</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$1.493.970.000</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 277.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">Para el a&ntilde;o gravable 2026 ser&aacute;n personas naturales retenedoras los comerciantes que en el a&ntilde;o 2025 hubiesen pose&iacute;do un patrimonio o ingresos brutos superiores a 30.000 UVT.</p>
+<p class="p2">Esta obligaci&oacute;n recaer&aacute; respecto de pagos por honorarios, comisiones, arrendamientos, rendimientos financieros y compras.</p>
+</td>
+</tr>
+<tr style="height: 157.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 157.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/retencion-en-la-fuente-por-servicios-2026/" target="_blank" rel="noopener"><span class="s1">Cuant&iacute;a m&iacute;nima de retenci&oacute;n en la fuente por servicios</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 157.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$104.748</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 157.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">La cuant&iacute;a m&iacute;nima de retenci&oacute;n en la fuente a t&iacute;tulo de renta por concepto de prestaci&oacute;n de servicios es de 2 UVT. El valor de la UVT fijado por la Dian para 2026 es de $52.374.</p>
+</td>
+</tr>
+<tr style="height: 133.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 133.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/retencion-en-la-fuente-por-compras-2026/" target="_blank" rel="noopener"><span class="s1">Cuant&iacute;a m&iacute;nima de retenci&oacute;n en la fuente por compras</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 133.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$523.740</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 133.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">La cuant&iacute;a m&iacute;nima de retenci&oacute;n en la fuente a t&iacute;tulo de renta por concepto de compras es de 10 UVT. El valor de la UVT fijado por la Dian para 2026 es de $52.374.</p>
+</td>
+</tr>
+<tr style="height: 157.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 157.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/retencion-en-la-fuente-por-loterias-2025" target="_blank" rel="noopener"><span class="s1">Cuant&iacute;a m&iacute;nima de retenci&oacute;n en la fuente para loter&iacute;as, rifas, apuestas y similares</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 157.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$2.513.952</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 157.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">La cuant&iacute;a m&iacute;nima de retenci&oacute;n en la fuente a t&iacute;tulo de renta por concepto de loter&iacute;as, rifas, apuestas y similares es de 48 UVT. El valor de la UVT fijado por la Dian para 2025 es de $49.799.</p>
+</td>
+</tr>
+<tr style="height: 157.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 157.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/como-queda-la-cuantia-minima-de-retencion-en-la-fuente-en-juegos-de-suerte-y-azar-en-2026/" target="_blank" rel="noopener"><span class="s1">Cuant&iacute;a m&iacute;nima de retenci&oacute;n en la fuente por juegos de suerte y azar</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 157.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$261.870</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 157.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">La cuant&iacute;a m&iacute;nima de&nbsp;retenci&oacute;n en la fuente&nbsp;para los colocadores independientes de&nbsp;juegos de suerte y azar&nbsp;es de 5 UVT diarias. El valor de la&nbsp;UVT fijado por la Dian para 2026 es de $52.374.</p>
+</td>
+</tr>
+<tr style="height: 247.43px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 247.43px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/retencion-en-la-fuente-para-asalariados-2026/" target="_blank" rel="noopener"><span class="s1">Cuant&iacute;a m&iacute;nima de retenci&oacute;n en la fuente para asalariados (95 UVT)</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 247.43px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$4.975.530</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 247.43px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p>La retenci&oacute;n en la fuente para asalariados en 2026&nbsp;se activa cuando el ingreso laboral mensual pasa de cierto tope definido en el&nbsp;art&iacute;culo 383 del Estatuto Tributario &ndash;ET&ndash;: la tabla de retenci&oacute;n empieza a aplicar&nbsp;a partir de 95 UVT.</p>
+</td>
+</tr>
+<tr style="height: 159.094px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 159.094px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/valor-de-activos-de-menor-cuantia-en-2026/" target="_blank" rel="noopener"><span class="s1">Activos fijos de menor cuant&iacute;a&nbsp;</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 159.094px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$2.618.700</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 159.094px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">Los&nbsp;activos de menor cuant&iacute;a para efectos fiscales&nbsp;son aquellos que poseen un costo igual o inferior a&nbsp;50 UVT. El valor de la&nbsp;<a title="" href="https://actualicese.com/uvt/">UVT</a>&nbsp;fijado por la Dian para 2026 es de $52.374.</p>
+</td>
+</tr>
+<tr style="height: 277.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/transacciones-exentas-del-gmf-en-2026/" target="_blank" rel="noopener"><span class="s1">L&iacute;mite de transacciones exentas del pago del gravamen a los movimientos financieros</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$18.330.900</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 277.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2"><span style="font-size: 1rem;">El GMF es un impuesto aplicado a transacciones financieras. Seg&uacute;n el art&iacute;culo 879 del ET, algunas transacciones est&aacute;n exentas. Desde 2025, el l&iacute;mite de 350 UVT exentas deber&iacute;a aplicarse a todas las cuentas de una persona natural o jur&iacute;dica, independientemente de la entidad a la cual se encuentren adscritas.</span></p>
+</td>
+</tr>
+<tr style="height: 90.2812px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 90.2812px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><a href="https://actualicese.com/impuesto-de-vehiculos-automotores-para-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Veh&iacute;culos automotores gravados al</strong></span></a></p>
+<p class="p3"><a href="https://actualicese.com/impuesto-de-vehiculos-automotores-para-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>&nbsp;1,5 %</strong></span></a></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 90.2812px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2">Valor comercial de hasta $57.349.000</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 278.883px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" rowspan="3" valign="top">
+<p>Para determinar el valor del impuesto de veh&iacute;culos automotores para la vigencia fiscal 2026, se debe considerar lo dispuesto en la Resoluci&oacute;n 20253040048935 del 26 de noviembre de 2025 de MinTransporte y el Decreto 1457 de diciembre de 2025 de MinHacienda.</p>
+</td>
+</tr>
+<tr style="height: 96px;">
+<td style="width: 33.2715%; height: 96px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3 align-center"><a href="https://actualicese.com/impuesto-de-vehiculos-automotores-para-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Veh&iacute;culos automotores gravados al </strong></span></a></p>
+<p class="p3 align-center"><a href="https://actualicese.com/impuesto-de-vehiculos-automotores-para-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>2,5 %</strong></span></a></p>
+</td>
+<td style="width: 33.2715%; height: 96px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2 align-center">Valor comercial de m&aacute;s de $57.349.000 y hasta $129.032.000</p>
+</td>
+</tr>
+<tr style="height: 92.6016px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 92.6016px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><a href="https://actualicese.com/impuesto-de-vehiculos-automotores-para-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Veh&iacute;culos automotores gravados al </strong></span></a></p>
+<p class="p3"><a href="https://actualicese.com/impuesto-de-vehiculos-automotores-para-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>3,5 %</strong></span></a></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 92.6016px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2">Valor comercial de m&aacute;s de $125.274.000</p>
+</td>
+</tr>
+<tr style="height: 157.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 315px; background-color: #edf0ff; border-color: #000000; border-style: solid;" rowspan="2" valign="top">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/impuesto-al-consumo-de-licores-en-2025/" target="_blank" rel="noopener"><span class="s1">Impuesto al consumo de licores, vinos, aperitivos y similares</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 157.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2"><strong>Licores, aperitivos y similares</strong></p>
+<p class="p2" style="text-align: justify;">El componente espec&iacute;fico para 2026 es de $360 por cada grado alcoholim&eacute;trico en unidad de 750 cent&iacute;metros c&uacute;bicos o su equivalente.</p>
+</td>
+<td class="td1" style="height: 315px; background-color: #edf0ff; border-color: #000000; border-style: solid; width: 33.3952%; text-align: justify;" rowspan="2" valign="middle">
+<p>El<a title=" impuesto al consumo de licores" href="https://actualicese.com/guia-de-referencia-2026/?srsltid=AfmBOoqHR_5NTRFy_f_oiH40uTQFzbRAd74eD1gyfVtRSGKbLLqrIL5x" target="_blank" rel="noopener">&nbsp;impuesto al consumo de licores</a>, vino, aperitivos y similares para 2026 fue establecido por la Direcci&oacute;n General de Apoyo Fiscal del MinHacienda mediante la Certificaci&oacute;n 003 de diciembre de 2025.</p>
+</td>
+</tr>
+<tr style="height: 157.5px;">
+<td style="width: 33.2715%; height: 157.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2 align-center"><strong>Vinos y aperitivos v&iacute;nicos</strong></p>
+<p class="p2" style="text-align: justify;">El componente espec&iacute;fico para 2026 es de $243 por cada grado alcoholim&eacute;trico en unidad de 750 cent&iacute;metros c&uacute;bicos o su equivalente.</p>
+</td>
+</tr>
+<tr style="height: 85.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 256.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" rowspan="3" valign="top">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/impuesto-al-consumo-de-cervezas-en-2026/" target="_blank" rel="noopener"><span class="s1">Impuesto al consumo de cerveza nacional</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 85.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2"><strong>Cerveza</strong></p>
+<p class="p2">$333,62 por unidad de 300 cent&iacute;metros c&uacute;bicos</p>
+</td>
+<td class="td1" style="height: 256.5px; background-color: #ffffff; border-color: #000000; border-style: solid; width: 33.3952%; text-align: justify;" rowspan="3" valign="middle">
+<p class="p2">El impuesto al consumo de&nbsp;cerveza, sifones, refajos y mezclas&nbsp;para el&nbsp;primer semestre de 2026&nbsp;es establecido por la&nbsp;Direcci&oacute;n General de Apoyo Fiscal &ndash;DGAF&ndash;&nbsp;mediante la&nbsp;Certificaci&oacute;n 02 de diciembre de 2025.</p>
+</td>
+</tr>
+<tr style="height: 85.5px;">
+<td style="width: 33.2715%; height: 85.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2 align-center"><strong>Sifones</strong></p>
+<p class="p2 align-center">$447,98 por unidad de 300 cent&iacute;metros c&uacute;bicos</p>
+</td>
+</tr>
+<tr style="height: 85.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 85.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2"><strong>Refajos y mezclas</strong></p>
+<p class="p2">$98,82 por unidad de 300 cent&iacute;metros c&uacute;bicos</p>
+</td>
+</tr>
+<tr style="height: 137.719px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 205.477px; background-color: #edf0ff; border-color: #000000; border-style: solid;" rowspan="2" valign="top">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/impuesto-a-cigarrillos-y-tabaco-para-2026/" target="_blank" rel="noopener"><span class="s1">Impuesto sobre el consumo de cigarrillos y tabaco</span></a></strong></span></p>
+</td>
+<td class="td1" style="width: 33.2715%; height: 137.719px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2 align-center"><strong>Cigarrillos, tabacos, cigarros y cigarritos</strong></p>
+<p class="p2 align-center">$4.446 por cada cajetilla de 20 unidades o de manera proporcional a su contenido</p>
+</td>
+<td class="td1" style="height: 205.477px; background-color: #edf0ff; border-color: #000000; border-style: solid; width: 33.3952%; text-align: justify;" rowspan="2" valign="middle">
+<p class="p2">Si en 2026 vendes, distribuyes o consumes&nbsp;cigarrillos o tabaco elaborado, te va a afectar el&nbsp;impuesto al consumo&nbsp;que define el Ministerio de Hacienda a trav&eacute;s de la&nbsp;Direcci&oacute;n General de Apoyo Fiscal &ndash;DGAF&ndash;.</p>
+</td>
+</tr>
+<tr style="height: 67.7578px;">
+<td style="width: 33.2715%; height: 67.7578px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2 align-center"><strong>Picadura, rap&eacute; o chim&uacute;</strong></p>
+<p class="p2 align-center">$354 por cada gramo</p>
+</td>
+</tr>
+<tr style="height: 259.875px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 259.875px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/plazo-para-expedir-certificados-de-retencion-en-2026/" target="_blank" rel="noopener"><span class="s1">Plazo m&aacute;ximo para expedir certificados de retenci&oacute;n en 2026</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 259.875px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">31 de marzo de 2026</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 259.875px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p>Para el 2026, los certificados de retenci&oacute;n del a&ntilde;o gravable 2025 deber&aacute;n expedirse a m&aacute;s tardar el &uacute;ltimo d&iacute;a h&aacute;bil de marzo.</p>
+<p>Este plazo est&aacute; definido en el calendario tributario del&nbsp;<a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=227310">Decreto 2229 del 22 de diciembre de 2023</a>, el cu&aacute;l modific&oacute; el &nbsp;<a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=83233">art&iacute;culo 1.6.1.13.2.40 del Decreto 1625</a>&nbsp;de 2016.</p>
+</td>
+</tr>
+<tr style="height: 258.281px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 258.281px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/tarifa-general-del-impuesto-de-renta-2026-para-personas-juridicas/" target="_blank" rel="noopener"><span class="s1">Impuesto de renta de personas jur&iacute;dicas</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 258.281px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">35 %</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 258.281px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p>Si tienes una empresa en Colombia, esto te interesa. Para el a&ntilde;o gravable 2026, la tarifa general del impuesto de renta para personas jur&iacute;dicas ser&aacute; del 35 %, tal como lo indica el&nbsp;<a href="http://www.secretariasenado.gov.co/senado/basedoc/estatuto_tributario_pr010.html#240" target="_blank" rel="noopener">art&iacute;culo 240</a>&nbsp;del Estatuto Tributario, modificado por el art&iacute;culo&nbsp;<a href="http://www.secretariasenado.gov.co/senado/basedoc/estatuto_tributario_pr010.html#240" target="_blank" rel="noopener">10 de la Ley 2277 de 2022</a>.</p>
+</td>
+</tr>
+<tr style="height: 325.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 325.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/uvt-2026/" target="_blank" rel="noopener"><span class="s1">Ingresos para estar obligado a declarar renta (1.400 UVT)</span></a></strong></span></p>
+</td>
+<td class="td1" style="width: 33.2715%; height: 325.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2 align-center" style="text-align: center;">$73.323.600</p>
+<p class="p4">&nbsp;</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 325.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">En concordancia con lo se&ntilde;alado en el art&iacute;culo 592 del ET, se encuentran obligados a presentar la declaraci&oacute;n de renta las personas naturales y sucesiones il&iacute;quidas que durante el respectivo a&ntilde;o gravable hayan obtenido ingresos iguales o superiores a 1.400 UVT o que cuenten con un patrimonio bruto que al 31 de diciembre del per&iacute;odo fiscal exceda las 4.500 UVT.</p>
+</td>
+</tr>
+<tr style="height: 325.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 325.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/uvt-2026/" target="_blank" rel="noopener"><span class="s1">Tope de patrimonio para estar obligado a declarar renta (4.500 UVT)</span></a></strong></span></p>
+</td>
+<td class="td1" style="width: 33.2715%; height: 325.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2 align-center" style="text-align: center;">$235.683.000</p>
+<p class="p4">&nbsp;</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 325.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">En concordancia con lo se&ntilde;alado en el art&iacute;culo 592 del ET, se encuentran obligados a presentar la declaraci&oacute;n de renta las personas naturales y sucesiones il&iacute;quidas que durante el respectivo a&ntilde;o gravable hayan obtenido ingresos iguales o superiores a 1.400 UVT o que cuenten con un patrimonio bruto que al 31 de diciembre del per&iacute;odo fiscal exceda las 4.500 UVT.</p>
+</td>
+</tr>
+<tr style="height: 421.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 421.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><span class="s1"><a style="color: #4666ff;" href="https://actualicese.com/uvt-2026/" target="_blank" rel="noopener">L&iacute;mite de costos y gastos en efectivo que son deducibles en renta (100 UVT)</a></span></strong></span></p>
+</td>
+<td class="td1" style="width: 33.2715%; height: 421.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2 align-center" style="text-align: center;">$5.237.400</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 421.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">De acuerdo con lo contemplado en el par&aacute;grafo 2 del art&iacute;culo 771-5 del ET, los costos y gastos que se pretendan tomar como deducibles en la declaraci&oacute;n de renta, que individualmente considerados sean superiores a 100 UVT ($4.980.000), deber&aacute;n cubrirse solo por canales financieros (transferencia, cheques, tarjetas d&eacute;bito o cr&eacute;dito, etc.); de lo contrario, no ser&aacute;n aceptados en la declaraci&oacute;n de renta y el IVA de tales costos o gastos, ni tampoco como descontables en las declaraciones de IVA.</p>
+</td>
+</tr>
+<tr style="height: 208.688px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 208.688px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/tasa-de-interes-dian-enero-2026/" target="_blank" rel="noopener"><span class="s1">Tasa de inter&eacute;s moratorio para efectos fiscales entre el 1 y el 31 de enero de 2026</span></a></strong></span></p>
+<p class="p3">&nbsp;</p>
+<p class="p3"><a href="https://media.actualicese.com/VA26-Calculo-intereses-de-mora.xlsm" target="_blank" rel="noopener"><span style="color: #4666ff;"><span class="s1"><strong><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia.png" width="25" /></strong>&nbsp;Liquidador avanzado en Excel de intereses moratorios sobre deudas tributarias</span></span></a></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 208.688px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">22,36 %</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 208.688px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p>El&nbsp;<a href="http://www.secretariasenado.gov.co/senado/basedoc/estatuto_tributario_pr026.html#635" target="_blank" rel="noopener">art&iacute;culo 635 del Estatuto Tributario</a>&nbsp;establece que, para obligaciones administradas por la Dian, la&nbsp;tasa de inter&eacute;s moratorio es igual a la tasa de usura (para la modalidad de cr&eacute;dito de consumo y ordinario) menos 2 puntos porcentuales.</p>
+</td>
+</tr>
+<tr style="height: 192.141px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 192.141px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/tasa-para-liquidar-rendimientos-presuntivos-en-2025/" target="_blank" rel="noopener"><span class="s1">Tasa para la liquidaci&oacute;n de rendimientos presuntivos durante el a&ntilde;o 2026</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 192.141px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">9 %</p>
+</td>
+<td style="width: 33.3952%; height: 376.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" rowspan="2" valign="top">
+<p><span style="font-size: 1rem;">Durante 2026 las empresas deber&aacute;n liquidar rendimientos presuntivos seg&uacute;n el art&iacute;culo 35 del Estatuto Tributario. Aplica cuando hay pr&eacute;stamos en dinero entre sociedad y socios sin intereses: para la Dian ning&uacute;n pr&eacute;stamo es gratis, por eso exige reconocer un rendimiento m&iacute;nimo.</span></p>
+<p class="p2" style="text-align: justify;">&nbsp;</p>
+</td>
+</tr>
+<tr style="height: 184.359px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 184.359px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/tasa-para-liquidar-rendimientos-presuntivos-en-2026/" target="_blank" rel="noopener"><span class="s1">Tasa para liquidar rendimientos presuntivos 2025</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 184.359px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">9,25 %</p>
+</td>
+</tr>
+<tr style="height: 277.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/renta-laboral-exenta-en-2026/" target="_blank" rel="noopener"><span class="s1">Rentas laborales exentas del impuesto de renta en 2026</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$41.375.460.</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 277.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p>Para el a&ntilde;o gravable 2026, la renta laboral exenta del 25 % se sigue manejando con el tope fijado por la Ley 2277 de 2022: el 25 % del valor de los pagos laborales, limitado a 790 UVT al a&ntilde;o.</p>
+<p>Ese l&iacute;mite aplica tanto para asalariados como, bajo ciertas condiciones, para independientes.</p>
+</td>
+</tr>
+<tr style="height: 277.5px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/impuesto-al-consumo-de-bolsas-plasticas-para-2026/" target="_blank" rel="noopener"><span class="s1">Impuesto nacional al consumo de bolsas pl&aacute;sticas</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 277.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">$73</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 277.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2">El valor del&nbsp;impuesto al consumo&nbsp;de bolsas pl&aacute;sticas se incrementa cada a&ntilde;o siguiendo las variaciones del&nbsp;IPC. Para el&nbsp;2026&nbsp;este incremento se certifica por la Dian mediante la&nbsp;Circular 000005 del 16 de diciembre de 2025, en la que se actualiza el valor que se cobra por cada bolsa pl&aacute;stica entregada.</p>
+</td>
+</tr>
+<tr style="height: 214.688px;">
+<td class="td1 align-center" style="width: 33.2715%; height: 214.688px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/tarifa-general-de-reteiva-para-2026/" target="_blank" rel="noopener"><span class="s1">Porcentaje de reteiva general para residentes</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.2715%; height: 214.688px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p2" style="text-align: center;">15 %</p>
+</td>
+<td class="td1" style="width: 33.3952%; height: 214.688px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p2"><span style="font-size: 1rem;">Para el </span><span style="font-size: 1rem;">2026&nbsp;</span><span style="font-size: 1rem;">la&nbsp;</span><span style="font-size: 1rem;">tarifa general de reteiva</span><span style="font-size: 1rem;">&nbsp;(retenci&oacute;n en la fuente a t&iacute;tulo de IVA)&nbsp;</span><span style="font-size: 1rem;">podr&aacute; ser hasta del 50 % del valor del IVA</span><span style="font-size: 1rem;">, seg&uacute;n lo establece el&nbsp;</span><span style="font-size: 1rem;">art&iacute;culo 437-1 del Estatuto Tributario &ndash;ET&ndash;</span><span style="font-size: 1rem;">,modificado por la&nbsp;</span><span style="font-size: 1rem;">Ley 2010 de 2019</span><span style="font-size: 1rem;">.&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 37.5px;">
+<td class="align-center" style="width: 33.2715%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 37.5px;">
+<p class="p3"><span style="color: #4666ff;"><strong><span class="s1">Porcentaje de reteiva general para no residentes</span></strong></span></p>
+</td>
+<td style="width: 33.2715%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 37.5px;">
+<p class="p2 align-center" style="text-align: center;">100 %</p>
+</td>
+<td style="width: 33.3952%; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify; height: 37.5px;">
+<p>En algunos servicios con no residentes, la retenci&oacute;n es del&nbsp;100 % del IVA.</p>
+</td>
+</tr>
+<tr style="height: 37.5px;">
+<td class="align-center" style="width: 33.2715%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 37.5px;">
+<p class="p3"><a href="https://actualicese.com/uvt-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong><span class="s1">RST: l&iacute;mite en UVT para pertenecer o permanecer</span></strong></span></a></p>
+</td>
+<td style="width: 33.2715%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 37.5px;">
+<p class="p2 align-center"><strong>AG 2025: para trasladarse y permanecer en AG 2026</strong> $4.979.900.000&nbsp;</p>
+<p class="p2 align-center">&nbsp;</p>
+<p class="p2 align-center"><strong>AG 2026: para mantenerse o pertenecer en AG 2027</strong> $5.237.400.000</p>
+</td>
+<td style="width: 33.3952%; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify; height: 37.5px;">
+<p class="p2">Seg&uacute;n el&nbsp;<a href="http://www.secretariasenado.gov.co/senado/basedoc/estatuto_tributario_pr036.html#905">art&iacute;culo 905 del ET</a>, podr&aacute;n ser contribuyentes del&nbsp;r&eacute;gimen simple&nbsp;(entre otros requisitos) las personas naturales y jur&iacute;dicas cuyos&nbsp;ingresos brutos ordinarios o extraordinarios en el a&ntilde;o inmediatamente anterior sean inferiores a 100.000 UVT.</p>
+</td>
+</tr>
+<tr style="height: 37.5px;">
+<td class="align-center" style="width: 33.2715%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 37.5px;">
+<p class="p3"><a href="https://actualicese.com/contribuyentes-no-obligados-declaracion-de-renta-2026-colombia/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong><span class="s1">Contribuyentes no obligados a presentar declaraci&oacute;n</span></strong></span></a></p>
+</td>
+<td style="width: 33.2715%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 37.5px;">
+<p class="ewa-rteLine align-center"><strong>Patrimonio bruto:</strong></p>
+<p class="ewa-rteLine align-center">inferior a $224.095.500</p>
+<p class="ewa-rteLine align-center">&nbsp;</p>
+<p class="ewa-rteLine align-center"><strong>Ingresos brutos, consignaciones, compras y consumos con tarjeta de cr&eacute;dito:</strong></p>
+<p class="ewa-rteLine align-center">inferior a $69.718.600</p>
+</td>
+<td style="width: 33.3952%; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify; height: 37.5px;">
+<p class="p2" style="text-align: justify;">En Colombia, durante 2026 ciertas personas naturales que pertenecen al r&eacute;gimen ordinario no estar&aacute;n obligadas a presentar la declaraci&oacute;n de renta y complementarios correspondiente al a&ntilde;o gravable 2025.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p id="bkmrk--1">&nbsp;</p>
+<p id="bkmrk-%C2%A0-8" class="align-left">&nbsp;</p>
+
+
+
+      </div>
+    </div>
+
+    <!-- Pestaña de Indicadores laborales -->
+    <div class="tab-content" id="laborales">
+     
+      <div class="contenido-centro">
+        <p id="bkmrk-a-continuaci%C3%B3n%2C-te-c" style="text-align: justify;">A continuaci&oacute;n, te compartimos las cifras, datos y porcentajes que no debes perder de vista en 2026 en materia laboral:</p>
+<p id="bkmrk-a-continuaci%C3%B3n%2C-te-c" style="text-align: justify;">&nbsp;</p>
+<table id="bkmrk-indicadores-laborale" class="t1" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Roboto, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 14px; width: 100%; height: 6628.64px;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 37.3333px;">
+<td style="width: 100.124%; border-color: #000000; border-style: solid; background-color: #7585fc; height: 37.3333px;" colspan="3">
+<p class="p1 align-center" style="text-align: center;"><span style="color: #ffffff;"><strong>INDICADORES LABORALES</strong></span></p>
+</td>
+</tr>
+<tr style="height: 37.3333px;">
+<td class="td2 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #96a3fc; height: 37.3333px;" valign="middle">
+<p class="p1" style="text-align: center;"><span style="color: #ffffff;"><strong>Concepto</strong></span></p>
+</td>
+<td class="td2 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #96a3fc; height: 37.3333px;" valign="middle">
+<p class="p1" style="text-align: center;"><span style="color: #ffffff;"><strong>Valor o porcentaje</strong></span></p>
+</td>
+<td class="td2 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #96a3fc; height: 37.3333px;" valign="middle">
+<p class="p1" style="text-align: center;"><span style="color: #ffffff;"><strong>Descripci&oacute;n</strong></span></p>
+</td>
+</tr>
+<tr style="height: 96.7708px;">
+<td class="td3 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 96.7708px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/salario-minimo-2026-en-colombia/" target="_blank" rel="noopener">Salario m&iacute;nimo mensual legal vigente&ndash;smmlv&ndash;</a></strong></span></p>
+</td>
+<td class="td3 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 96.7708px;" valign="middle">
+<p class="p1" style="text-align: center;">$1.750.905</p>
+</td>
+<td class="td3" style="border-color: #000000; border-style: solid; background-color: #edf0ff; height: 181.333px; width: 33.3745%; text-align: justify;" rowspan="2" valign="middle">
+<p class="p1">El Gobierno nacional estableci&oacute; un aumento del 23 % en el salario m&iacute;nimo mensual y del 24,5 % en el auxilio de transporte. Estos cambios entraron en vigencia el 1 de enero, y se extender&aacute;n durante todo el 2026.</p>
+</td>
+</tr>
+<tr style="height: 84.5625px;">
+<td class="td3 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 84.5625px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/salario-minimo-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">Incremento del salario m&iacute;nimo</span></a></strong></span></p>
+</td>
+<td class="td3 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 84.5625px;" valign="middle">
+<p class="p1" style="text-align: center;">23 %</p>
+</td>
+</tr>
+<tr style="height: 157.333px;">
+<td class="td3 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 157.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/salario-minimo-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">Salario m&iacute;nimo diario</span></a></strong></span></p>
+</td>
+<td class="td3 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 157.333px;" valign="middle">
+<p class="p1" style="text-align: center;">$58.364</p>
+</td>
+<td class="td3" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 157.333px; text-align: justify;" valign="middle">
+<p class="p1">El indicador del salario m&iacute;nimo diario para el a&ntilde;o 2026 se construye a partir de la cifra del salario m&iacute;nimo mensual, dividido por los 30 d&iacute;as calendario del mes.</p>
+</td>
+</tr>
+<tr style="height: 56.5625px;">
+<td class="td3 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 56.5625px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/salario-integral-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">Salario integral total</span></a></strong></span></p>
+</td>
+<td class="td3 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 56.5625px;" valign="middle">
+<p class="p1" style="text-align: center;">$22.761.765</p>
+</td>
+<td class="td3" style="border-color: #000000; border-style: solid; background-color: #edf0ff; width: 33.3745%; height: 185.562px; text-align: justify;" rowspan="3" valign="middle">
+<p class="p1">El salario integral es una modalidad de pago que incluye, adem&aacute;s del salario b&aacute;sico, prestaciones, bonificaciones, horas extra y otros beneficios laborales que compensan los servicios del trabajador.</p>
+</td>
+</tr>
+<tr style="height: 64.5px;">
+<td class="td4 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 64.5px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/salario-integral-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">Factor salarial del salario integral</span></a></strong></span></p>
+</td>
+<td class="td4 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 64.5px;" valign="middle">
+<p class="p1" style="text-align: center;">$17.509.050</p>
+</td>
+</tr>
+<tr style="height: 64.5px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 64.5px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/salario-integral-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">Factor prestacional del salario integral</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 64.5px;" valign="middle">
+<p class="p1" style="text-align: center;">$5.252.715</p>
+</td>
+</tr>
+<tr style="height: 157.333px;">
+<td class="align-center" style="border-color: #000000; border-style: solid; background-color: #ffffff; width: 33.3745%; height: 1584px;" rowspan="9">
+<p class="p2"><span style="color: #4666ff; background-color: #e03e2d;"><strong><span class="s1">&nbsp;</span></strong></span></p>
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/horas-extra-y-recargos-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">Valores m&iacute;nimos de horas extra y recargos</span></a></strong></span></p>
+<br />
+<p class="p2"><span style="color: #4666ff; background-color: #e03e2d;"><strong><span class="s1">&nbsp;</span></strong></span></p>
+<p class="p2"><span style="color: #4666ff; background-color: #e03e2d;"><strong><span class="s1">&nbsp;</span></strong></span></p>
+<p class="p2"><span style="color: #4666ff; background-color: #e03e2d;"><strong><span class="s1">&nbsp;</span></strong></span></p>
+<p class="p2"><span style="color: #4666ff; background-color: #e03e2d;"><strong><span class="s1">&nbsp;</span></strong></span></p>
+<p class="p2"><span style="color: #4666ff; background-color: #e03e2d;"><strong><span class="s1">&nbsp;</span></strong></span></p>
+</td>
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 157.333px;">
+<p class="p1" style="text-align: center;">Hora extra diurna: 25 %</p>
+<p class="p1"><strong>Del 1 de enero al 14 de julio</strong></p>
+<p class="p1" style="text-align: center;">$9.948</p>
+<p class="p1"><strong>Del 15 de julio al 31 de diciembre:</strong></p>
+<p class="p1" style="text-align: center;">$10.423</p>
+</td>
+<td style="border-color: #000000; border-style: solid; background-color: #ffffff; width: 33.3745%; height: 1584px; text-align: justify;" rowspan="9">
+<p class="p1">&nbsp;</p>
+<p class="p1">El aumento del salario m&iacute;nimo y la reducci&oacute;n de la jornada laboral impactan directamente el valor de las horas extra y recargos. Esto se debe a que el c&aacute;lculo del valor de la hora ordinaria de trabajo depende del salario mensual del trabajador y las horas trabajadas al mes.</p>
+<p class="p1">&nbsp;</p>
+</td>
+</tr>
+<tr style="height: 157.333px;">
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 157.333px;">
+<p class="p1 align-center" style="text-align: center;">Hora extra nocturna: 75 %</p>
+<p class="p1"><strong>Del 1 de enero al 14 de julio</strong></p>
+<p class="p1" style="text-align: center;">$13.928</p>
+<p class="p1"><strong>Del 15 de julio al 31 de diciembre:</strong></p>
+<p class="p1" style="text-align: center;">$14.592</p>
+</td>
+</tr>
+<tr style="height: 181.333px;">
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 181.333px;">
+<p class="p1" style="text-align: center;">Hora extra diurna dominical o festiva: &nbsp;115 %</p>
+<p class="p1"><strong>Del 1 de enero al 14 de julio</strong></p>
+<p class="p1" style="text-align: center;">$17.711</p>
+<p class="p1"><strong>Del 15 de julio al 31 de diciembre:</strong></p>
+<p class="p1" style="text-align: center;">$17.927</p>
+</td>
+</tr>
+<tr style="height: 181.333px;">
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 181.333px;">
+<p class="p1 align-center" style="text-align: center;">Hora extra nocturna dominical o festiva: &nbsp;165 %</p>
+<p class="p1"><strong>Del 1 de enero al 14 de julio</strong></p>
+<p class="p1" style="text-align: center;">$21.091</p>
+<p class="p1"><strong>Del 15 de julio al 31 de diciembre:</strong></p>
+<p class="p1" style="text-align: center;">$22.096</p>
+</td>
+</tr>
+<tr style="height: 157.333px;">
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 157.333px;">
+<p class="p1" style="text-align: center;">Recargo nocturno: 35 %</p>
+<p class="p1"><strong>Del 1 de enero al 14 de julio</strong></p>
+<p class="p1" style="text-align: center;">$10.745</p>
+<p class="p1"><strong>Del 15 de julio al 31 de diciembre:</strong></p>
+<p class="p1" style="text-align: center;">$11.256</p>
+</td>
+</tr>
+<tr style="height: 205.333px;">
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 205.333px;">
+<p class="p1 align-center" style="text-align: center;">Recargo dominical o festivo (hasta el 30 de junio de 2026):&nbsp; &nbsp;80 %</p>
+<p class="p1 align-center"><strong>Del 1 de enero al 14 de julio</strong></p>
+<p class="p1 align-center" style="text-align: center;">$14.326</p>
+<p class="p1 align-center"><strong>Del 15 de julio al 31 de diciembre:</strong></p>
+<p class="p1 align-center" style="text-align: center;">N/A</p>
+</td>
+</tr>
+<tr style="height: 157.333px;">
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 157.333px;">
+<p class="p1 align-center" style="text-align: center;">Recargo dominical o festivo: 90 %</p>
+<p class="p1"><strong>Del 1 de enero al 14 de julio</strong></p>
+<p class="p1" style="text-align: center;">$15.122</p>
+<p class="p1"><strong>Del 15 de julio al 31 de diciembre:</strong></p>
+<p class="p1" style="text-align: center;">$15.842</p>
+</td>
+</tr>
+<tr style="height: 205.333px;">
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 205.333px;">
+<p class="p1 align-center" style="text-align: center;">Recargo nocturno dominical o festivo (hasta el 30 de junio de 2026): &nbsp;115 %</p>
+<p class="p1 align-center"><strong>Del 1 de enero al 14 de julio</strong></p>
+<p class="p1 align-center" style="text-align: center;">$17.111</p>
+<p class="p1 align-center"><strong>Del 15 de julio al 31 de diciembre:</strong></p>
+<p class="p1 align-center" style="text-align: center;">N/A</p>
+</td>
+</tr>
+<tr style="height: 181.333px;">
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 181.333px;">
+<p class="p1" style="text-align: center;">Recargo nocturno dominical o festivo: &nbsp;125 %</p>
+<p class="p1"><strong>Del 1 de enero al 14 de julio</strong></p>
+<p class="p1" style="text-align: center;">$17.908</p>
+<p class="p1"><strong>Del 15 de julio al 31 de diciembre:</strong></p>
+<p class="p1" style="text-align: center;">$18.761</p>
+</td>
+</tr>
+<tr style="height: 127.292px;">
+<td class="align-center" style="border-color: #000000; border-style: solid; background-color: #edf0ff; width: 33.3745%; height: 127.292px;">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/auxilio-de-transporte-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">Auxilio de transporte</span></a></strong></span></p>
+<p class="p2"><span style="color: #4666ff;"><strong><span class="s1">&nbsp;</span></strong></span></p>
+</td>
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 127.292px;">
+<p class="p1" style="text-align: center;">$249.095</p>
+</td>
+<td style="border-color: #000000; border-style: solid; background-color: #edf0ff; width: 33.3745%; height: 205.334px; text-align: justify;" rowspan="2">
+<p class="p1">El auxilio de transporte para 2026 tendr&aacute; un incremento del 24,5 % para trabajadores con ingresos mensuales de hasta dos salarios m&iacute;nimos. Este ajuste tambi&eacute;n se aplicar&aacute; al auxilio de conectividad digital para quienes trabajen en modalidad de trabajo en casa.</p>
+</td>
+</tr>
+<tr style="height: 78.0417px;">
+<td class="align-center" style="border-color: #000000; border-style: solid; background-color: #ffffff; width: 33.3745%; height: 78.0417px;">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/auxilio-de-transporte-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">Incremento del auxilio de transporte</span></a></strong></span></p>
+</td>
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 78.0417px;">
+<p class="p1" style="text-align: center;">24,5 %</p>
+</td>
+</tr>
+<tr style="height: 229.333px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 229.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/aporte-a-salud-2026-en-el-regimen-contributivo/" target="_blank" rel="noopener"><span class="s1">Cotizaci&oacute;n total obligatoria a salud</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 229.333px;" valign="middle">
+<p class="p1" style="text-align: center;">12,5 %</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 229.333px; text-align: justify;" valign="middle">
+<p class="p1">Para 2026 el aporte a salud en el r&eacute;gimen contributivo se mantiene en el 12,5 %, calculado sobre el ingreso base de cotizaci&oacute;n. Este porcentaje es asumido por empleadores y trabajadores en el caso de ser dependientes, o en su totalidad por trabajadores independientes.</p>
+</td>
+</tr>
+<tr style="height: 147.25px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 147.25px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/aporte-a-salud-2026-en-el-regimen-contributivo/" target="_blank" rel="noopener"><span class="s1">Cotizaci&oacute;n a salud a cargo del empleador</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 147.25px;" valign="middle">
+<p class="p1" style="text-align: center;">8,5 %</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 147.25px; text-align: justify;" valign="middle">
+<p class="p1">El aporte al sistema de seguridad social en salud &ndash;SG-SSS&ndash; corresponde al 12,5%. De este porcentaje le corresponde al empleador pagar un 8,5 %.</p>
+</td>
+</tr>
+<tr style="height: 147.667px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 147.667px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/aporte-a-salud-2026-en-el-regimen-contributivo/" target="_blank" rel="noopener"><span class="s1">Cotizaci&oacute;n a salud a cargo del trabajador</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 147.667px;" valign="middle">
+<p class="p1" style="text-align: center;">4 %</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 147.667px; text-align: justify;" valign="middle">
+<p class="p1">El aporte al sistema de seguridad social en salud &ndash;SG-SSS&ndash; corresponde al 12,5 %. De este porcentaje le corresponde al trabajador pagar un 4 %.</p>
+</td>
+</tr>
+<tr style="height: 184.5px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 184.5px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/aporte-a-salud-2026-en-el-regimen-contributivo/" target="_blank" rel="noopener"><span class="s1">Cotizaci&oacute;n a salud de los trabajadores independientes</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 184.5px;" valign="middle">
+<p class="p1" style="text-align: center;">12,5 %</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 184.5px; text-align: justify;" valign="middle">
+<p class="p1">A los trabajadores independientes les corresponde pagar la totalidad del aporte de cotizaci&oacute;n a salud (12,5 %) con base en el IBC conforme el <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_2277_2022_pr002.html#89" target="_blank" rel="noopener">art&iacute;culo 89 de la Ley 2277 de 2022</a>.</p>
+</td>
+</tr>
+<tr style="height: 133.333px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 133.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/aportes-a-pension-2026/" target="_blank" rel="noopener"><span class="s1">Cotizaci&oacute;n obligatoria a pensiones</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 133.333px;" valign="middle">
+<p class="p1" style="text-align: center;">16 %</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 133.333px; text-align: justify;" valign="middle">
+<p class="p1">El porcentaje de los aportes a pensi&oacute;n seguir&aacute; siendo del 16 %; este debe determinarse con base en el ingreso base de cotizaci&oacute;n &ndash;IBC&ndash;.</p>
+</td>
+</tr>
+<tr style="height: 109.333px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 109.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/aportes-a-pension-2026/" target="_blank" rel="noopener"><span class="s1">Cotizaci&oacute;n a pensi&oacute;n a cargo del empleador</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 109.333px;" valign="middle">
+<p class="p1" style="text-align: center;">12 %</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 109.333px; text-align: justify;" valign="middle">
+<p class="p1">El aporte a pensiones corresponde a un&nbsp; 16 %. De este porcentaje le corresponde al trabajador pagar un 12 %.</p>
+</td>
+</tr>
+<tr style="height: 109.333px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 109.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/aportes-a-pension-2026/" target="_blank" rel="noopener"><span class="s1">Cotizaci&oacute;n a pensi&oacute;n a cargo del trabajador</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 109.333px;" valign="middle">
+<p class="p1" style="text-align: center;">4 %</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 109.333px; text-align: justify;" valign="middle">
+<p class="p1">El aporte a pensiones corresponde a un 16 %. De este porcentaje le corresponde al empleador pagar un 4 %.</p>
+</td>
+</tr>
+<tr style="height: 184.5px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 184.5px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/aportes-a-pension-2026/" target="_blank" rel="noopener"><span class="s1">Cotizaci&oacute;n a pensi&oacute;n de los trabajadores independientes</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 184.5px;" valign="middle">
+<p class="p1" style="text-align: center;">16 %</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 184.5px; text-align: justify;" valign="middle">
+<p class="p1">A los trabajadores independientes les corresponde pagar la totalidad del aporte a pensi&oacute;n (16 %) con base en el IBC determinado en atenci&oacute;n a las reglas del <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_2277_2022_pr002.html#89" target="_blank" rel="noopener">art&iacute;culo 89 de la Ley 2277 de 2022</a>.</p>
+</td>
+</tr>
+<tr style="height: 205.333px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/aporte-a-salud-para-pensionados-2026/" target="_blank" rel="noopener"><span class="s1">Aporte a salud para pensionados</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px;" valign="middle">
+<p class="p1" style="text-align: center;">Hasta 1 smmlv = 4 %</p>
+<p class="p1" style="text-align: center;">&gt; a 1 y hasta 3 smmlv = 10 %</p>
+<p class="p1" style="text-align: center;">&gt; a 3 smmlv = 12 %</p>
+<p class="p4">&nbsp;</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px; text-align: justify;" valign="middle">
+<p class="p1">Con la entrada en vigor del Plan Nacional de Desarrollo 2022-2026 (Ley 2294 de 2023) se redujo el aporte a salud para los pensionados en Colombia. Esta medida significa un importante beneficio en favor del ahorro de los pensionados.</p>
+</td>
+</tr>
+<tr style="height: 110.417px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 110.417px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/semanas-minimas-para-pension-de-vejez-en-2026/" target="_blank" rel="noopener"><span class="s1">N&uacute;mero m&iacute;nimo de semanas para obtener pensi&oacute;n de vejez</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 110.417px;" valign="middle">
+<p class="p1" style="text-align: center;">1.300</p>
+</td>
+<td class="td1" style="border-color: #000000; border-style: solid; background-color: #edf0ff; height: 277.334px; width: 33.3745%; text-align: justify;" rowspan="3" valign="middle">
+<p class="p1">En 2026 los requisitos para la pensi&oacute;n de vejez seguir&aacute;n regulados por el sistema pensional de la Ley 100 de 1993, debido a que la Corte Constitucional suspendi&oacute; la entrada en vigor de la reforma pensional Ley 2381 de 2024. El nuevo sistema pensional solo aplicar&aacute; a quienes no est&eacute;n en el r&eacute;gimen de transici&oacute;n.</p>
+</td>
+</tr>
+<tr style="height: 112.521px;">
+<td style="border-color: #000000; border-style: solid; background-color: #ffffff; height: 166.917px; width: 33.3745%;" rowspan="2" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/semanas-minimas-para-pension-de-vejez-en-2026/" target="_blank" rel="noopener"><span class="s1">Edad m&iacute;nima para pensionarse</span></a></strong></span></p>
+</td>
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 112.521px;" valign="middle">
+<p class="p1 align-center"><strong>Mujeres:</strong> 57 a&ntilde;os</p>
+</td>
+</tr>
+<tr style="height: 54.3958px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 54.3958px;" valign="middle">
+<p class="p1"><strong>Hombres:</strong> 62 a&ntilde;os</p>
+</td>
+</tr>
+<tr style="height: 205.333px;">
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px;">
+<p class="p2 align-center"><a href="https://actualicese.com/umbral-de-cotizacion-colpensiones-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong><span class="s1">Umbral de cotizaci&oacute;n</span></strong></span></a></p>
+<p class="p2 align-center"><span style="color: #4666ff;"><strong><span class="s1"><a href="https://media.actualicese.com/VA24-Comparativo-regimen-pension.pdf" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia.png" width="25" height="32" /></a> </span></strong><a href="https://media.actualicese.com/VA24-Comparativo-regimen-pension.pdf" target="_blank" rel="noopener"><span class="s1">Cuadro comparativo de reg&iacute;menes pensionales en Colombia</span></a></span></p>
+</td>
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px;">
+<p class="p1 align-center" style="text-align: center;">$4.027.082</p>
+</td>
+<td style="border-color: #000000; border-style: solid; background-color: #ffffff; width: 33.3745%; text-align: justify; height: 205.333px;">
+<p class="p1">El umbral de cotizaci&oacute;n es el monto establecido en el pilar contributivo para realizar aportes obligatorios al componente de prima media (Colpensiones). Seg&uacute;n la Ley 2381 de 2024, este umbral qued&oacute; fijado en 2,3 smmlv.</p>
+</td>
+</tr>
+<tr style="height: 181.333px;">
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 181.333px;">
+<p class="p2 align-center"><a href="https://actualicese.com/exonerados-de-aportes-parafiscales-en-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong><span class="s1">Aportes parafiscales en 2026</span></strong></span></a></p>
+<p class="p2 align-center"><span style="color: #4666ff;"><strong><span class="s1"><a href="https://media.actualicese.com/VB26-Guia-basica-de-informacion-laboral-2026.pdf" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia.png" width="25" /> </a></span></strong><span class="s1"><a href="https://media.actualicese.com/VB26-Guia-basica-de-informacion-laboral-2026.pdf" target="_blank" rel="noopener">Gu&iacute;a de informaci&oacute;n laboral 2026</a></span></span></p>
+</td>
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 181.333px;">
+<p class="p1 align-center"><strong>Sena:&nbsp;</strong>2 %</p>
+<p class="p1 align-center">&nbsp;</p>
+<p class="p1 align-center"><strong>ICBF: </strong>3 %</p>
+<p class="p1 align-center">&nbsp;</p>
+<p class="p1 align-center"><strong>CCF: </strong>4 %</p>
+</td>
+<td style="border-color: #000000; border-style: solid; background-color: #edf0ff; width: 33.3745%; text-align: justify; height: 181.333px;">
+<p class="p1">En Colombia los aportes parafiscales se distribuyen entre tres entidades del sistema de protecci&oacute;n social; su c&aacute;lculo se basa en un porcentaje aplicado sobre la n&oacute;mina mensual de salarios por cada trabajador</p>
+</td>
+</tr>
+<tr style="height: 205.333px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/licencias-de-maternidad-y-paternidad-en-2026/" target="_blank" rel="noopener"><span class="s1">Licencia de maternidad</span></a></strong></span></p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px;" valign="middle">
+<p class="p1 align-center" style="text-align: center;">18 semanas</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px; text-align: justify;" valign="middle">
+<p class="p1">La duraci&oacute;n de la licencia de maternidad es de dieciocho (18) semanas remuneradas con el salario que devengue al momento de iniciar su licencia. Para calcular dichas semanas deben tomarse los d&iacute;as calendario.</p>
+</td>
+</tr>
+<tr style="height: 376.5px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 376.5px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/licencias-de-maternidad-y-paternidad-en-2026/" target="_blank" rel="noopener"><span class="s1">Descansos remunerados por lactancia</span></a></strong></span></p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 376.5px;" valign="middle">
+<p class="p1 align-center"><strong>Primer per&iacute;odo:</strong> dos descansos de 30 minutos cada uno, hasta los seis (6) meses de edad del menor.<br /><br /></p>
+<p class="p1 align-center"><strong>Segundo per&iacute;odo:</strong> un descanso de 30 minutos hasta los dos (2) a&ntilde;os de edad del menor.</p>
+<p class="p4">&nbsp;</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 376.5px; text-align: justify;" valign="middle">
+<p class="p1">El per&iacute;odo de lactancia es una obligaci&oacute;n para el empleador de conceder descansos remunerados durante la jornada laboral a la trabajadora para amamantar a su hijo o hija, una vez la madre se reincorpore a sus labores despu&eacute;s de disfrutar la licencia de maternidad (<a href="http://www.secretariasenado.gov.co/senado/basedoc/codigo_sustantivo_trabajo_pr008.html#238" target="_blank" rel="noopener">art&iacute;culo 238 del CST</a>).</p>
+<p class="p4">&nbsp;</p>
+<p class="p1">Estos permisos por lactancia deben otorgarse a partir del primer d&iacute;a en que la trabajadora se reincorpore al trabajo.</p>
+</td>
+</tr>
+<tr style="height: 253.333px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 253.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/licencias-de-maternidad-y-paternidad-en-2026/" target="_blank" rel="noopener"><span class="s1">Licencia de paternidad</span></a></strong></span></p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 253.333px;" valign="middle">
+<p class="p1 align-center" style="text-align: center;">Dos (2) semanas</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 253.333px; text-align: justify;" valign="middle">
+<p class="p1">De acuerdo con la Ley 2114 de 2021, el padre tendr&aacute; derecho a dos (2) semanas de licencia remunerada de paternidad y opera por los hijos nacidos del c&oacute;nyuge o de la compa&ntilde;era permanente. De igual manera, para calcular dichas semanas deben tomarse los d&iacute;as calendario.</p>
+</td>
+</tr>
+<tr style="height: 373.333px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 373.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/licencias-de-maternidad-y-paternidad-en-2026/" target="_blank" rel="noopener"><span class="s1">Licencia parental compartida</span></a></strong></span></p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 373.333px;" valign="middle">
+<p class="p1 align-center">Posibilidad de distribuir las seis (6) &uacute;ltimas semanas de la licencia de maternidad.</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 373.333px; text-align: justify;" valign="middle">
+<p class="p1">Esta licencia permite a los padres distribuir libremente, de com&uacute;n acuerdo, las &uacute;ltimas seis (6) semanas de la licencia de maternidad, siempre y cuando se cumplan una serie de condiciones y requisitos.<br /><br />El otorgamiento de esta licencia no supone una afectaci&oacute;n a las dos (2) semanas que se tienen por licencia de paternidad, es decir, el t&eacute;rmino de la licencia compartida deber&aacute; adicionarse a esas dos (2) semanas.</p>
+</td>
+</tr>
+<tr style="height: 205.333px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/licencias-de-maternidad-y-paternidad-en-2026/" target="_blank" rel="noopener"><span class="s1">Licencia parental flexible de tiempo parcial</span></a></strong></span></p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px;" valign="middle">
+<p class="p1 align-center">Labor de medio tiempo; duplicando as&iacute; la duraci&oacute;n total de la licencia en d&iacute;as.</p>
+</td>
+<td class="td1" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.333px;" valign="middle">
+<p class="p1" style="text-align: justify;">Atendiendo las indicaciones de la Ley 2114 de 2021, madre y padre podr&aacute;n cambiar un per&iacute;odo determinado de su licencia de maternidad o de paternidad por un per&iacute;odo de trabajo de medio tiempo, con lo cual el per&iacute;odo seleccionado&nbsp;se duplicar&iacute;a.</p>
+</td>
+</tr>
+<tr style="height: 152.104px;">
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 152.104px;">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/upc-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">UPC en el r&eacute;gimen contributivo</span></a></strong></span></p>
+</td>
+<td class="align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 152.104px;">
+<p class="p1" style="text-align: center;">$1.658.912,01</p>
+</td>
+<td style="border-color: #000000; border-style: solid; background-color: #edf0ff; width: 33.3745%; height: 277.333px; text-align: justify;" rowspan="2">
+<p class="p3">La unidad de pago por capitaci&oacute;n UPC corresponde al monto anual que se reconoce por cada afiliado al Sistema General de Seguridad Social en Salud, con el fin de financiar las prestaciones incluidas en el plan de beneficios de los reg&iacute;menes contributivo y subsidiado. A continuaci&oacute;n, se presenta el valor de la UPC aplicable para el a&ntilde;o 2026.</p>
+</td>
+</tr>
+<tr style="height: 125.229px;">
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 125.229px;" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/upc-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">UPC en el r&eacute;gimen subsidiado</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 125.229px;" valign="middle">
+<p class="p1" style="text-align: center;">$1.541.706,27</p>
+</td>
+</tr>
+<tr style="height: 106.792px;">
+<td style="border-color: #000000; border-style: solid; background-color: #edf0ff; height: 205.334px; width: 33.3745%;" rowspan="2" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/jornada-laboral-semanal-2026-en-colombia/" target="_blank" rel="noopener"><span class="s1">Jornada laboral m&aacute;xima semanal</span></a></strong></span></p>
+<p class="p3"><span style="color: #4666ff;"><strong><span class="s1"><a href="https://media.actualicese.com/VA26-Contabilizacion-horas-extra-reduccion-jornada-laboral-2026-a-44-horas.xlsm" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia.png" width="25" /> </a></span></strong></span><a href="https://media.actualicese.com/VA26-Contabilizacion-horas-extra-reduccion-jornada-laboral-2026-a-44-horas.xlsm" target="_blank" rel="noopener">Liquidador y caso pr&aacute;ctico para calcular y contabilizar el valor de horas extra y recargos</a></p>
+</td>
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 106.792px;" valign="middle">
+<p class="p1 align-center"><strong>Entre el 1 de enero y el 14 de julio:</strong></p>
+<p class="p1 align-center" style="text-align: center;">44 horas</p>
+</td>
+<td class="td1" style="border-color: #000000; border-style: solid; background-color: #ffffff; height: 205.334px; width: 33.3745%; text-align: justify;" rowspan="2" valign="middle">
+<p class="p1">La Ley 2101 de 2021 redujo la jornada laboral m&aacute;xima de 48 a 42 horas semanales. Su implementaci&oacute;n podr&aacute; realizarse de manera autom&aacute;tica o gradual.</p>
+<p class="p1">La disminuci&oacute;n gradual inici&oacute; el 15 de julio de 2023 y concluir&aacute; el 15 de julio de 2026.</p>
+</td>
+</tr>
+<tr style="height: 98.5417px;">
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 98.5417px;" valign="middle">
+<p class="p1 align-center"><strong>Entre el 15 de julio y el 31 de diciembre: </strong></p>
+<p class="p1 align-center" style="text-align: center;">42 horas</p>
+</td>
+</tr>
+<tr style="height: 114.625px;">
+<td style="border-color: #000000; border-style: solid; background-color: #ffffff; height: 229.333px; width: 33.3745%;" rowspan="2" valign="middle">
+<p class="p1"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/apoyo-de-sostenimiento-para-aprendices-2025/" target="_blank" rel="noopener">Apoyo de sostenimiento para aprendices</a></strong></span></p>
+<p class="p1"><span style="color: #4666ff;"><strong><span class="s1"><a href="https://media.actualicese.com/VA26-Monetizacion-Sena-despues-de-la-reforma-laboral-Ley-2466-de-2025.xlsx" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia.png" width="25" /> </a></span></strong><span class="s1"><a href="https://media.actualicese.com/VA26-Monetizacion-Sena-despues-de-la-reforma-laboral-Ley-2466-de-2025.xlsx" target="_blank" rel="noopener">Calculadora de monetizaci&oacute;n total y parcial de la cuota de aprendizaje Sena</a></span></span></p>
+</td>
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #ffffff; height: 114.625px;" valign="middle">
+<p class="p1 align-center"><strong>Fase lectiva:</strong></p>
+<p class="p1 align-center" style="text-align: center;">75 % de un (1) smmlv</p>
+<p class="p1 align-center" style="text-align: center;">$1.313.179</p>
+</td>
+<td class="td1" style="border-color: #000000; border-style: solid; background-color: #edf0ff; height: 229.333px; width: 33.3745%; text-align: justify;" rowspan="2" valign="middle">
+<p>El apoyo de sostenimiento es un ingreso reconocido a los aprendices que realizan su formaci&oacute;n te&oacute;rico-pr&aacute;ctica en una entidad autorizada, con el respaldo de una empresa patrocinadora que proporciona los medios necesarios para su formaci&oacute;n profesional.</p>
+</td>
+</tr>
+<tr style="height: 114.708px;">
+<td style="width: 33.3745%; border-color: #000000; border-style: solid; background-color: #edf0ff; height: 114.708px;" valign="middle">
+<p class="p1 align-center"><strong>Fase pr&aacute;ctica:</strong></p>
+<p class="p1 align-center" style="text-align: center;">100 % de un (1) smmlv</p>
+<p class="p1 align-center" style="text-align: center;">$1.750.905</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+
+    </div>
+
+    <!-- Pestaña de Indicadores financieros -->
+    <div class="tab-content" id="financieros">
+      <div class="contenido-centro">
+
+        <p id="bkmrk-a-continuaci%C3%B3n%2C-pone" style="text-align: justify;">A continuaci&oacute;n, ponemos a tu disposici&oacute;n los indicadores financieros y econ&oacute;micos que debes tener en cuenta para este nuevo a&ntilde;o:</p>
+<table id="bkmrk-indicadores-financie" class="t1" style="width: 100%; height: 3744.47px;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 37.5px;">
+<td class="td1 align-center" style="width: 99.8901%; height: 37.5px; background-color: #7585fc; border-color: #000000; border-style: solid;" colspan="4" valign="middle">
+<p class="p1" style="text-align: center;"><strong><span style="color: #ffffff;">INDICADORES FINANCIEROS Y ECON&Oacute;MICOS</span></strong></p>
+</td>
+</tr>
+<tr style="height: 37.5px;">
+<td class="td1 align-center" style="width: 49.9451%; height: 37.5px; background-color: #96a3fc; border-color: #000000; border-style: solid;" colspan="2" valign="middle">
+<p class="p1" style="text-align: center;"><strong><span style="color: #ffffff;">Concepto</span></strong></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 37.5px; background-color: #96a3fc; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;"><strong><span style="color: #ffffff;">Valor o porcentaje</span></strong></p>
+</td>
+<td class="align-center" style="width: 24.9725%; height: 37.5px; background-color: #96a3fc; border-color: #000000; border-style: solid; text-align: center;"><strong><span style="color: #ffffff;">Descripci&oacute;n</span></strong></td>
+</tr>
+<tr style="height: 160.102px;">
+<td class="td1" style="width: 24.9725%; height: 421.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" rowspan="2" valign="top">
+<p class="p2 align-center"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/tasa-de-dtf-en-colombia-2025/" target="_blank" rel="noopener"><span class="s1">DTF al 31 de diciembre de 2025</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 160.102px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">&Uacute;ltima semana de diciembre</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 160.102px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">9,09 %</p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 421.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" rowspan="2" valign="top">
+<p class="p1">&nbsp;</p>
+<p>El dep&oacute;sito a t&eacute;rmino fijo &ndash;DTF&ndash; es la tasa o tipo de inter&eacute;s calculado a partir del promedio ponderado semanal por monto de las tasas de captaci&oacute;n diarias de los certificados de dep&oacute;sito a t&eacute;rmino &ndash;CDT&ndash; a 90 d&iacute;as. A partir de este porcentaje se determina el c&aacute;lculo del pago o cobro de intereses en lo correspondiente al sector financiero.</p>
+<p class="p1">&nbsp;</p>
+</td>
+</tr>
+<tr style="height: 261.398px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 261.398px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Promedio diciembre</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 261.398px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;"><br />9,09 %</p>
+</td>
+</tr>
+<tr style="height: 253.5px;">
+<td class="td1" style="height: 253.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; width: 49.9451%;" colspan="2" valign="middle">
+<p class="p2 align-center"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/uvr-2025/" target="_blank" rel="noopener"><span class="s1">UVR al 31 de diciembre de 2025</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 253.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">$3397.0689</p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 253.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p1">El valor de la unidad de valor real &ndash;UVR&ndash;, utilizada en Colombia para calcular costos asociados a ciertos cr&eacute;ditos de vivienda y otros instrumentos financieros, es certificado por el Banco de la Rep&uacute;blica.</p>
+</td>
+</tr>
+<tr style="height: 253.5px;">
+<td class="td1 align-center" style="height: 253.5px; background-color: #ffffff; border-color: #000000; border-style: solid; width: 49.9451%;" colspan="2" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/trm-al-31-de-diciembre-de-2025/" target="_blank" rel="noopener"><span class="s1">Tasa representativa del mercado &ndash;TRM&ndash; al 31 de diciembre de 2025</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 253.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">$3.757,08</p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 253.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p>La TRM&nbsp;refleja cu&aacute;ntos pesos colombianos equivalen a un d&oacute;lar estadounidense. Al cierre del 31 de diciembre de 2025, este indicador registr&oacute; una ca&iacute;da del 14,79 % frente al valor observado el 31 de diciembre de 2024.</p>
+</td>
+</tr>
+<tr style="height: 229.5px;">
+<td class="td1 align-center" style="height: 229.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; width: 49.9451%;" colspan="2" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/trm-promedio-de-2025/" target="_blank" rel="noopener"><span class="s1">Tasa representativa del mercado promedio en 2025</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 229.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">$4.052,86</p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 229.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p1">La tasa representativa del mercado &ndash;TRM&ndash;, adem&aacute;s de ser un indicador econ&oacute;mico, es una herramienta de gran utilidad en los procesos de planeaci&oacute;n presupuestal de las organizaciones.</p>
+</td>
+</tr>
+<tr style="height: 373.5px;">
+<td class="td1 align-center" style="height: 373.5px; background-color: #ffffff; border-color: #000000; border-style: solid; width: 49.9451%;" colspan="2" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/revaluacion-del-peso-colombiano-frente-al-dolar-en-2025/" target="_blank" rel="noopener"><span class="s1">Revaluaci&oacute;n en 2025</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 373.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">-14,79 %</p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 373.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p>Al concluir el a&ntilde;o 2025, se observa una notable revaluaci&oacute;n del peso colombiano, recuperando su valor frente al d&oacute;lar de manera significativa, algo que no suced&iacute;a desde el a&ntilde;o 2023.</p>
+<p>Este fen&oacute;meno, conocido como revaluaci&oacute;n, indica un aumento en el poder adquisitivo del peso colombiano.</p>
+</td>
+</tr>
+<tr style="height: 282.469px;">
+<td class="td1 align-center" style="height: 282.469px; background-color: #edf0ff; border-color: #000000; border-style: solid; width: 49.9451%;" colspan="2" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/valor-del-euro-al-31-de-diciembre-2025/" target="_blank" rel="noopener"><span class="s1">Euro al 31 de diciembre de 2025</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 282.469px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">$4.414,50</p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 282.469px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p1">El&nbsp;euro&nbsp;es la moneda oficial de los pa&iacute;ses que integran la Uni&oacute;n Europea. En Colombia, su cotizaci&oacute;n frente al peso colombiano registra variaciones diarias, influenciadas por factores econ&oacute;micos locales e internacionales.</p>
+</td>
+</tr>
+<tr style="height: 253.5px;">
+<td class="td1 align-center" style="height: 253.5px; background-color: #ffffff; border-color: #000000; border-style: solid; width: 49.9451%;" colspan="2" valign="middle">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/bitcoin-al-31-de-diciembre-de-2025-en-colombia/" target="_blank" rel="noopener"><span class="s1">Bitcoin al 31 de diciembre de 2025</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 253.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">USD 87.612,7</p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 253.5px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" valign="middle">
+<p class="p1" style="text-align: justify;">Aunque el bitcoin no es reconocido como una moneda legal en Colombia, su uso en transacciones financieras ha sido significativo, convirti&eacute;ndolo en un indicador relevante en el mercado.</p>
+</td>
+</tr>
+<tr style="height: 114.375px;">
+<td class="td1" style="width: 24.9725%; height: 301.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" rowspan="2" valign="top">
+<p class="p2 align-center"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/interes-bancario-en-credito-de-consumo-y-ordinario-para-enero-de-2026/" target="_blank" rel="noopener"><span class="s1">Tasas de inter&eacute;s en cr&eacute;ditos de consumo y ordinario entre el 1 y el 31 de enero de 2026</span></a></strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 114.375px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s bancario corriente</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 114.375px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">16,24 % EA</p>
+</td>
+<td style="width: 24.9725%; height: 301.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" rowspan="2" valign="top">
+<p class="p1">Mediante la Resoluci&oacute;n 002288 de 2025, la Superfinanciera certific&oacute; la&nbsp;tasa de inter&eacute;s bancario corriente para la modalidad de cr&eacute;dito de consumo y ordinario&nbsp;que regir&aacute; para el per&iacute;odo comprendido entre el 1 y el 31 de enero de 2026.</p>
+</td>
+</tr>
+<tr style="height: 187.125px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 187.125px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s remuneratorio y moratorio (usura)</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 187.125px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">24,36 % EA</p>
+</td>
+</tr>
+<tr style="height: 109.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 999px; background-color: #ffffff; border-color: #000000; border-style: solid;" rowspan="10" valign="top">
+<p class="p2"><span style="color: #4666ff;"><strong><a style="color: #4666ff;" href="https://actualicese.com/interes-bancario-para-creditos-productivos-entre-el-1-de-enero-y-el-31-de-marzo-de-2026/" target="_blank" rel="noopener"><span class="s1">Tasas de inter&eacute;s para cr&eacute;ditos productivos entre el 1 de enero y el 31 de marzo de 2026</span></a></strong></span></p>
+<p class="p2"><span style="color: #4666ff;"><span class="s1"><a href="https://media.actualicese.com/VA25-Comparativo-creditos-bancarios.xlsx" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia.png" width="25" /></a><a href="https://media.actualicese.com/VA25-Comparativo-creditos-bancarios.xlsx" target="_blank" rel="noopener">Simulador para comparar cr&eacute;ditos bancarios con tabla de amortizaci&oacute;n</a></span></span></p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 109.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1 align-center">Inter&eacute;s bancario corriente cr&eacute;dito productivo de mayor monto</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">40,20 % EA</p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 999px; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;" rowspan="10" valign="top">
+<p class="p1">Mediante la Resoluci&oacute;n 002288 de 2025, la Superfinanciera certific&oacute; la tasa de&nbsp;inter&eacute;s bancario corriente para las modalidades de cr&eacute;dito productivo&nbsp;que regir&aacute;n para el per&iacute;odo comprendido entre el 1 de enero y el 31 de marzo de 2026.</p>
+<p class="p3">&nbsp;</p>
+</td>
+</tr>
+<tr style="height: 85.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 85.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s bancario corriente cr&eacute;dito productivo rural</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 85.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">18,65 % EA</p>
+</td>
+</tr>
+<tr style="height: 85.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 85.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s bancario corriente Cr&eacute;dito productivo urbano</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 85.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">38,49 % EA</p>
+</td>
+</tr>
+<tr style="height: 85.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 85.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s bancario corriente Cr&eacute;dito popular productivo rural</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 85.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">50,88 % EA</p>
+</td>
+</tr>
+<tr style="height: 109.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s bancario corriente Cr&eacute;dito popular productivo urbano</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">59,83 % EA</p>
+</td>
+</tr>
+<tr style="height: 109.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s remuneratorio y moratorio (usura) Cr&eacute;dito productivo de mayor monto</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">40,20 % EA</p>
+</td>
+</tr>
+<tr style="height: 85.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 85.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s remuneratorio y moratorio (usura) Cr&eacute;dito productivo rural</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 85.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">27,98 % EA</p>
+</td>
+</tr>
+<tr style="height: 109.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s remuneratorio y moratorio (usura) Cr&eacute;dito productivo urbano</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">57,74 % EA</p>
+</td>
+</tr>
+<tr style="height: 109.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s remuneratorio y moratorio (usura) Cr&eacute;dito popular productivo rural</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">76,32 % EA</p>
+</td>
+</tr>
+<tr style="height: 109.5px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s remuneratorio y moratorio (usura) Cr&eacute;dito popular productivo urbano</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 109.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">89,75 % EA</p>
+</td>
+</tr>
+<tr style="height: 143.461px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 301.5px; background-color: #edf0ff; border-color: #000000; border-style: solid;" rowspan="2" valign="top">
+<p class="p1"><a href="https://actualicese.com/creditos-de-consumo-de-bajo-monto-interes-bancario-y-tasa-de-usura-entre-1-y-el-31-de-enero-de-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Cr&eacute;ditos de consumo de bajo monto: inter&eacute;s bancario y tasa de usura entre el 1 y el 31 de enero de 2026</strong></span></a></p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 143.461px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s bancario corriente</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 143.461px; background-color: #ffffff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">45,90 % EA</p>
+</td>
+<td class="td1" style="width: 24.9725%; height: 301.5px; background-color: #edf0ff; border-color: #000000; border-style: solid; text-align: justify;" rowspan="2" valign="top">
+<p class="p1">Mediante la Resoluci&oacute;n 002288 de 2025, la Superfinanciera certifica la tasa de inter&eacute;s bancario corriente para la modalidad de cr&eacute;ditos de consumo de bajo monto y la tasa de usura que rige para el per&iacute;odo entre el 1 y el 31 de enero de 2026.</p>
+</td>
+</tr>
+<tr style="height: 158.039px;">
+<td class="td1 align-center" style="width: 24.9725%; height: 158.039px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1">Inter&eacute;s remuneratorio y moratorio (usura)</p>
+</td>
+<td class="td1 align-center" style="width: 24.9725%; height: 158.039px; background-color: #edf0ff; border-color: #000000; border-style: solid;" valign="middle">
+<p class="p1" style="text-align: center;">68,85 % EA</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; border-color: #000000; border-style: solid; width: 49.9451%;" colspan="2">
+<p class="p1 align-center"><a href="https://actualicese.com/ipc-2025-en-colombia/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>IPC 2025</strong></span></a></p>
+</td>
+<td style="width: 24.9725%; background-color: #ffffff; border-color: #000000; border-style: solid;">
+<p class="p1 align-center" style="text-align: center;">5,10 %</p>
+</td>
+<td style="width: 24.9725%; background-color: #ffffff; border-color: #000000; border-style: solid; text-align: justify;">
+<p class="p1">El IPC al cierre de diciembre de 2025 refleja la continuidad del proceso de desaceleraci&oacute;n de la inflaci&oacute;n en Colombia, consolidando un nuevo panorama econ&oacute;mico para los hogares y las empresas.&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p id="bkmrk-%C2%A0-10">&nbsp;</p>
+
+
+      </div>
+    </div>
+
+    <!-- Pestaña de Indicadores comerciales -->
+    <div class="tab-content" id="comerciales">
+      
+      <div class="contenido-centro">
+        <p id="bkmrk-encuentra-a-continua" style="text-align: justify;">Encuentra a continuaci&oacute;n las cifras, datos y porcentajes que no debes perder de vista en 2026 en materia comercial:</p>
+<table id="bkmrk-indicadores-comercia" class="t1" style="width: 100.247%; height: 1309.5px;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 37.5px;">
+<td style="width: 99.8627%; background-color: #7585fc; border-color: #000000; border-style: solid; height: 37.5px;" colspan="4" valign="middle">
+<p class="p1 align-center" style="text-align: center;"><span style="color: #ffffff;"><strong>INDICADORES COMERCIALES</strong></span></p>
+</td>
+</tr>
+<tr style="height: 37.5px;">
+<td class="td1 align-center" style="width: 49.9313%; background-color: #96a3fc; border-color: #000000; border-style: solid; height: 37.5px;" colspan="2" valign="middle">
+<p class="p2" style="text-align: center;"><span style="color: #ffffff;"><strong>Concepto</strong></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9657%; background-color: #96a3fc; border-color: #000000; border-style: solid; height: 37.5px;" valign="middle">
+<p class="p2" style="text-align: center;"><span style="color: #ffffff;"><strong>Valor o porcentaje</strong></span></p>
+</td>
+<td class="align-center" style="width: 24.9657%; background-color: #96a3fc; border-color: #000000; border-style: solid; height: 37.5px; text-align: center;"><span style="color: #ffffff;"><strong>Descripci&oacute;n</strong></span></td>
+</tr>
+<tr style="height: 157.5px;">
+<td class="td1" style="width: 24.9657%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 315px;" rowspan="2" valign="top">
+<p class="p3 align-center"><a href="https://actualicese.com/obligados-a-tener-revisor-fiscal-en-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong><span class="s1">Obligados a tener revisor</span></strong></span></a></p>
+<p class="p3 align-center"><a href="https://actualicese.com/obligados-a-tener-revisor-fiscal-en-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong><span class="s1">&nbsp;fiscal durante 2026</span></strong></span></a></p>
+</td>
+<td class="td1" style="width: 24.9657%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 157.5px; text-align: justify;" valign="middle">
+<p class="p2">Sociedades comerciales con activos brutos al 31 de diciembre de 2025 equivalentes a 5.000 salarios m&iacute;nimos legales del a&ntilde;o anterior.</p>
+</td>
+<td class="td1 align-center" style="width: 24.9657%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 157.5px;" valign="middle">
+<p class="p2" style="text-align: center;">$7.117.500.000</p>
+</td>
+<td class="td1" style="width: 24.9657%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 315px; text-align: justify;" rowspan="2" valign="top">
+<p class="p2">En 2026 deber&aacute;n tener revisor fiscal las sociedades comerciales que al cierre de 2025 cumplan los topes de activos o ingresos definidos en la Ley 43 de 1990.</p>
+</td>
+</tr>
+<tr style="height: 157.5px;">
+<td class="td1" style="width: 24.9657%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 157.5px; text-align: justify;" valign="middle">
+<p class="p2">Sociedades comerciales con ingresos brutos al 31 de diciembre de 2025 equivalentes a 3.000 salarios m&iacute;nimos legales del a&ntilde;o anterior.</p>
+</td>
+<td class="td1 align-center" style="width: 24.9657%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 157.5px;" valign="middle">
+<p class="p2" style="text-align: center;">$4.270.500.000</p>
+</td>
+</tr>
+<tr style="height: 165.5px;">
+<td class="td1 align-center" style="background-color: #edf0ff; border-color: #000000; border-style: solid; height: 165.5px; width: 49.9313%;" colspan="2" valign="middle">
+<p class="p3"><a href="https://actualicese.com/sociedades-vigiladas-por-supersociedades-en-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong><span class="s1">Activos e ingresos para no ser vigilado por Supersociedades en el 2026</span></strong></span></a></p>
+<a href="https://media.actualicese.com/VA25-Calculo-contribucion-a-supersociedades-2025.xlsx" target="_blank" rel="noopener"><span style="color: #4666ff;"><span class="s1"><strong><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia.png" width="25" /></strong> Liquidador en Excel para calcular la contribuci&oacute;n 2025 a Supersociedades</span></span></a></td>
+<td class="td1 align-center" style="width: 24.9657%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 165.5px;" valign="middle">
+<p style="text-align: center;">&le; 3.000 smmlv</p>
+</td>
+<td class="td1" style="width: 24.9657%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 165.5px; text-align: justify;" valign="middle">
+<p>En 2026 ser&aacute;n vigiladas por Supersociedades las sociedades cuyos activos o ingresos del 2025 superen 30.000 smmlv.&nbsp;</p>
+</td>
+</tr>
+<tr style="height: 138.681px;">
+<td class="td1 align-center" style="background-color: #ffffff; border-color: #000000; border-style: solid; height: 138.681px; width: 49.9313%;" colspan="2" valign="middle">
+<p class="p3"><a href="https://actualicese.com/incremento-de-los-avaluos-catastrales-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong><span class="s1">Aumento autorizado para aval&uacute;os catastrales de predios urbanos</span></strong></span></a></p>
+</td>
+<td class="td1 align-center" style="width: 24.9657%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 138.681px; text-align: center;" valign="middle">3 %</td>
+<td class="td1" style="width: 24.9657%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 277.5px; text-align: justify;" rowspan="2" valign="top">
+<p>Cada a&ntilde;o el Gobierno nacional ajusta el valor de los aval&uacute;os catastrales sin exceder la meta de inflaci&oacute;n establecida.</p>
+</td>
+</tr>
+<tr style="height: 138.819px;">
+<td class="td1 align-center" style="background-color: #edf0ff; border-color: #000000; border-style: solid; height: 138.819px; width: 49.9313%;" colspan="2" valign="middle">
+<p class="p3"><a href="https://actualicese.com/incremento-de-los-avaluos-catastrales-2026/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong><span class="s1">Aumento autorizado para aval&uacute;os catastrales de predios rurales</span></strong></span></a></p>
+</td>
+<td class="td1 align-center" style="width: 24.9657%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 138.819px; text-align: center;" valign="middle">3 %</td>
+</tr>
+<tr style="height: 180.5px;">
+<td class="td1 align-center" style="background-color: #ffffff; border-color: #000000; border-style: solid; height: 180.5px; width: 49.9313%;" colspan="2" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><span class="s1">Canon de arrendamiento de bienes urbanos destinados a vivienda</span></strong></span></p>
+<a href="https://media.actualicese.com/VB25-Incremento-arrendamiento-comercial.docx" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia-2.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia 2.png" width="25" /></a> <a href="https://media.actualicese.com/VB25-Incremento-arrendamiento-comercial.docx" target="_blank" rel="noopener">Modelo de carta para el incremento anual del arrendamiento comercial</a></td>
+<td class="td1 align-center" style="width: 24.9657%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 180.5px;" valign="middle">
+<p>No puede exceder el 1 % del valor comercial del inmueble</p>
+</td>
+<td style="background-color: #edf0ff; border-color: #000000; border-style: solid; height: 476.5px; text-align: justify; width: 24.9657%;" rowspan="3" valign="middle">
+<p>La Ley 820 de 2003 permite al arrendador aumentar el canon de arrendamiento de vivienda urbana tras un (1) a&ntilde;o de contrato con el mismo precio.&nbsp;</p>
+</td>
+</tr>
+<tr style="height: 149.5px;">
+<td class="td1 align-center" style="background-color: #edf0ff; border-color: #000000; border-style: solid; height: 149.5px; width: 49.9313%;" colspan="2" valign="middle">
+<p class="p3"><span style="color: #4666ff;"><strong><span class="s1">Incremento en el valor del arrendamiento de bienes ra&iacute;ces urbanos utilizados para vivienda</span></strong></span></p>
+<a href="https://media.actualicese.com/VB25-Carta-terminacion-contrato-de-arrendamiento-arrendador.docx" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia-2.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia 2.png" width="25" /></a> <a href="https://media.actualicese.com/VB25-Carta-terminacion-contrato-de-arrendamiento-arrendador.docx" target="_blank" rel="noopener">Carta de finalizaci&oacute;n del contrato de arrendamiento de vivienda por vencimiento de t&eacute;rmino</a></td>
+<td class="td1 align-center" style="width: 24.9657%; background-color: #edf0ff; border-color: #000000; border-style: solid; height: 149.5px; text-align: center;" valign="middle">5,10%</td>
+</tr>
+<tr style="height: 146.5px;">
+<td class="td1" style="background-color: #ffffff; border-color: #000000; border-style: solid; height: 146.5px; width: 49.9313%;" colspan="2" valign="middle">
+<p class="p3 align-center"><span style="color: #4666ff;"><strong><span class="s1">Incremento en el valor del arrendamiento de bienes ra&iacute;ces urbanos alquilados antes de julio 10 de 2003</span></strong></span></p>
+<p class="p3 align-center"><span style="color: #4666ff;"><span class="s1"><a href="https://media.actualicese.com/VA25-Contrato-arrendamiento-local-comercial.docx" target="_blank" rel="noopener"><img src="https://actualicese.com/rutas/uploads/images/gallery/2024-04/scaled-1680-/iconos-cartilla-mesa-de-trabajo-1-copia-2.png" alt="ICONOS CARTILLA_Mesa de trabajo 1 copia 2.png" width="25" /></a></span><span class="s1"><a href="https://media.actualicese.com/VA25-Contrato-arrendamiento-local-comercial.docx" target="_blank" rel="noopener"> Modelo de contrato de arrendamiento de local comercial, oficina o bodega</a></span></span></p>
+</td>
+<td class="td1 align-center" style="width: 24.9657%; background-color: #ffffff; border-color: #000000; border-style: solid; height: 146.5px; text-align: center;" valign="middle">4,59%</td>
+</tr>
+</tbody>
+</table>
+<p id="bkmrk--13" class="align-left">&nbsp;</p>
+<p id="bkmrk--13" class="align-left"><br /><br /></p>
+
+      </div>
+
+    </div>
+    
+    <!-- Pestaña de Otros -->
+    <div class="tab-content" id="otros">
+      
+      <div class="contenido-centro">
+    
+
+        <p id="bkmrk-consulta-a-continuac" style="text-align: justify;">Consulta a continuaci&oacute;n las tarifas que debes tener en cuenta al momento de efectuar los diferentes tr&aacute;mites ante la Junta Central de Contadores:</p>
+<table id="bkmrk-tarifas-junta-centra" class="t1" style="width: 100%; height: 615.167px;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 37.3333px;">
+<td class="td1 align-center" style="background-color: #7585fc; border-color: #000000; border-style: solid; width: 99.8628%; height: 37.3333px;" colspan="3" valign="middle">
+<p class="p1" style="text-align: center;"><span style="color: #ffffff;"><strong>TARIFAS JUNTA CENTRAL DE CONTADORES</strong></span></p>
+</td>
+</tr>
+<tr style="height: 37.3333px;">
+<td class="td2 align-center" style="background-color: #96a3fc; border-color: #000000; border-style: solid; width: 33.2862%; height: 37.3333px;" valign="middle">
+<p class="p2" style="text-align: center;"><span style="color: #ffffff;"><strong>Concepto</strong></span></p>
+</td>
+<td class="td3 align-center" style="background-color: #96a3fc; border-color: #000000; border-style: solid; width: 33.2862%; height: 37.3333px;" valign="middle">
+<p class="p2" style="text-align: center;"><span style="color: #ffffff;"><strong>Valor en pesos</strong></span></p>
+</td>
+<td class="td2 align-center" style="background-color: #96a3fc; border-color: #000000; border-style: solid; width: 33.2905%; height: 37.3333px;" valign="middle">
+<p class="p2" style="text-align: center;"><span style="color: #ffffff;"><strong>Descripci&oacute;n</strong></span></p>
+</td>
+</tr>
+<tr style="height: 90.0833px;">
+<td class="td2 align-center" style="background-color: #ffffff; border-color: #000000; border-style: solid; width: 33.2862%; height: 90.0833px;" valign="middle">
+<p class="p3"><a href="https://actualicese.com/tarifas-2026-de-la-junta-central-de-contadores/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Certificado de antecedentes disciplinarios de persona natural</strong></span></a></p>
+</td>
+<td class="td4 align-center" style="background-color: #ffffff; border-color: #000000; border-style: solid; width: 33.2862%; height: 90.0833px;" valign="middle">
+<p style="text-align: center;">$482.000</p>
+</td>
+<td class="td2" style="background-color: #ffffff; border-color: #000000; border-style: solid; width: 33.2905%; height: 540.5px;" rowspan="6" valign="top">
+<p style="text-align: justify;">Mediante la Resoluci&oacute;n D-0001-2026 del 5 de enero de 2026, se fijaron las tarifas de la Junta Central de Contadores&ndash;JCC&ndash; para la vigencia 2026 en relaci&oacute;n con los tr&aacute;mites y servicios que la entidad ofrece.</p>
+<p style="text-align: justify;">&nbsp;</p>
+</td>
+</tr>
+<tr style="height: 90.0833px;">
+<td class="td2 align-center" style="background-color: #edf0ff; border-color: #000000; border-style: solid; width: 33.2862%; height: 90.0833px;" valign="middle">
+<p class="p3"><a href="https://actualicese.com/tarifas-2026-de-la-junta-central-de-contadores/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Duplicado de la tarjeta profesional del contador p&uacute;blico</strong></span></a></p>
+</td>
+<td class="td2 align-center" style="background-color: #edf0ff; border-color: #000000; border-style: solid; width: 33.2862%; height: 90.0833px;" valign="middle">
+<p style="text-align: center;">$6.204.000</p>
+</td>
+</tr>
+<tr style="height: 90.0833px;">
+<td class="td2 align-center" style="background-color: #ffffff; border-color: #000000; border-style: solid; width: 33.2862%; height: 90.0833px;" valign="middle">
+<p class="p3"><a href="https://actualicese.com/tarifas-2026-de-la-junta-central-de-contadores/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Certificado de antecedentes disciplinarios de persona jur&iacute;dica</strong></span></a></p>
+</td>
+<td class="td2 align-center" style="background-color: #ffffff; border-color: #000000; border-style: solid; width: 33.2862%; height: 90.0833px;" valign="middle">
+<p style="text-align: center;">$482.000</p>
+</td>
+</tr>
+<tr style="height: 64.5px;">
+<td class="td2 align-center" style="background-color: #edf0ff; border-color: #000000; border-style: solid; width: 33.2862%; height: 64.5px;" valign="middle">
+<p class="p3"><a href="https://actualicese.com/tarifas-2026-de-la-junta-central-de-contadores/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Tarjeta profesional del contador p&uacute;blico</strong></span></a></p>
+</td>
+<td class="td2 align-center" style="background-color: #edf0ff; border-color: #000000; border-style: solid; width: 33.2862%; height: 64.5px;" valign="middle">
+<p style="text-align: center;">$620.000</p>
+</td>
+</tr>
+<tr style="height: 115.667px;">
+<td class="td2 align-center" style="background-color: #ffffff; border-color: #000000; border-style: solid; width: 33.2862%; height: 115.667px;" valign="middle">
+<p class="p3"><a href="https://actualicese.com/tarifas-2026-de-la-junta-central-de-contadores/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Duplicado de la tarjeta registro de las personas jur&iacute;dicas prestadoras de servicios contables</strong></span></a></p>
+</td>
+<td class="td2 align-center" style="background-color: #ffffff; border-color: #000000; border-style: solid; width: 33.2862%; height: 115.667px;" valign="middle">
+<p style="text-align: center;">$48.000</p>
+</td>
+</tr>
+<tr style="height: 90.0833px;">
+<td class="td3 align-center" style="background-color: #edf0ff; border-color: #000000; border-style: solid; width: 33.2862%; height: 90.0833px;" valign="middle">
+<p class="p3"><a href="https://actualicese.com/tarifas-2026-de-la-junta-central-de-contadores/" target="_blank" rel="noopener"><span style="color: #4666ff;"><strong>Registro de personas jur&iacute;dicas en la Junta Central de Contadores</strong></span></a></p>
+</td>
+<td class="td3 align-center" style="background-color: #edf0ff; border-color: #000000; border-style: solid; width: 33.2862%; height: 90.0833px;" valign="middle">
+<p style="text-align: center;">$620.000</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p id="bkmrk-%C2%A0-8" class="align-left">&nbsp;</p>
+
+
+      </div>
+
+    </div>
+
+    <!----------------------------------------------->
+
+    <script>
+      // ...existing code...
+
+      // Función para activar tab por hash
+      function activarTabPorHash() {
+        var hash = window.location.hash.replace('#', '');
+        var tabObjetivo = hash || 'tributarios';
+        var btn = document.querySelector('.nav-btn[data-tab="' + tabObjetivo + '"]');
+        if (btn) btn.click();
+      }
+      // Escucha cambios en el hash
+      window.addEventListener('hashchange', activarTabPorHash);
+      // Activa el tab correcto al cargar la página
+      window.addEventListener('DOMContentLoaded', activarTabPorHash);
+      // ...existing code...
+
+      // Tabs
+      const navTabs = document.getElementById('navTabs');
+      const tabBtns = navTabs.querySelectorAll('.nav-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Botón activo
+          tabBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          // Contenido activo
+          tabContents.forEach(tc => tc.classList.remove('active'));
+          document.getElementById(this.dataset.tab).classList.add('active');
+          // Cierra menú hamburguesa en móvil
+          if(window.innerWidth <= 700) navTabs.classList.remove('open');
+        });
+      });
+      // Hamburger
+      const hamburger = document.getElementById('hamburger');
+      hamburger.addEventListener('click', function() {
+        navTabs.classList.toggle('open');
+      });
+      // Accesibilidad: Enter/Espacio
+      hamburger.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') navTabs.classList.toggle('open');
+      });
+      // Cierra menú si cambia a desktop
+      window.addEventListener('resize', function() {
+        if(window.innerWidth > 700) navTabs.classList.remove('open');
+      });
+
+        function abrirModalimg(imagen) {
+        document.getElementById('imagenModalimg').src = imagen;
+        document.getElementById('miModalimg').style.display = 'flex';
+      }
+      function cerrarModalimg(event) {
+        if (event.target.classList.contains('modalimg') || event.target.classList.contains('close')) {
+          document.getElementById('miModalimg').style.display = 'none';
+          document.getElementById('imagenModalimg').src = '';
+        }
+      }
+
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("activo");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
+      }
+
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+
+      function opensus(evt, suscriptorType) {
+        var i, tabcontenido, tablink;
+        tabcontenido = document.getElementsByClassName("tabcontenido");
+        for (i = 0; i < tabcontenido.length; i++) {
+          tabcontenido[i].style.display = "none";
+        }
+        tablink = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablink.length; i++) {
+          tablink[i].className = tablink[i].className.replace(" active", "");
+        }
+        document.getElementById(suscriptorType).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("Open").click();
+
+
+      // ...existing code...
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+
+        // Barra de progreso para los tabs de meses
+        // Solo aplica si estamos en la sección "explora"
+        if (document.getElementById('explora').classList.contains('active')) {
+          // cityName es el número del mes (1 a 13)
+          var total = 13;
+          var actual = parseInt(cityName);
+          var percent = Math.round((actual / total) * 100);
+          document.getElementById('progressBar').style.width = percent + "%";
+        }
+      }
+
+      document.getElementById("defaultOpen").click();
+      (function() {
+        var total = 13;
+        var actual = 8;
+        var percent = Math.round((actual / total) * 100);
+        document.getElementById('progressBar').style.width = percent + "%";
+      })();
+
+    </script>
+
+</body>
+</html>

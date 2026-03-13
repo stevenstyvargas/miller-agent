@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main-style-act-2025.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+  .azul-siigo {color: #00a4ff;}
+  .bg-azul-siigo {background-color: #00a4ff;}
+  .azul-osc-siigo {color: #003468;}
+  .gray-osc-siigo {background-color: gray;}
+  .bg-azul-osc-siigo {background-color: #003468;}
+  .uxp-lista-datos li::marker { color: #00a4ff !important;}
+  
+  /* Clases reutilizables para tarjetas */
+  .tarjeta-info {
+    box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+    border-radius: 10px;
+    background: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  .tarjeta-info-icono { padding: 1rem 0; }
+  
+  /* Contenedor de tarjetas */
+  .contenedor-tarjetas {
+    justify-content: center;
+    gap: 30px;
+    margin-top: -200px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Cajas de contenido */
+  .caja-contenido {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  /* Clases de visibilidad */
+  .uxp-hidden { display: block; }
+  .uxp-hidden-desktop { display: none; }
+
+
+  .custom-tabs {
+    margin: 10px 0 30px 0;
+  }
+
+  .custom-tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .custom-tab-btn {
+    background: #003468;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 8px 40px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 10px;
+    line-height: 22px;
+  }
+
+  .custom-tab-btn.active, .custom-tab-btn:hover {
+    background: #f6fafd;
+    color: #00a4ff;
+  }
+
+  .custom-tabs-content {
+    display: none;
+    animation: fadeIn .2s;
+  }
+
+  .custom-tabs-content.active {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .custom-tab-col {
+    flex: 1 1 20%;
+    min-width: 240px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 10px 0;
+    text-align: center;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+  }
+
+  @media (max-width: 1000px) {
+    .custom-tabs-content.active {
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .custom-tab-col {
+      flex: 1 1 45%;
+      min-width: 140px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    
+    .custom-tabs-nav {
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+    .custom-tab-btn {
+      width: auto;
+      border-radius: 8px;
+    }
+    .custom-tabs-content.active {
+      flex-direction: column;
+      gap: 8px;
+      width: 320px;
+    }
+    .custom-tab-col {
+      min-width: 100%;
+      font-size: 14px;
+    }
+  }
+
+@media (max-width: 600px) {
+  .uxp-grid-contenedor-ruta {
+    margin: 24px 8px;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  .uxp-ancho-completo {
+    width: 100vw;
+    margin-left: -8px;
+    margin-right: -8px;
+    box-sizing: border-box;
+  }
+  .uxp-flex-fila {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .uxp-flex-2, .uxp-flex-1 {
+    width: 100%;
+  }
+  .uxp-texto-banner {
+    font-size: 28px !important;
+    line-height: 32px !important;
+  }
+  .uxp-texto-precios {
+    font-size: 18px !important;
+    line-height: 22px !important;
+  }
+  .uxp-margen-izquierdo img {
+    width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+  }
+  .uxp-linea-corta {
+    width: 50% !important;
+  }
+  .btn-actu-amarillo {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* BLOQUE 1 */
+  section:first-of-type {
+    height: auto !important;
+    padding: 24px 16px !important;
+  }
+  
+  /* BLOQUE 2 */
+  section:nth-of-type(2) .uxp-grid-contenedor-ruta {
+    margin-top: -60px !important;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  section:nth-of-type(2) article {
+    flex: 1 1 calc(50% - 8px);
+    min-width: calc(50% - 8px);
+  }
+  section:nth-of-type(2) article:last-of-type {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+  .uxp-hidden { display: none; }
+  .uxp-hidden-desktop { display: inline; }
+  .tarjeta-info-icono.uxp-hidden-desktop { display: inline; padding: 0; }
+  
+  /* BLOQUE 3 */
+  section:nth-of-type(3) .uxp-flex-fila {
+    flex-direction: column;
+  }
+  section:nth-of-type(3) figure {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  section:nth-of-type(3) figure img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  section:nth-of-type(3) .uxp-margen-izquierdo {
+    margin-left: 0;
+  }
+  
+  /* BLOQUE 4 */
+  section:nth-of-type(4) > div {
+    padding: 24px 16px !important;
+  }
+  section:nth-of-type(4) .uxp-flex-fila {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  section:nth-of-type(4) article {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  section:nth-of-type(4) article:last-of-type {
+    margin-bottom: 0;
+  }
+  .caja-contenido {
+    padding: 20px !important;
+  }
+  
+  /* BLOQUE 5 */
+  section:nth-of-type(5) .uxp-flex-fila {
+    flex-direction: column;
+    align-items: center !important;
+  }
+  section:nth-of-type(5) figure {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  section:nth-of-type(5) figure img {
+    width: 200px !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+  section:nth-of-type(5) .uxp-relleno-derecho {
+    padding-right: 0;
+  }
+  
+  /* BLOQUE 6 */
+  section:nth-of-type(6) .uxp-flex-fila {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  section:nth-of-type(6) figure {
+    width: 100%;
+    margin-top: 16px;
+  }
+  section:nth-of-type(6) figure.uxp-relleno-izquierdo {
+    padding-left: 0;
+  }
+  section:nth-of-type(6) figure img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* BLOQUE 7 */
+  section:last-of-type {
+    height: auto !important;
+    padding: 40px 16px !important;
+    background-size: cover !important;
+  }
+  section:last-of-type .uxp-flex-2 {
+    width: 100%;
+  }
+
+  section:last-of-type .uxp-texto-banner {
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+}
+
+</style>
+  
+</head>
+  <body>
+
+      <!-- BLOQUE 1 - Banner principal -->   
+      <section style="background: url('https://cdn.actualicese.com/wp-content/uploads/2025/12/26100427/Del-cumplimiento-reactivo-a-la-excelencia-tecnica-1.jpg') center center/cover no-repeat; width:100%; height: 500px;" class="uxp-ancho-completo uxp-relleno-superior uxp-margen-inferior-cero div-principal">
+          
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-relleno-superior">
+
+          <div class="uxp-flex-2 uxp-texto-izquierda">
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero uxp-texto-precios uxp-texto-centrado"><strong class="uxp-txt-blanco">Capacitación presencial</strong></p>
+            <p class="uxp-texto-banner uxp-margen-superior-cero uxp-margen-inferior-cero uxp-txt-naranja uxp-texto-centrado"><strong>Taller de información exógena <br> tributaria AG 2025</strong></p>
+
+            <div class="uxp-elemento-centrado uxp-relleno-superior"><span class="uxp-linea-corta bg-azul-siigo"></span></div>  
+
+            <p class="uxp-relleno-superior uxp-txt-blanco uxp-texto-centrado">Anticípese a la fiscalización de la DIAN con una metodología de reporte basada en la precisión técnica y el cumplimiento preventivo.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOQUE 2 - Tarjetas con iconos -->   
+      <section class="uxp-ancho-completo uxp-relleno-superior">
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila contenedor-tarjetas">
+
+          <div class="custom-tabs">
+
+            <div class="custom-tabs-nav">
+              <button class="custom-tab-btn active" onclick="switchTab(this, 0)"><strong>Bogotá</strong><br><span style="font-size: 15px;">19 de febrero</span></button>
+              <button class="custom-tab-btn" onclick="switchTab(this, 1)"><strong>Cali</strong><br><span style="font-size: 15px;">27 de febrero</span></button>
+            </div>
+
+            <!-- Bogotá -->
+            <div class="custom-tabs-content active">
+
+              <div class="custom-tab-col">
+
+                <div style="margin-top: -10px;">
+                  <strong class="bg-azul-siigo uxp-txt-blanco" style="border-radius: 15px; padding: 5px;">&nbsp;&nbsp;Capacitación infinita&nbsp;&nbsp;</strong>
+                </div>
+
+                <div style="padding: 15px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> Actualícese:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Hoy:</p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$49.900 + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1046611">Reserva</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="margin-top: -10px;">
+                  <strong class="bg-azul-siigo uxp-txt-blanco" style="border-radius: 15px; padding: 5px;">&nbsp;&nbsp;Capacitación infinita&nbsp;&nbsp;</strong>
+                </div>
+
+                <div style="padding: 15px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> VIP:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Hoy:</p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$99.900 + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1047452">Reserva</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="padding: 29px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> Actualícese:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Antes: <s>$ 499.900 + IVA</s></p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$399.920* + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1035762&coupon_code=20off_presenciales">Comprar ahora</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="padding: 29px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> VIP:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Antes: <s>$ 699.900 + IVA</s></p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$559.920* + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1046578&coupon_code=20off_presenciales_vip">Comprar ahora</a></p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Cali OK -->
+            <div class="custom-tabs-content">
+
+              <div class="custom-tab-col">
+
+                <div style="margin-top: -10px;">
+                  <strong class="bg-azul-siigo uxp-txt-blanco" style="border-radius: 15px; padding: 5px;">&nbsp;&nbsp;Capacitación infinita&nbsp;&nbsp;</strong>
+                </div>
+
+                <div style="padding: 15px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> Actualícese:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Hoy:</p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$49.900 + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1051682">Reserva</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="margin-top: -10px;">
+                  <strong class="bg-azul-siigo uxp-txt-blanco" style="border-radius: 15px; padding: 5px;">&nbsp;&nbsp;Capacitación infinita&nbsp;&nbsp;</strong>
+                </div>
+
+                <div style="padding: 15px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> VIP:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Hoy:</p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$99.900 + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1051686">Reserva</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="padding: 29px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> Actualícese:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Antes: <s>$ 499.900 + IVA</s></p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$399.920* + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1051645&coupon_code=20off_presenciales">Comprar ahora</a></p>
+
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="padding: 29px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> VIP:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Antes: <s>$ 699.900 + IVA</s></p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$559.920* + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1051661&coupon_code=20off_presenciales_vip">Comprar ahora</a></p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <p class="uxp-texto-centrado uxp-relleno-superior"><i>*20% de dcto hasta el 31 de enero de 2026</i></p>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOQUE 3 - Comprende, aplica y evalúa -->
+      <section class="uxp-ancho-completo uxp-fondo-blanco">
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila">
+          <figure>
+            <img class="uxp-borde-redondeado" src="https://cdn.actualicese.com/wp-content/uploads/2025/12/26104428/La-diferencia-entre-reportar-y-asegurar-la-gestion-tributaria.jpg" alt="Profesionales en capacitación sobre estrategia tributaria" width="600" height="100%">
+          </figure>
+          <div class="uxp-margen-izquierdo">
+            <p class="uxp-texto-precios"><strong class="azul-siigo">La diferencia entre reportar y asegurar la gestión tributaria</strong></p>
+            <div class="uxp-margen-superior uxp-margen-inferior uxp-linea-corta bg-azul-osc-siigo"></div>
+            <p>La información exógena ya no es un simple trámite de cumplimiento; es el mapa que la DIAN utiliza para sus procesos de fiscalización automatizada. Un error de cruce o una interpretación incorrecta de la <strong>Resolución 000233 de 2025</strong>  puede exponer a la organización a sanciones onerosas y auditorías recurrentes. </p>
+
+            <p>Esta <strong>Capacitación Presencial</strong> en Bogotá está diseñada para profesionales que buscan transformar la preparación de la exógena en un proceso de auditoría preventiva, garantizando que la información reportada sea el fiel reflejo de la realidad contable y fiscal.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE 4 - Contenido del Libro Digital -->
+      <section class="uxp-ancho-completo uxp-fondo-blanco">
+        <div style="padding: 50px;" class="bg-azul-osc-siigo uxp-grid-contenedor-ruta uxp-relleno-superior uxp-relleno-inferior uxp-borde-redondeado">
+
+          <div class="uxp-flex-fila uxp-align-items-flex-end">
+            
+            <article class="uxp-flex-1 uxp-borde-redondeado">
+              
+              <div>
+                <p class="uxp-texto-precios uxp-relleno-derecho uxp-txt-naranja"><strong>Domine el Reporte de Información Exógena AG 2025</strong></p>
+                <div class="uxp-margen-superior uxp-linea-corta bg-azul-siigo"></div>
+  
+                <p class="uxp-txt-blanco uxp-relleno-derecho uxp-margen-derecho uxp-relleno-superior uxp-margen-superior">Alexander Cobo te enseñará a blindar tus reportes ante los cruces de información de la DIAN.</p>
+  
+                <div style="margin-bottom: 40px;" class="uxp-margen-inferior uxp-relleno-superior uxp-relleno-inferior uxp-margen-superior">
+                  <a class="uxp-margen-superior btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="#producto">Comprar ahora</a>
+                </div>
+              </div>
+
+              <div>
+                <div class="caja-contenido uxp-margen-inferior uxp-margen-superior">
+                  <p><strong class="azul-osc-siigo">Generalidades</strong></p>
+                  <ul class="uxp-lista-datos uxp-margen-inferior-cero">
+                    <li>Quiénes están obligados a reportar y por qué</li>
+                    <li>Análisis de bases y topes actualizados para el AG 2025</li>
+                    <li>Énfasis en la Resolución 000233 de 2025</li>
+                    <li>Cambios clave entre el AG 2024 y el AG 2025</li>
+                    <li>Responsabilidades del contador, revisor fiscal y representante legal</li>
+                  </ul>
+                </div>
+  
+                <div class="caja-contenido">
+                  <p><strong class="azul-osc-siigo">Estructura general de la información exógena</strong></p>
+                  <ul class="uxp-lista-datos uxp-margen-inferior-cero">
+                    <li>Conceptos y formatos más importantes</li>
+                    <li>Archivos XML: estructura y validaciones</li>
+                    <li>Herramientas oficiales Dian para generación y prevalidación</li>
+                    <li>Clasificación de la información a reportar</li>
+                  </ul>
+                </div>
+              </div>
+              
+            </article>
+            
+            <article class="uxp-flex-1 uxp-borde-redondeado">
+
+              <div class="caja-contenido">
+                <p><strong class="azul-osc-siigo">Formatos principales con explicación detallada</strong></p>
+
+                <p class="uxp-relleno-izquierdo uxp-margen-inferior-cero"><strong>Formato 1001 - Pagos o abonos en cuenta</strong></p>
+                <div class="uxp-relleno-inferior uxp-flex-fila uxp-relleno-izquierdo">
+                  <ul class="uxp-lista-datos uxp-flex-1" style="margin-bottom: 0;">
+                    <li>Quién lo reporta.</li>
+                    <li>Campos obligatorios.</li>
+                    <li>Tipos de documentos.</li>
+                  </ul>
+                  <ul class="uxp-lista-datos uxp-flex-1" style="margin-bottom: 0;">
+                    <li>Facturación electrónica como soporte.</li>
+                    <li>Casos prácticos.</li>
+                  </ul>
+                </div>
+
+                <p class="uxp-relleno-izquierdo uxp-margen-inferior-cero"><strong>Formato 1003 - Retenciones en la fuente practicadas</strong></p>
+                <ul class="uxp-lista-datos">
+                  <li>Retención a título de renta, IVA y timbre.</li>
+                  <li>Identificación de conceptos y tasas.</li>
+                  <li>Revisión de inconsistencias típicas.</li>
+                </ul>
+
+                <p class="uxp-relleno-izquierdo uxp-margen-inferior-cero"><strong>Formato 1005 - Retenciones que me practicaron</strong></p>
+                <ul class="uxp-lista-datos">
+                  <li>Cruce directo con terceros.</li>
+                  <li>Soportes necesarios.</li>
+                </ul>
+
+                <p class="uxp-relleno-izquierdo uxp-margen-inferior-cero"><strong>Formato 1006 - IVA descontable y generado</strong></p>
+                <ul class="uxp-lista-datos">
+                  <li>Compras, ventas y responsable del régimen.</li>
+                  <li>Facturas anuladas y notas crédito.</li>
+                </ul>
+
+                <p class="uxp-relleno-izquierdo uxp-margen-inferior-cero"><strong>Formato 1007 - Ingresos recibidos</strong></p>
+                <ul class="uxp-lista-datos">
+                  <li>Ingresos facturados vs. ingresos contabilizados.</li>
+                  <li>Ajustes por NIIF y efectos fiscales.</li>
+                </ul>
+
+                <p class="uxp-relleno-izquierdo uxp-margen-inferior-cero"><strong>Formato 1008 - Información de cuentas por cobrar</strong></p>
+                <ul class="uxp-lista-datos">
+                  <li>Clasificación, deterioros y castigos.</li>
+                  <li>Revisión con auxiliares contables.</li>
+                </ul>
+
+                <p class="uxp-relleno-izquierdo uxp-margen-inferior-cero"><strong>Formato 1009 - Información de cuentas por pagar</strong></p>
+                <ul class="uxp-lista-datos">
+                  <li>Soportes válidos.</li>
+                  <li>Conciliaciones con proveedores.</li>
+                </ul>
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOQUE * - ¿Que incluye la experiencia Actualícese? -->
+      <section class="uxp-ancho-completo uxp-relleno-superior uxp-relleno-inferior uxp-fondo-naranja">
+
+        <div class="uxp-grid-contenedor-ruta uxp-margen-inferior-cero">
+        
+          <p class="uxp-texto-centrado uxp-texto-precios uxp-margen-auto uxp-relleno-inferior"><strong>Tu pasaporte de acceso total</strong></p>
+
+          <span class="uxp-elemento-centrado">
+            <span class="uxp-linea-corta uxp-fondo-azul"></span>
+          </span>
+  
+          <p class="uxp-texto-centrado uxp-relleno-inferior uxp-margen-inferior uxp-relleno-superior">
+            Podrás escoger en qué experiencia quieres hacer tu reserva
+          </p>
+        
+        </div>
+
+        <div class="uxp-grid-contenedor-ruta uxp-margen-superior-cero uxp-margen-inferior-cero uxp-flex-fila">
+
+          <!-- Columna 1: Experiencia Actualícese -->
+          <div>
+            <div class="caja-contenido">
+              <p class="uxp-texto-precios"><strong class="azul-osc-siigo">¿Qué incluye <br> <span class="uxp-txt-azul">la experiencia Actualícese?</span></strong></p>
+              <ul class="uxp-lista-datos">
+                <li><strong>Capacitación presencial:</strong> 4 horas de formación técnica de alto nivel.</li>
+                <li><strong>Networking profesional:</strong> Espacio de conexión con colegas y expertos.</li>
+                <li><strong>Sesión de preguntas:*</strong> Resolución de inquietudes en vivo con el conferencista.</li>
+                <li><strong>Material de apoyo:</strong> Herramientas exclusivas para la preparación de reportes.</li>
+                <li><strong>Certificado de asistencia:</strong> Respaldo de tu actualización profesional.</li>
+                <li><strong>Kit de apuntes:</strong> Libreta y Lapicero para que anotes lo más relevante de <br> tu experiencia.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Columna 2: Experiencia VIP -->
+          <div>
+            <div class="caja-contenido">
+              <p class="uxp-texto-precios"><strong class="azul-osc-siigo">¿Qué incluye <br> <span class="uxp-txt-azul">la experiencia VIP?</span></strong></p>
+              <p><strong>Todo lo de la experiencia Actualícese y además:</strong></p>
+              <ul class="uxp-lista-datos">
+                <li>Solo 20 sillas disponibles.</li>
+                <li>Mesa VIP (primera fila).</li>
+                <li>Sesión privada de una hora al final con el conferencista.</li>
+                <li>Garantía de respuesta a tu pregunta.</li>
+                <li>Sesión de fotos individual con ponente.</li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="uxp-grid-contenedor-ruta uxp-margen-superior-cero uxp-margen-inferior-cero">
+        
+          <p class="texto-ancho-limitado uxp-texto-centrado uxp-relleno-inferior uxp-relleno-superior"><i>*No garantizamos que todas las preguntas sean contestadas.</i></p>
+        
+        </div>
+
+
+      </section>
+
+      <!-- BLOQUE 6 - Alexander Cobo -->
+      <section class="uxp-ancho-completo uxp-fondo-blanco">
+        <div style="width: 1000px;" class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-align-items-flex-end">
+          <figure>
+            <img src="https://actualicese.com/wp-content/uploads/2023/02/Alexander-cobo.png" alt="Diego Guevara, conferencista especialista en tributación" width="250" height="300">
+          </figure>
+          <div>
+            <p class="uxp-margen-inferior-cero"><strong>Conferencista:</strong></p>
+            <p class="uxp-texto-precios"><strong class="azul-siigo">Alexander Cobo</strong></p>
+            <div class="uxp-margen-superior uxp-linea-corta bg-azul-osc-siigo uxp-margen-inferior"></div>
+
+            <p class="uxp-relleno-derecho">Contador público y experto en información exógena tributaria. Posee una amplia trayectoria en asesoría y acompañamiento a empresas en el cumplimiento de obligaciones ante la Dian. Su metodología combina el rigor normativo con la revisión técnica de formatos, validaciones y la corrección de errores recurrentes detectados en procesos de fiscalización.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE 1 - Banner principal -->   
+      <section style="background: url('https://cdn.actualicese.com/wp-content/uploads/2025/12/26100427/Del-cumplimiento-reactivo-a-la-excelencia-tecnica-1.jpg') center center/cover no-repeat; width:100%; height: 500px;" class="uxp-ancho-completo uxp-relleno-superior uxp-margen-inferior-cero div-principal">
+    
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila uxp-relleno-superior">
+
+          <div class="uxp-flex-2 uxp-texto-izquierda">
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero uxp-texto-precios uxp-texto-centrado"><strong class="uxp-txt-blanco">Capacitación presencial</strong></p>
+            <p class="uxp-texto-banner uxp-margen-superior-cero uxp-margen-inferior-cero uxp-txt-naranja uxp-texto-centrado"><strong>Taller de información exógena <br> tributaria AG 2025</strong></p>
+
+            <div class="uxp-elemento-centrado uxp-relleno-superior"><span class="uxp-linea-corta bg-azul-siigo"></span></div>  
+
+            <p class="uxp-relleno-superior uxp-txt-blanco uxp-texto-centrado">Anticípese a la fiscalización de la DIAN con una metodología de reporte basada en la precisión técnica y el cumplimiento preventivo.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOQUE 2 - Tarjetas con iconos -->   
+      <section class="uxp-ancho-completo uxp-relleno-superior">
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila contenedor-tarjetas">
+
+          <div class="custom-tabs">
+
+            <div class="custom-tabs-nav">
+              <button class="custom-tab-btn active" onclick="switchTab(this, 0)"><strong>Bogotá</strong><br><span style="font-size: 15px;">19 de febrero</span></button>
+              <button class="custom-tab-btn" onclick="switchTab(this, 1)"><strong>Cali</strong><br><span style="font-size: 15px;">27 de febrero</span></button>
+            </div>
+
+            <!-- Bogotá -->
+            <div class="custom-tabs-content active">
+
+              <div class="custom-tab-col">
+
+                <div style="margin-top: -10px;">
+                  <strong class="bg-azul-siigo uxp-txt-blanco" style="border-radius: 15px; padding: 5px;">&nbsp;&nbsp;Capacitación infinita&nbsp;&nbsp;</strong>
+                </div>
+
+                <div style="padding: 15px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> Actualícese:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Hoy:</p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$49.900 + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1046611">Reserva</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="margin-top: -10px;">
+                  <strong class="bg-azul-siigo uxp-txt-blanco" style="border-radius: 15px; padding: 5px;">&nbsp;&nbsp;Capacitación infinita&nbsp;&nbsp;</strong>
+                </div>
+
+                <div style="padding: 15px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> VIP:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Hoy:</p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$99.900 + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1047452">Reserva</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="padding: 29px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> Actualícese:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Antes: <s>$ 499.900 + IVA</s></p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$399.920* + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1035762&coupon_code=20off_presenciales">Comprar ahora</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="padding: 29px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> VIP:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Antes: <s>$ 699.900 + IVA</s></p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$559.920* + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1046578&coupon_code=20off_presenciales_vip">Comprar ahora</a></p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Cali OK -->
+            <div class="custom-tabs-content">
+
+              <div class="custom-tab-col">
+
+                <div style="margin-top: -10px;">
+                  <strong class="bg-azul-siigo uxp-txt-blanco" style="border-radius: 15px; padding: 5px;">&nbsp;&nbsp;Capacitación infinita&nbsp;&nbsp;</strong>
+                </div>
+
+                <div style="padding: 15px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> Actualícese:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Hoy:</p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$49.900 + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1051682">Reserva</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="margin-top: -10px;">
+                  <strong class="bg-azul-siigo uxp-txt-blanco" style="border-radius: 15px; padding: 5px;">&nbsp;&nbsp;Capacitación infinita&nbsp;&nbsp;</strong>
+                </div>
+
+                <div style="padding: 15px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> VIP:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Hoy:</p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$99.900 + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1051686">Reserva</a></p>
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="padding: 29px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> Actualícese:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Antes: <s>$ 499.900 + IVA</s></p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$399.920* + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1051645&coupon_code=20off_presenciales">Comprar ahora</a></p>
+
+                </div>
+
+              </div>
+
+              <div class="custom-tab-col">
+
+                <div style="padding: 29px 25px 20px;">
+                  <p style="line-height: 22px;"><strong>Experiencia <br> VIP:</strong></p>
+
+                  <p class="uxp-margen-inferior-cero">Antes: <s>$ 699.900 + IVA</s></p>
+                  <p class="uxp-margen-superior-cero uxp-relleno-inferior"><strong style="font-size: 22px;" class="azul-osc-siigo">$559.920* + IVA</strong></p>
+  
+                  <p><a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado" href="https://actualicese.com/?add-to-cart=1051661&coupon_code=20off_presenciales_vip">Comprar ahora</a></p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <p class="uxp-texto-centrado uxp-relleno-superior"><i>*20% de dcto hasta el 31 de enero de 2026</i></p>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BLOQUE 8 - Terminos y condiciones -->
+      <section class="uxp-ancho-completo uxp-fondo-blanco">
+        <div class="uxp-grid-contenedor-ruta">
+
+            <p class="uxp-texto-precios uxp-margen-superior-cero uxp-margen-inferior-cero uxp-texto-centrado"><strong class="azul-siigo">Términos y Condiciones</strong></p>
+            <div class="uxp-margen-superior uxp-linea-corta bg-azul-osc-siigo" style="margin-left:auto; margin-right:auto;"></div>
+
+            <p><strong class="azul-siigo">Evento Presencial</strong></p>
+            <p>
+              El CLIENTE acepta irrevocablemente los siguientes términos y condiciones generales en la compra de cupos para eventos presenciales que se comercialicen por ACTUALÍCESE:
+            </p>
+
+            <ul class="uxp-lista-datos" style="margin-top: 14px; padding-left: 22px;">
+              <li style="margin-bottom: 15px;">
+                <strong>Acceso al Evento:</strong> La entrada al evento será autorizada únicamente a las personas previamente registradas por el CLIENTE al momento de realizar la compra. No se permitirá el ingreso a personas no inscritas.
+              </li>
+              <li style="margin-bottom: 15px;">
+                <strong>Hora de Registro:</strong> El proceso de registro e ingreso comenzará a las 1:00 p.m. Para ello, el CLIENTE deberá haber realizado previamente la inscripción en la página web de ACTUALÍCESE y presentar el código QR que le será suministrado al completar dicho registro. ACTUALÍCESE se reserva el derecho de admisión al evento.
+              </li>
+              <li style="margin-bottom: 15px;">
+                <strong>Hora de Inicio:</strong> El evento iniciará las 2:00 p.m., por lo que se recomienda llegar con suficiente anticipación.
+              </li>
+              <li style="margin-bottom: 15px;">
+                <strong>Material Digital:</strong> El material digital correspondiente al evento estará disponible para los asistentes el mismo día de su realización.
+              </li>
+              <li style="margin-bottom: 15px;">
+                <strong>Certificado de Asistencia:</strong> El certificado digital de asistencia estará disponible por medio de código QR para generar una vez finalizado el evento.
+              </li>
+              <li style="margin-bottom: 15px;">
+                <strong>Ubicación en el auditorio:</strong> La asignación de sillas se realizará en orden de llegada. Solo los cupos VIP cuentan con sillas numeradas. El personal logístico se encargará de ubicar a los asistentes.
+              </li>
+              <li style="margin-bottom: 15px;">
+                <strong>Realización del evento:</strong> Actualícese, advierte que la realización de eventos está sujeta a completar los cupos mínimos determinados por la empresa. Si desea asistir a un evento en una ciudad diferente a su lugar de residencia y va a incurrir en gastos de tiquetes aéreos y/o hoteles, tenga en cuenta que deberá tomar planes y tarifas que le permitan mover o cancelar su reserva sin penalidades; esto debido a que Actualícese no reconocerá ningún costo adicional incurrido por un cliente para asistir a un evento, cuya cancelación o cambio de fecha haya sido notificado anticipadamente con tres (3) días calendario.
+                <br><br>
+                El CLIENTE declara conocer que la realización de cualquier evento organizado por ACTUALÍCESE no depende exclusivamente de la compañía, por lo cual ACTUALÍCESE se reserva el derecho de modificar fechas, horarios, lugares, conferencistas y/o contenido temático, informando con la debida anticipación. La apertura de cada evento requiere un número mínimo de participantes; en caso de no cumplirse, el evento podrá ser cancelado, notificando al CLIENTE con al menos tres (3) días calendario de anticipación y reprogramando la fecha o devolviendo los dineros recibidos.
+                <br><br>
+                Es responsabilidad del CLIENTE leer detenidamente la información publicada sobre cada evento antes de realizar la compra de su cupo. En consecuencia, ACTUALÍCESE no estará obligado a realizar devoluciones de dinero por errores atribuibles al CLIENTE en la selección de fechas, horarios, valores, nombre del evento o cualquier otra circunstancia ajena a la organización.
+              </li>
+            </ul>
+
+        </div>
+      </section>
+
+      <script>
+        function switchTab(btn, idx) {
+          var container = btn.closest('.custom-tabs');
+          if (!container) return;
+          var btns = container.querySelectorAll('.custom-tab-btn');
+          var panels = container.querySelectorAll('.custom-tabs-content');
+          btns.forEach(function(b, i) { b.classList.toggle('active', i === idx); });
+          panels.forEach(function(p, i) { p.classList.toggle('active', i === idx); });
+        }
+      </script>
+
+  </body>
+</html>

@@ -1,0 +1,98 @@
+body { margin: 0px; }
+html { font-family: "Open Sans", sans-serif; font-size: 16px; line-height: 1.5; }
+
+/* Contenedores y bloques */
+.uxp-ancho-completo { width: 100%; }
+.uxp-grid-contenedor-ruta { max-width: 1200px; margin: 68px auto; }
+
+/* Para ocultar textos, imágenes o bloques en la versión mobile */
+.uxp-hidden
+.uxp-hidden-desktop
+
+/* Flex */
+.uxp-flex-fila { display: flex; align-items: center; gap: 20px; }
+.uxp-align-items-flex-start { align-items: flex-start; }
+.uxp-align-items-flex-end { align-items: flex-end; }
+.uxp-flex-1 { flex: 1; }
+.uxp-flex-2 { flex: 2; }
+
+/* Tamaños tipográficos */
+P { font-size: 16px; line-height: 24px; }
+h1 { font-size: 40px; line-height: 48px; font-weight: 400; }
+h2 { font-size: 32px; line-height: 38.4px; font-weight: 400; }
+h3 { font-size: 28px; line-height: 33.6px; font-weight: 400; }
+h4 { font-size: 24px; line-height: 28.8px; font-weight: 400; }
+h5 { font-size: 20px; line-height: 24px; font-weight: 400; }
+h6 { font-size: 16px; line-height: 19.2px; font-weight: 400; }
+
+.uxp-texto-destacado { font-size: 70px; line-height: 70px; }
+.text-accent { font-size: 30px; color: #4666ff; line-height: 32px; font-weight: 600; }
+.uxp-texto-banner { font-size: 50px; line-height: 55px; }
+.uxp-texto-precios { font-size: 25px; line-height: 30px; }
+
+/* Margin */
+.uxp-margen-auto { margin: auto; }
+.uxp-margen-superior { margin-top: 1rem; }
+.uxp-margen-derecho { margin-right: 1rem; }
+.uxp-margen-izquierdo { margin-left: 1rem; }
+.uxp-margen-inferior { margin-bottom: 1rem; }
+
+/* uxp-relleno-derecho uxp-relleno-izquierdo */
+.uxp-margen-inferior-cero { margin-bottom: 0; }
+.uxp-margen-superior-cero { margin-top: 0; }
+
+/* Padding */
+.uxp-relleno-superior { padding-top: 1rem; }
+.uxp-relleno-derecho { padding-right: 1rem; }
+.uxp-relleno-inferior { padding-bottom: 1rem; }
+.uxp-relleno-izquierdo { padding-left: 1rem; }
+
+/* Estilos para tablas */
+.uxp-columna-pequena { width: 75px; }
+
+/* Border Radius */
+.uxp-borde-redondeado { border-radius: 10px; }
+
+/* Barra separadora */
+.uxp-barra-separadora { background-color: transparent; background-image: url(https://actualicese.com/wp-content/uploads/2023/02/Separador_lp4.png); background-position: center center; background-repeat: repeat-x; background-size: auto; margin-top: 50px; margin-bottom: 50px; }
+
+/* Alinación de textos */
+.uxp-texto-centrado { text-align: center; }
+.uxp-texto-izquierda { text-align: left; }
+.uxp-texto-derecha { text-align: end; }
+
+/* Alineación de elementos */
+.uxp-elemento-centrado { display: flex; justify-content: center; }
+.uxp-elemento-izquierda { display: flex; justify-content: flex-start; }
+.uxp-elemento-derecha { display: flex; justify-content: flex-end; }
+
+/* boton-actu */
+.btn-actu-amarillo { padding: 8px 30px; text-decoration: none; }
+
+/* Colores de textos */
+.uxp-txt-azul { color: #4666ff;}
+.uxp-txt-verde-lima { color: #beff5e;}
+.uxp-txt-naranja { color: #FCB900 ;}
+.uxp-txt-blanco { color: #ffffff;}
+.uxp-txt-negro { color: #000000;}
+
+/* Colores de fondos */
+.uxp-fondo-azul { background: #4666ff; }
+.uxp-fondo-verde-lima { background: #beff5e;}
+.uxp-fondo-naranja { background: #FCB900;}
+.uxp-fondo-negro { background: #000000;}
+.uxp-fondo-blanco { background: #ffffff;}
+
+.uxp-fondo-gris-claro { background: #f5f5f5;}
+.uxp-fondo-azul-claro {background: #ecf4ff;}
+.uxp-fondo-verde-claro {background: #f5ffe5;}
+
+/* Línea para títulos */
+.uxp-linea-corta { height: 4px; width: 25%;}
+.uxp-linea-larga { height: 4px;}
+
+/* Listas */
+.uxp-lista-datos li { list-style-type: disc;}
+.uxp-lista-datos li::marker { color: #4666FF;}
+
+/* ---------------------------------- */

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main-style-act-2025.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+  .azul-siigo {color: #00a4ff;}
+  .azul-osc-siigo {color: #005d95;}
+  .bg-azul-osc-siigo {background-color: #005d95;}
+  .uxp-lista-datos li::marker { color: #00a4ff !important;}
+  
+  /* Clases reutilizables para tarjetas */
+  .tarjeta-info {
+    box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+    border-radius: 10px;
+    background: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  .tarjeta-info-icono { padding: 1rem 0; }
+  
+  /* Contenedor de tarjetas */
+  .contenedor-tarjetas {
+    justify-content: center;
+    gap: 32px;
+    margin-top: -70px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Cajas de contenido */
+  .caja-contenido {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  /* Clases de visibilidad */
+  .uxp-hidden { display: block; }
+  .uxp-hidden-desktop { display: none; }
+  
+  /* Texto con ancho limitado */
+  .texto-ancho-limitado {
+    width: 520px;
+    margin: auto;
+  }
+
+@media (max-width: 600px) {
+  .uxp-grid-contenedor-ruta {
+    margin: 24px 8px;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  .uxp-ancho-completo {
+    width: 100vw;
+    margin-left: -8px;
+    margin-right: -8px;
+    box-sizing: border-box;
+  }
+  .uxp-flex-fila {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .uxp-flex-2, .uxp-flex-1 {
+    width: 100%;
+  }
+  .uxp-texto-banner {
+    font-size: 28px !important;
+    line-height: 32px !important;
+  }
+  .uxp-texto-precios {
+    font-size: 18px !important;
+    line-height: 22px !important;
+  }
+  .uxp-margen-izquierdo img {
+    width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+  }
+  .uxp-linea-corta {
+    width: 50% !important;
+  }
+  .btn-actu-amarillo {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* BLOQUE 1 */
+  section:first-of-type {
+    height: auto !important;
+    padding: 24px 16px !important;
+  }
+  
+  /* BLOQUE 2 */
+  section:nth-of-type(2) .uxp-grid-contenedor-ruta {
+    margin-top: -40px !important;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  section:nth-of-type(2) article {
+    flex: 1 1 calc(50% - 8px);
+    min-width: calc(50% - 8px);
+  }
+  section:nth-of-type(2) article:last-of-type {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+  .uxp-hidden { display: none; }
+  .uxp-hidden-desktop { display: inline; }
+  .tarjeta-info-icono.uxp-hidden-desktop { display: inline; padding: 0; }
+  
+  /* BLOQUE 3 */
+  section:nth-of-type(3) .uxp-flex-fila {
+    flex-direction: column;
+  }
+  section:nth-of-type(3) figure {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  section:nth-of-type(3) figure img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  section:nth-of-type(3) .uxp-margen-izquierdo {
+    margin-left: 0;
+  }
+  
+  /* BLOQUE 4 */
+  section:nth-of-type(4) > div {
+    padding: 24px 16px !important;
+  }
+  section:nth-of-type(4) .uxp-flex-fila {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  section:nth-of-type(4) article {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  section:nth-of-type(4) article:last-of-type {
+    margin-bottom: 0;
+  }
+  .caja-contenido {
+    padding: 20px !important;
+  }
+  
+  /* BLOQUE 5 */
+  section:nth-of-type(5) .uxp-flex-fila {
+    flex-direction: column;
+    align-items: center !important;
+  }
+  section:nth-of-type(5) figure {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  section:nth-of-type(5) figure img {
+    width: 200px !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+  section:nth-of-type(5) .uxp-relleno-derecho {
+    padding-right: 0;
+  }
+  
+  /* BLOQUE 6 */
+  section:nth-of-type(6) .uxp-flex-fila {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  section:nth-of-type(6) figure {
+    width: 100%;
+    margin-top: 16px;
+  }
+  section:nth-of-type(6) figure.uxp-relleno-izquierdo {
+    padding-left: 0;
+  }
+  section:nth-of-type(6) figure img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* BLOQUE 7 */
+  section:last-of-type {
+    height: auto !important;
+    padding: 40px 16px !important;
+    background-size: cover !important;
+  }
+  section:last-of-type .uxp-flex-2 {
+    width: 100%;
+  }
+  .texto-ancho-limitado {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  section:last-of-type .uxp-texto-banner {
+    font-size: 32px !important;
+    line-height: 38px !important;
+  }
+}
+
+</style>
+  
+</head>
+  <body>
+
+      <!-- Bloque 1  -->
+      <section class="uxp-ancho-completo uxp-fondo-azul-claro" style="background: #6cb9f1;">
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila">
+
+          <!-- columna izquierda del banner -->
+          <div class="uxp-flex-2 uxp-texto-izquierda uxp-margen-derecho">
+            
+            <p class="uxp-margen-superior-cero uxp-margen-inferior-cero uxp-texto-precios"><strong class="azul-osc-siigo">Capacitación presencial</strong></p>
+            <p class="uxp-texto-banner uxp-margen-superior-cero uxp-margen-inferior-cero uxp-txt-blanco"><strong>Declaración de renta de personas jurídicas AG 2025</strong></p>   
+            <div class="uxp-margen-superior uxp-linea-corta bg-azul-osc-siigo"></div>
+
+            <p class="uxp-relleno-superior">En este lugar   podrás acceder   a información relevante y oportuna para completar tu experiencia en nuestro evento.</p>
+
+          </div>
+        
+          <!-- columna derecha del banner -->
+          <div class="uxp-flex-1 uxp-hidden">
+            <img class="uxp-borde-redondeado" src="https://cdn.actualicese.com/wp-content/uploads/2025/11/14094045/Evento-de-negocios-en-sala-de-conferencias4.jpg" width="700" height="270" loading="eager" alt="">
+          </div> 
+
+        </div>
+      </section>
+  
+      <!-- BLOQUE 2 - Tarjetas con iconos -->   
+      <section class="uxp-ancho-completo uxp-relleno-superior uxp-margen-superior">
+        <div class="uxp-grid-contenedor-ruta uxp-flex-fila contenedor-tarjetas uxp-align-items-flex-start">
+
+          <article class="uxp-flex-1 tarjeta-info">
+
+            <span class="uxp-texto-banner uxp-elemento-centrado uxp-relleno-superior uxp-margen-superior uxp-margen-inferior uxp-relleno-inferior"> <i style="color: #6cb9f1;" class="fas fa-download fa-lg uxp-margen-superior uxp-relleno-superior"></i></span>
+
+            <h5 class="uxp-texto-centrado uxp-relleno-superior uxp-relleno-inferior uxp-margen-superior"><strong class="azul-osc-siigo">Descargar el material <br> de apoyo</strong> </h5>
+
+            <p class="uxp-margen-inferior-cero uxp-relleno-izquierdo uxp-relleno-derecho uxp-relleno-inferior"> <a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-elemento-centrado uxp-margen-inferior" href="https://cdn.actualicese.com/Material-de-descarga-22-de-noviembre.zip">Descargar</a>
+              
+            <a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-elemento-centrado uxp-margen-inferior" href="https://cdn.actualicese.com/Material-de-descarga-22-de-noviembre.rar">Descargar versión RAR</a></p>
+
+          </article>
+
+          <article class="uxp-flex-1 tarjeta-info">
+
+            <span class="uxp-texto-banner uxp-elemento-centrado uxp-relleno-superior uxp-margen-superior uxp-margen-inferior uxp-relleno-inferior"> <i style="color: #6cb9f1;" class="fas fa-pen-square fa-lg uxp-margen-superior uxp-relleno-superior"></i></span>
+
+            <h5 class="uxp-texto-centrado uxp-relleno-superior uxp-relleno-inferior"><strong class="azul-osc-siigo">Diligenciar la encuesta y obtener tu certificado de participación</strong> </h5>
+
+            <p class=" uxp-margen-inferior-cero uxp-relleno-izquierdo uxp-relleno-derecho uxp-relleno-inferior"> <a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-elemento-centrado uxp-margen-inferior" href="https://actualicese.com/qsm_quiz/encuesta-de-satisfaccion-capacitacion-presencial-masterclass-planeacion-integral-2026/">Diligenciar</a></p>
+
+          </article>
+
+          <article class="uxp-flex-1 tarjeta-info">
+            <span class="uxp-texto-banner uxp-elemento-centrado uxp-relleno-superior uxp-margen-superior uxp-margen-inferior uxp-relleno-inferior"> <i style="color: #6cb9f1;" class="fas fa-question-circle fa-lg uxp-margen-superior uxp-relleno-superior"></i></span>
+
+            <h5 class="uxp-texto-centrado uxp-relleno-superior uxp-relleno-inferior"><strong class="azul-osc-siigo">Resolver tus <br>preguntas</strong></h5>
+
+            <p class="uxp-margen-inferior-cero uxp-relleno-izquierdo uxp-relleno-derecho uxp-relleno-inferior"> <a class="btn-actu-amarillo uxp-fondo-naranja uxp-txt-negro uxp-borde-redondeado uxp-elemento-centrado uxp-margen-inferior" href="https://actualicese.com/asesoria/eventos?evento=masterclass-planeacion-integral-2026&tipo=NORMAL&tematicas=reforma_laboral,planeacion_financiera,planeacion_tributaria,planeacion_de_revisoria_fiscal_y_auditoria">Preguntar</a></p>
+
+          </article>
+        </div>
+      </section>
+
+  </body>
+</html>
